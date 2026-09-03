@@ -1,0 +1,79 @@
+/* ==========================================================================
+   TechBloom Labs — Animations
+   Reusable reveal, mask and micro-motion definitions. Restrained by design.
+   ========================================================================== */
+
+/* ---- Keyframes ---------------------------------------------------------- */
+@keyframes tb-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes tb-fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ---- Reveal: opacity + rise --------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(var(--reveal-shift, 18px));
+  transition:
+    opacity var(--dur-reveal) var(--ease-out),
+    transform var(--dur-reveal) var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+.reveal.is-in { opacity: 1; transform: none; }
+
+.reveal--fade { transform: none; }
+.reveal--right { transform: translateX(24px); }
+.reveal--right.is-in { transform: none; }
+
+/* ---- Reveal: image mask ------------------------------------------------- */
+.reveal-mask {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 900ms var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal-mask.is-in { clip-path: inset(0 0 0 0); }
+
+.reveal-mask__inner {
+  transform: scale(1.06);
+  transition: transform 1100ms var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal-mask.is-in .reveal-mask__inner { transform: none; }
+
+/* ---- Line draw (dividers, rules) --------------------------------------- */
+.line-draw {
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 800ms var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.line-draw.is-in { transform: scaleX(1); }
+
+/* ---- Hover arrow -------------------------------------------------------- */
+.arrow-shift { transition: transform var(--dur) var(--ease); }
+a:hover .arrow-shift,
+button:hover .arrow-shift,
+.is-hovered .arrow-shift { transform: translateX(4px); }
+
+/* ---- Reduced motion ---------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal { opacity: 1; transform: none; }
+  .reveal-mask { clip-path: none; }
+  .reveal-mask__inner { transform: none; }
+  .line-draw { transform: scaleX(1); }
+}

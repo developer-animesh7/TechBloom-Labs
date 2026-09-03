@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" role="img" aria-label="Study and mentorship setting shown as a shared table with review notes, screens and discussion markers">
+  <defs>
+    <linearGradient id="cb-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F1EFE9"/>
+      <stop offset="1" stop-color="#E1E6E0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="700" fill="url(#cb-bg)"/>
+
+  <!-- wall rule + window light -->
+  <g fill="#0B1512" fill-opacity="0.05">
+    <rect x="620" y="60" width="320" height="240" rx="6"/>
+  </g>
+  <g stroke="#0B1512" stroke-opacity="0.18">
+    <rect x="620" y="60" width="320" height="240" rx="6" fill="none"/>
+    <path d="M780 60v240M620 180h320"/>
+  </g>
+
+  <!-- table -->
+  <path d="M60 470h880v20H60z" fill="#0B1512" fill-opacity="0.55"/>
+  <path d="M120 490v150M880 490v150" stroke="#0B1512" stroke-opacity="0.45" stroke-width="8"/>
+
+  <!-- laptop -->
+  <g transform="translate(150,318)">
+    <rect width="230" height="146" rx="8" fill="#0B1512" fill-opacity="0.9"/>
+    <rect x="14" y="14" width="202" height="112" rx="4" fill="#3ED0A2" fill-opacity="0.16"/>
+    <g stroke="#3ED0A2" stroke-opacity="0.75" stroke-width="2.4" fill="none">
+      <path d="M32 106 L 70 76 L 104 90 L 142 52 L 180 66 L 200 40"/>
+    </g>
+    <g fill="#EEF3F0" fill-opacity="0.35">
+      <rect x="32" y="28" width="60" height="6" rx="3"/>
+      <rect x="32" y="42" width="34" height="6" rx="3"/>
+    </g>
+    <path d="M-20 146h270l14 22H-34z" fill="#0B1512" fill-opacity="0.7"/>
+  </g>
+
+  <!-- papers + review notes -->
+  <g transform="translate(430,352)">
+    <rect width="180" height="112" rx="4" fill="#FFFFFF" fill-opacity="0.92" stroke="#0B1512" stroke-opacity="0.2" transform="rotate(-4 90 56)"/>
+    <g stroke="#0B1512" stroke-opacity="0.25" transform="rotate(-4 90 56)">
+      <path d="M20 34h140M20 54h140M20 74h96"/>
+    </g>
+    <g transform="rotate(-4 90 56)">
+      <rect x="20" y="14" width="58" height="8" rx="4" fill="#0C7A5E" fill-opacity="0.85"/>
+    </g>
+  </g>
+
+  <!-- sticky notes wall -->
+  <g transform="translate(646,96)">
+    <g>
+      <rect x="0" y="0" width="80" height="80" rx="4" fill="#0C7A5E" fill-opacity="0.75"/>
+      <rect x="96" y="18" width="80" height="80" rx="4" fill="#0B1512" fill-opacity="0.18"/>
+      <rect x="192" y="0" width="80" height="80" rx="4" fill="#0B1512" fill-opacity="0.12"/>
+      <rect x="48" y="112" width="80" height="80" rx="4" fill="#0B1512" fill-opacity="0.15"/>
+      <rect x="144" y="122" width="80" height="80" rx="4" fill="#0C7A5E" fill-opacity="0.35"/>
+    </g>
+  </g>
+
+  <!-- discussion markers -->
+  <g>
+    <g fill="none" stroke="#0B1512" stroke-opacity="0.5" stroke-width="2">
+      <path d="M660 380h190a10 10 0 0 1 10 10v52a10 10 0 0 1-10 10h-160l-30 26v-26h0a10 10 0 0 1-10-10v-52a10 10 0 0 1 10-10z" fill="#FFFFFF" fill-opacity="0.85"/>
+    </g>
+    <g fill="#0B1512" fill-opacity="0.4">
+      <rect x="682" y="404" width="130" height="8" rx="4"/>
+      <rect x="682" y="422" width="86" height="8" rx="4" fill-opacity="0.28"/>
+    </g>
+  </g>
+
+  <!-- seat silhouettes (abstract) -->
+  <g fill="#0B1512" fill-opacity="0.16">
+    <path d="M232 640c0-52 34-92 78-92s78 40 78 92z"/>
+    <path d="M612 640c0-52 34-92 78-92s78 40 78 92z"/>
+  </g>
+  <g fill="#0B1512" fill-opacity="0.24">
+    <circle cx="310" cy="516" r="34"/>
+    <circle cx="690" cy="516" r="34"/>
+  </g>
+</svg>

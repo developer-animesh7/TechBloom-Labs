@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" role="img" aria-label="Agricultural field in rows with irrigation lines and monitoring sensor nodes">
+  <defs>
+    <linearGradient id="af-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E6EDE4"/>
+      <stop offset="1" stop-color="#CFDCC9"/>
+    </linearGradient>
+    <linearGradient id="af-soil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1E3A26"/>
+      <stop offset="1" stop-color="#0F2117"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="640" fill="url(#af-sky)"/>
+
+  <!-- sun band -->
+  <circle cx="812" cy="128" r="58" fill="#0C7A5E" fill-opacity="0.14"/>
+  <circle cx="812" cy="128" r="30" fill="#0C7A5E" fill-opacity="0.3"/>
+
+  <!-- horizon -->
+  <path d="M0 250h1000" stroke="#0B1512" stroke-opacity="0.22"/>
+  <path d="M0 250 C 180 236 320 262 520 246 C 700 232 860 254 1000 244 V 250 Z" fill="#1E3A26" fill-opacity="0.35"/>
+
+  <!-- field in perspective rows -->
+  <path d="M0 250h1000v390H0z" fill="url(#af-soil)"/>
+  <g stroke="#8CCBA6" stroke-opacity="0.5" stroke-width="2">
+    <path d="M470 252 L 60 640"/>
+    <path d="M492 252 L 250 640"/>
+    <path d="M514 252 L 440 640"/>
+    <path d="M536 252 L 630 640"/>
+    <path d="M558 252 L 820 640"/>
+    <path d="M580 252 L 1010 640"/>
+  </g>
+  <g stroke="#8CCBA6" stroke-opacity="0.22" stroke-width="1.4">
+    <path d="M0 300h1000"/><path d="M0 360h1000"/><path d="M0 440h1000"/><path d="M0 540h1000"/>
+  </g>
+
+  <!-- crop tufts -->
+  <g stroke="#8CCBA6" stroke-linecap="round" fill="none">
+    <g stroke-width="2.6" stroke-opacity="0.85">
+      <path d="M120 600v-40M112 574l8 10M130 570l-10 14"/>
+      <path d="M310 560v-34M302 538l8 9M320 534l-10 12"/>
+      <path d="M690 566v-34M682 544l8 9M700 540l-10 12"/>
+      <path d="M880 604v-42M871 578l9 11M891 574l-11 14"/>
+    </g>
+    <g stroke-width="2" stroke-opacity="0.55">
+      <path d="M215 470v-26M208 454l7 8M223 450l-8 10"/>
+      <path d="M470 452v-26M463 436l7 8M478 432l-8 10"/>
+      <path d="M770 468v-26M763 452l7 8M778 448l-8 10"/>
+    </g>
+  </g>
+
+  <!-- irrigation pivot line -->
+  <g stroke="#EEF3F0" stroke-opacity="0.5">
+    <path d="M60 396h880" stroke-dasharray="14 10"/>
+  </g>
+
+  <!-- sensor nodes -->
+  <g>
+    <g fill="#3ED0A2">
+      <circle cx="248" cy="396" r="7"/><circle cx="560" cy="396" r="7"/><circle cx="836" cy="396" r="7"/>
+    </g>
+    <g fill="none" stroke="#3ED0A2" stroke-opacity="0.45">
+      <circle cx="248" cy="396" r="18"/><circle cx="560" cy="396" r="18"/><circle cx="836" cy="396" r="18"/>
+    </g>
+    <g stroke="#3ED0A2" stroke-opacity="0.6" stroke-width="1.6">
+      <path d="M248 389v-40"/><path d="M560 389v-58"/><path d="M836 389v-32"/>
+    </g>
+  </g>
+
+  <!-- data card -->
+  <g transform="translate(64,66)">
+    <rect width="286" height="140" rx="10" fill="#0B1512" fill-opacity="0.9"/>
+    <text x="22" y="38" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" letter-spacing="2.4" fill="#3ED0A2">FIELD MONITORING</text>
+    <g stroke="#EEF3F0" stroke-opacity="0.22">
+      <path d="M22 60h242"/><path d="M22 92h242"/>
+    </g>
+    <path d="M22 108 C 62 82 96 100 132 74 C 168 50 206 86 264 60" fill="none" stroke="#3ED0A2" stroke-width="2.6" stroke-linecap="round"/>
+    <g fill="#EEF3F0" fill-opacity="0.55" font-family="Inter, system-ui, sans-serif" font-size="14">
+      <text x="22" y="128">Soil · Irrigation · Growth stage</text>
+    </g>
+  </g>
+</svg>

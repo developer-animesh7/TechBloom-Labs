@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" role="img" aria-label="Livestock lineage chart with animal profile records and paired trait markers">
+  <defs>
+    <linearGradient id="lg-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F2EDE2"/>
+      <stop offset="1" stop-color="#E4DACA"/>
+    </linearGradient>
+    <pattern id="lg-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#6B4A1F" fill-opacity="0.18"/>
+    </pattern>
+  </defs>
+
+  <rect width="1000" height="640" fill="url(#lg-bg)"/>
+  <rect width="1000" height="640" fill="url(#lg-dots)"/>
+
+  <!-- pedigree tree -->
+  <g fill="none" stroke="#6B4A1F" stroke-opacity="0.55" stroke-width="2">
+    <path d="M500 150v50"/>
+    <path d="M300 250h400"/>
+    <path d="M300 250v46"/>
+    <path d="M700 250v46"/>
+    <path d="M200 400h200"/>
+    <path d="M600 400h200"/>
+    <path d="M200 400v44"/><path d="M400 400v44"/><path d="M600 400v44"/><path d="M800 400v44"/>
+    <path d="M300 296v104"/>
+    <path d="M700 296v104"/>
+  </g>
+
+  <!-- generation 0 -->
+  <g>
+    <rect x="424" y="94" width="152" height="58" rx="8" fill="#0B1512" fill-opacity="0.9"/>
+    <text x="446" y="121" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" letter-spacing="2" fill="#3ED0A2">ID · GEN 0</text>
+    <text x="446" y="141" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#EEF3F0" fill-opacity="0.7">Breeding record</text>
+  </g>
+
+  <!-- generation 1 -->
+  <g fill="#FFFFFF" fill-opacity="0.82" stroke="#6B4A1F" stroke-opacity="0.45">
+    <rect x="234" y="252" width="132" height="46" rx="7"/>
+    <rect x="634" y="252" width="132" height="46" rx="7"/>
+  </g>
+  <g font-family="Inter, system-ui, sans-serif" font-size="14" fill="#3A2C15">
+    <text x="256" y="281">Sire · lineage</text>
+    <text x="654" y="281">Dam · lineage</text>
+  </g>
+
+  <!-- generation 2 nodes -->
+  <g>
+    <g fill="#6B4A1F" fill-opacity="0.85">
+      <circle cx="200" cy="466" r="19"/><circle cx="400" cy="466" r="19"/><circle cx="600" cy="466" r="19"/><circle cx="800" cy="466" r="19"/>
+    </g>
+    <g fill="none" stroke="#6B4A1F" stroke-opacity="0.35">
+      <circle cx="200" cy="466" r="30"/><circle cx="400" cy="466" r="30"/><circle cx="600" cy="466" r="30"/><circle cx="800" cy="466" r="30"/>
+    </g>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="1.6" fill="#3A2C15" fill-opacity="0.7" text-anchor="middle">
+      <text x="200" y="518">A-014</text>
+      <text x="400" y="518">A-027</text>
+      <text x="600" y="518">B-006</text>
+      <text x="800" y="518">B-019</text>
+    </g>
+  </g>
+
+  <!-- trait marker strip -->
+  <g transform="translate(64,556)">
+    <text x="0" y="0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" letter-spacing="2.4" fill="#3A2C15" fill-opacity="0.65">TRAIT MARKERS</text>
+    <g>
+      <rect x="0" y="14" width="872" height="10" rx="5" fill="#6B4A1F" fill-opacity="0.18"/>
+      <g fill="#0C7A5E">
+        <rect x="24" y="14" width="58" height="10" rx="5"/>
+        <rect x="140" y="14" width="34" height="10" rx="5" fill-opacity="0.75"/>
+        <rect x="248" y="14" width="76" height="10" rx="5" fill-opacity="0.55"/>
+        <rect x="404" y="14" width="44" height="10" rx="5" fill-opacity="0.85"/>
+        <rect x="556" y="14" width="62" height="10" rx="5" fill-opacity="0.6"/>
+        <rect x="712" y="14" width="38" height="10" rx="5" fill-opacity="0.8"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- record card -->
+  <g transform="translate(704,86)">
+    <rect width="232" height="128" rx="10" fill="#FFFFFF" fill-opacity="0.9" stroke="#6B4A1F" stroke-opacity="0.35"/>
+    <text x="20" y="34" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2.2" fill="#0C7A5E">HERD RECORDS</text>
+    <g stroke="#6B4A1F" stroke-opacity="0.28">
+      <path d="M20 52h192"/><path d="M20 78h192"/><path d="M20 104h150"/>
+    </g>
+    <g fill="#6B4A1F" fill-opacity="0.7">
+      <rect x="20" y="42" width="46" height="6" rx="3"/>
+      <rect x="20" y="68" width="80" height="6" rx="3"/>
+      <rect x="20" y="94" width="62" height="6" rx="3"/>
+    </g>
+  </g>
+</svg>

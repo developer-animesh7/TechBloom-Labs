@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" role="img" aria-label="Enterprise workflow diagram with task columns, approval branches and automation rules">
+  <defs>
+    <linearGradient id="sw-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EDEDE8"/>
+      <stop offset="1" stop-color="#DEE0DA"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="640" fill="url(#sw-bg)"/>
+  <g stroke="#0B1512" stroke-opacity="0.07">
+    <path d="M0 60h1000M0 120h1000M0 180h1000M0 240h1000M0 300h1000M0 360h1000M0 420h1000M0 480h1000M0 540h1000M0 600h1000"/>
+  </g>
+
+  <!-- kanban columns -->
+  <g transform="translate(72,96)">
+    <g fill="#0B1512" fill-opacity="0.05" stroke="#0B1512" stroke-opacity="0.14">
+      <rect width="200" height="440" rx="10"/>
+      <rect x="228" width="200" height="440" rx="10"/>
+      <rect x="456" width="200" height="440" rx="10"/>
+    </g>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2.2" fill="#0B1512" fill-opacity="0.55">
+      <text x="20" y="34">QUEUE</text>
+      <text x="248" y="34">IN PROGRESS</text>
+      <text x="476" y="34">REVIEW</text>
+    </g>
+    <g fill="#FFFFFF" fill-opacity="0.92" stroke="#0B1512" stroke-opacity="0.16">
+      <rect x="18" y="52" width="164" height="72" rx="8"/>
+      <rect x="18" y="136" width="164" height="72" rx="8"/>
+      <rect x="18" y="220" width="164" height="72" rx="8"/>
+      <rect x="246" y="52" width="164" height="72" rx="8"/>
+      <rect x="246" y="136" width="164" height="72" rx="8"/>
+      <rect x="474" y="52" width="164" height="72" rx="8"/>
+    </g>
+    <g fill="#0B1512" fill-opacity="0.4">
+      <rect x="34" y="70" width="92" height="7" rx="3.5"/><rect x="34" y="86" width="60" height="6" rx="3" fill-opacity="0.25"/>
+      <rect x="34" y="154" width="112" height="7" rx="3.5"/><rect x="34" y="170" width="48" height="6" rx="3" fill-opacity="0.25"/>
+      <rect x="34" y="238" width="76" height="7" rx="3.5"/><rect x="34" y="254" width="88" height="6" rx="3" fill-opacity="0.25"/>
+      <rect x="262" y="70" width="104" height="7" rx="3.5"/><rect x="262" y="86" width="56" height="6" rx="3" fill-opacity="0.25"/>
+      <rect x="262" y="154" width="84" height="7" rx="3.5"/><rect x="262" y="170" width="72" height="6" rx="3" fill-opacity="0.25"/>
+      <rect x="490" y="70" width="96" height="7" rx="3.5"/><rect x="490" y="86" width="64" height="6" rx="3" fill-opacity="0.25"/>
+    </g>
+    <g>
+      <rect x="34" y="102" width="40" height="12" rx="6" fill="#0C7A5E" fill-opacity="0.8"/>
+      <rect x="34" y="186" width="52" height="12" rx="6" fill="#0B1512" fill-opacity="0.2"/>
+      <rect x="34" y="270" width="34" height="12" rx="6" fill="#0B1512" fill-opacity="0.16"/>
+      <rect x="262" y="102" width="46" height="12" rx="6" fill="#0C7A5E" fill-opacity="0.55"/>
+      <rect x="262" y="186" width="38" height="12" rx="6" fill="#0B1512" fill-opacity="0.18"/>
+      <rect x="490" y="102" width="58" height="12" rx="6" fill="#0C7A5E" fill-opacity="0.9"/>
+    </g>
+    <g stroke="#0C7A5E" stroke-opacity="0.6" stroke-width="1.8" fill="none">
+      <path d="M182 88h64" stroke-dasharray="5 5"/>
+      <path d="M410 88h64" stroke-dasharray="5 5"/>
+    </g>
+  </g>
+
+  <!-- automation rule card -->
+  <g transform="translate(768,120)">
+    <rect width="176" height="392" rx="10" fill="#0B1512" fill-opacity="0.92"/>
+    <text x="20" y="38" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2.2" fill="#3ED0A2">AUTOMATION</text>
+    <g fill="#EEF3F0" fill-opacity="0.45">
+      <rect x="20" y="58" width="96" height="7" rx="3.5"/>
+      <rect x="20" y="76" width="130" height="7" rx="3.5" fill-opacity="0.22"/>
+    </g>
+    <g stroke="#3ED0A2" stroke-opacity="0.6" fill="none" stroke-width="1.6">
+      <path d="M32 110v40h48v40h-48v40h48"/>
+    </g>
+    <g fill="#3ED0A2">
+      <circle cx="32" cy="110" r="5"/><circle cx="80" cy="190" r="5" fill-opacity="0.7"/><circle cx="80" cy="270" r="5" fill-opacity="0.5"/>
+    </g>
+    <g fill="#EEF3F0" fill-opacity="0.35">
+      <rect x="20" y="304" width="120" height="7" rx="3.5"/>
+      <rect x="20" y="322" width="86" height="7" rx="3.5" fill-opacity="0.6"/>
+      <rect x="20" y="340" width="104" height="7" rx="3.5" fill-opacity="0.4"/>
+    </g>
+  </g>
+</svg>

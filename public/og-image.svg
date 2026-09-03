@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="TechBloom — Where research meets real-world innovation">
+  <defs>
+    <linearGradient id="og-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E1F1A"/>
+      <stop offset="0.6" stop-color="#0B1512"/>
+      <stop offset="1" stop-color="#08110F"/>
+    </linearGradient>
+    <pattern id="og-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0v40" fill="none" stroke="#EEF3F0" stroke-opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#og-bg)"/>
+  <rect width="1200" height="630" fill="url(#og-grid)"/>
+
+  <!-- mark -->
+  <g transform="translate(72,64)">
+    <rect width="52" height="52" rx="11" fill="#101E19" stroke="#EEF3F0" stroke-opacity="0.14"/>
+    <g stroke="#3ED0A2" stroke-width="2.6" stroke-linecap="round" fill="none" transform="translate(-2,-2)">
+      <path d="M28 43V25"/>
+      <path d="M28 29c-5.4 0-9-3.3-9-8.2"/>
+      <path d="M28 25c5.4 0 9-3.6 9-9"/>
+    </g>
+    <circle cx="17" cy="19" r="3.4" fill="#3ED0A2"/>
+    <circle cx="35" cy="14.6" r="4.4" fill="#F6F4EF"/>
+    <text x="70" y="34" font-family="'Space Grotesk', 'Segoe UI', system-ui, sans-serif" font-size="26" font-weight="600" letter-spacing="-0.6" fill="#EEF3F0">Tech<tspan fill="#3ED0A2">Bloom</tspan></text>
+  </g>
+
+  <text x="72" y="188" font-family="ui-monospace, Menlo, monospace" font-size="17" letter-spacing="4" fill="#3ED0A2">WHERE LEARNING MEETS OPPORTUNITY</text>
+
+  <g font-family="'Space Grotesk', 'Segoe UI', system-ui, sans-serif" font-size="70" font-weight="500" letter-spacing="-2.4" fill="#EEF3F0">
+    <text x="72" y="286">Where research meets</text>
+    <text x="72" y="360">real-world innovation.</text>
+  </g>
+
+  <text x="72" y="424" font-family="Inter, system-ui, sans-serif" font-size="23" fill="#EEF3F0" fill-opacity="0.62">Faculty · Research projects · Internships · Career pathways</text>
+
+  <!-- journey rail -->
+  <g transform="translate(72,506)">
+    <path d="M0 0h1056" stroke="#EEF3F0" stroke-opacity="0.18"/>
+    <g fill="#3ED0A2">
+      <circle cx="0" cy="0" r="8"/>
+      <circle cx="352" cy="0" r="8" fill-opacity="0.78"/>
+      <circle cx="704" cy="0" r="8" fill-opacity="0.56"/>
+      <circle cx="1056" cy="0" r="8" fill-opacity="0.34"/>
+    </g>
+    <g font-family="ui-monospace, Menlo, monospace" font-size="16" letter-spacing="3.4" fill="#EEF3F0" fill-opacity="0.6">
+      <text x="0" y="44">DISCOVER</text>
+      <text x="352" y="44">CONNECT</text>
+      <text x="704" y="44">EXPERIENCE</text>
+      <text x="1056" y="44" text-anchor="end">BLOOM</text>
+    </g>
+  </g>
+</svg>

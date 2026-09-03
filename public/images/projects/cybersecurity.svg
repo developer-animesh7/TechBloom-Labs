@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" role="img" aria-label="Security monitoring view with alert queue, network segments and vulnerability workflow lanes">
+  <defs>
+    <linearGradient id="cs-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1A1220"/>
+      <stop offset="1" stop-color="#100A15"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="640" fill="url(#cs-bg)"/>
+  <g stroke="#EEF3F0" stroke-opacity="0.06">
+    <path d="M0 80h1000M0 160h1000M0 240h1000M0 320h1000M0 400h1000M0 480h1000M0 560h1000"/>
+  </g>
+
+  <!-- network segments -->
+  <g transform="translate(72,96)">
+    <text x="0" y="-16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2.4" fill="#3ED0A2">SEGMENTS</text>
+    <g fill="none" stroke="#EEF3F0" stroke-opacity="0.2">
+      <path d="M60 60 L 180 20 M60 60 L 180 100 M60 60 L 150 160"/>
+      <path d="M180 20 L 300 60 M180 100 L 300 60 M150 160 L 300 60"/>
+      <path d="M300 60 L 400 20 M300 60 L 410 118"/>
+    </g>
+    <g stroke="#3ED0A2" stroke-opacity="0.75" stroke-width="1.8" fill="none">
+      <path d="M60 60 L 180 100 L 300 60 L 410 118"/>
+    </g>
+    <g fill="#EEF3F0">
+      <circle cx="60" cy="60" r="9" fill-opacity="0.85"/>
+      <circle cx="180" cy="20" r="6" fill-opacity="0.45"/>
+      <circle cx="150" cy="160" r="6" fill-opacity="0.45"/>
+      <circle cx="400" cy="20" r="6" fill-opacity="0.45"/>
+    </g>
+    <g fill="#3ED0A2">
+      <circle cx="180" cy="100" r="8"/>
+      <circle cx="300" cy="60" r="8" fill-opacity="0.8"/>
+    </g>
+    <!-- flagged node -->
+    <circle cx="410" cy="118" r="10" fill="#C8536B"/>
+    <circle cx="410" cy="118" r="22" fill="none" stroke="#C8536B" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- shield -->
+  <g transform="translate(608,84)">
+    <path d="M96 0l88 30v76c0 62-40 104-88 122-48-18-88-60-88-122V30z" fill="#EEF3F0" fill-opacity="0.06" stroke="#3ED0A2" stroke-opacity="0.55" stroke-width="2"/>
+    <path d="M64 112l24 24 44-52" fill="none" stroke="#3ED0A2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- alert queue -->
+  <g transform="translate(72,336)">
+    <rect width="404" height="228" rx="10" fill="#EEF3F0" fill-opacity="0.05" stroke="#EEF3F0" stroke-opacity="0.16"/>
+    <text x="22" y="36" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2.2" fill="#3ED0A2">ALERT QUEUE</text>
+    <g>
+      <rect x="22" y="54" width="360" height="40" rx="6" fill="#EEF3F0" fill-opacity="0.05"/>
+      <rect x="22" y="102" width="360" height="40" rx="6" fill="#EEF3F0" fill-opacity="0.05"/>
+      <rect x="22" y="150" width="360" height="40" rx="6" fill="#EEF3F0" fill-opacity="0.05"/>
+    </g>
+    <g fill="#EEF3F0" fill-opacity="0.42">
+      <rect x="40" y="68" width="150" height="7" rx="3.5"/>
+      <rect x="40" y="82" width="88" height="6" rx="3" fill-opacity="0.25"/>
+      <rect x="40" y="116" width="118" height="7" rx="3.5"/>
+      <rect x="40" y="130" width="130" height="6" rx="3" fill-opacity="0.25"/>
+      <rect x="40" y="164" width="164" height="7" rx="3.5"/>
+      <rect x="40" y="178" width="76" height="6" rx="3" fill-opacity="0.25"/>
+    </g>
+    <g>
+      <rect x="292" y="64" width="76" height="20" rx="10" fill="#C8536B" fill-opacity="0.85"/>
+      <rect x="292" y="112" width="76" height="20" rx="10" fill="#D8A24B" fill-opacity="0.7"/>
+      <rect x="292" y="160" width="76" height="20" rx="10" fill="#3ED0A2" fill-opacity="0.55"/>
+    </g>
+  </g>
+
+  <!-- workflow lanes -->
+  <g transform="translate(524,336)">
+    <rect width="404" height="228" rx="10" fill="#EEF3F0" fill-opacity="0.05" stroke="#EEF3F0" stroke-opacity="0.16"/>
+    <text x="22" y="36" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2.2" fill="#3ED0A2">VULNERABILITY WORKFLOW</text>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" letter-spacing="1.8" fill="#EEF3F0" fill-opacity="0.4">
+      <text x="22" y="70">TRIAGE</text>
+      <text x="22" y="122">FIX</text>
+      <text x="22" y="174">VERIFY</text>
+    </g>
+    <g>
+      <rect x="110" y="56" width="80" height="18" rx="9" fill="#3ED0A2" fill-opacity="0.85"/>
+      <rect x="200" y="56" width="52" height="18" rx="9" fill="#EEF3F0" fill-opacity="0.14"/>
+      <rect x="110" y="108" width="140" height="18" rx="9" fill="#3ED0A2" fill-opacity="0.5"/>
+      <rect x="110" y="160" width="62" height="18" rx="9" fill="#EEF3F0" fill-opacity="0.14"/>
+      <rect x="182" y="160" width="94" height="18" rx="9" fill="#3ED0A2" fill-opacity="0.3"/>
+    </g>
+    <path d="M96 46v144" stroke="#EEF3F0" stroke-opacity="0.16"/>
+  </g>
+</svg>

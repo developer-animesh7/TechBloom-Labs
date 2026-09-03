@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" role="img" aria-label="Analytics dashboard composition with forecast curve, distribution bars and cohort matrix">
+  <defs>
+    <linearGradient id="di-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101A26"/>
+      <stop offset="1" stop-color="#0A1016"/>
+    </linearGradient>
+    <linearGradient id="di-fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3ED0A2" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#3ED0A2" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="640" fill="url(#di-bg)"/>
+  <g stroke="#EEF3F0" stroke-opacity="0.07">
+    <path d="M0 80h1000M0 160h1000M0 240h1000M0 320h1000M0 400h1000M0 480h1000M0 560h1000"/>
+  </g>
+
+  <!-- forecast chart -->
+  <g transform="translate(72,88)">
+    <text x="0" y="-18" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2.4" fill="#3ED0A2">FORECAST</text>
+    <path d="M0 236 L 0 168 C 60 150 96 196 152 160 C 208 124 244 156 300 108 C 356 60 402 82 460 40 L 460 236 Z" fill="url(#di-fill)"/>
+    <path d="M0 168 C 60 150 96 196 152 160 C 208 124 244 156 300 108 C 356 60 402 82 460 40"
+          fill="none" stroke="#3ED0A2" stroke-width="3" stroke-linecap="round"/>
+    <path d="M460 40 C 500 26 528 44 560 20" fill="none" stroke="#3ED0A2" stroke-width="3" stroke-dasharray="7 7" stroke-opacity="0.7" stroke-linecap="round"/>
+    <g fill="#EEF3F0">
+      <circle cx="152" cy="160" r="4.5" fill-opacity="0.8"/><circle cx="300" cy="108" r="4.5" fill-opacity="0.8"/><circle cx="460" cy="40" r="6"/>
+    </g>
+    <path d="M0 236h564" stroke="#EEF3F0" stroke-opacity="0.22"/>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" letter-spacing="1.8" fill="#EEF3F0" fill-opacity="0.35">
+      <text x="0" y="258">Q1</text><text x="140" y="258">Q2</text><text x="288" y="258">Q3</text><text x="428" y="258">Q4</text><text x="536" y="258">EST</text>
+    </g>
+  </g>
+
+  <!-- distribution bars -->
+  <g transform="translate(72,404)">
+    <text x="0" y="-16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2.4" fill="#EEF3F0" fill-opacity="0.45">DISTRIBUTION</text>
+    <g fill="#EEF3F0" fill-opacity="0.22">
+      <rect x="0" y="64" width="34" height="76" rx="3"/>
+      <rect x="46" y="40" width="34" height="100" rx="3"/>
+      <rect x="92" y="14" width="34" height="126" rx="3" fill="#3ED0A2" fill-opacity="0.85"/>
+      <rect x="138" y="52" width="34" height="88" rx="3"/>
+      <rect x="184" y="88" width="34" height="52" rx="3"/>
+      <rect x="230" y="106" width="34" height="34" rx="3"/>
+      <rect x="276" y="72" width="34" height="68" rx="3"/>
+      <rect x="322" y="96" width="34" height="44" rx="3"/>
+    </g>
+    <path d="M0 140h360" stroke="#EEF3F0" stroke-opacity="0.22"/>
+  </g>
+
+  <!-- KPI stack -->
+  <g transform="translate(700,96)">
+    <g fill="#EEF3F0" fill-opacity="0.06" stroke="#EEF3F0" stroke-opacity="0.16">
+      <rect width="228" height="104" rx="10"/>
+      <rect y="122" width="228" height="104" rx="10"/>
+      <rect y="244" width="228" height="104" rx="10"/>
+    </g>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" letter-spacing="2.2" fill="#3ED0A2">
+      <text x="20" y="32">SIGNAL A</text><text x="20" y="154">SIGNAL B</text><text x="20" y="276">SIGNAL C</text>
+    </g>
+    <g stroke="#3ED0A2" stroke-width="2.4" fill="none" stroke-linecap="round">
+      <path d="M20 76 C 56 58 84 84 118 62 C 152 40 178 66 208 48" stroke-opacity="0.9"/>
+      <path d="M20 198 C 56 210 84 178 118 190 C 152 202 178 172 208 184" stroke-opacity="0.6"/>
+      <path d="M20 320 C 56 300 84 322 118 306 C 152 290 178 312 208 296" stroke-opacity="0.4"/>
+    </g>
+  </g>
+
+  <!-- cohort matrix -->
+  <g transform="translate(474,432)">
+    <text x="0" y="-16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2.4" fill="#EEF3F0" fill-opacity="0.45">COHORTS</text>
+    <g fill="#3ED0A2">
+      <rect x="0" y="0" width="22" height="22" rx="4" fill-opacity="0.85"/><rect x="28" y="0" width="22" height="22" rx="4" fill-opacity="0.3"/><rect x="56" y="0" width="22" height="22" rx="4" fill-opacity="0.55"/><rect x="84" y="0" width="22" height="22" rx="4" fill-opacity="0.15"/><rect x="112" y="0" width="22" height="22" rx="4" fill-opacity="0.65"/><rect x="140" y="0" width="22" height="22" rx="4" fill-opacity="0.2"/><rect x="168" y="0" width="22" height="22" rx="4" fill-opacity="0.4"/><rect x="196" y="0" width="22" height="22" rx="4" fill-opacity="0.12"/>
+      <rect x="0" y="28" width="22" height="22" rx="4" fill-opacity="0.25"/><rect x="28" y="28" width="22" height="22" rx="4" fill-opacity="0.7"/><rect x="56" y="28" width="22" height="22" rx="4" fill-opacity="0.18"/><rect x="84" y="28" width="22" height="22" rx="4" fill-opacity="0.5"/><rect x="112" y="28" width="22" height="22" rx="4" fill-opacity="0.22"/><rect x="140" y="28" width="22" height="22" rx="4" fill-opacity="0.45"/><rect x="168" y="28" width="22" height="22" rx="4" fill-opacity="0.14"/><rect x="196" y="28" width="22" height="22" rx="4" fill-opacity="0.35"/>
+      <rect x="0" y="56" width="22" height="22" rx="4" fill-opacity="0.45"/><rect x="28" y="56" width="22" height="22" rx="4" fill-opacity="0.16"/><rect x="56" y="56" width="22" height="22" rx="4" fill-opacity="0.9"/><rect x="84" y="56" width="22" height="22" rx="4" fill-opacity="0.24"/><rect x="112" y="56" width="22" height="22" rx="4" fill-opacity="0.38"/><rect x="140" y="56" width="22" height="22" rx="4" fill-opacity="0.12"/><rect x="168" y="56" width="22" height="22" rx="4" fill-opacity="0.6"/><rect x="196" y="56" width="22" height="22" rx="4" fill-opacity="0.2"/>
+      <rect x="0" y="84" width="22" height="22" rx="4" fill-opacity="0.14"/><rect x="28" y="84" width="22" height="22" rx="4" fill-opacity="0.4"/><rect x="56" y="84" width="22" height="22" rx="4" fill-opacity="0.2"/><rect x="84" y="84" width="22" height="22" rx="4" fill-opacity="0.75"/><rect x="112" y="84" width="22" height="22" rx="4" fill-opacity="0.16"/><rect x="140" y="84" width="22" height="22" rx="4" fill-opacity="0.3"/><rect x="168" y="84" width="22" height="22" rx="4" fill-opacity="0.5"/><rect x="196" y="84" width="22" height="22" rx="4" fill-opacity="0.18"/>
+    </g>
+  </g>
+</svg>

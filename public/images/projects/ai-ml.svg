@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" role="img" aria-label="Neural network layers with attention grid and document analysis output">
+  <defs>
+    <linearGradient id="ai-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E1F1A"/>
+      <stop offset="1" stop-color="#0A1311"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="640" fill="url(#ai-bg)"/>
+  <g stroke="#EEF3F0" stroke-opacity="0.06">
+    <path d="M0 80h1000M0 160h1000M0 240h1000M0 320h1000M0 400h1000M0 480h1000M0 560h1000"/>
+  </g>
+
+  <!-- network -->
+  <g stroke="#3ED0A2" stroke-opacity="0.22" stroke-width="1">
+    <path d="M140 160 L 340 130 M140 160 L 340 250 M140 160 L 340 370 M140 160 L 340 490"/>
+    <path d="M140 300 L 340 130 M140 300 L 340 250 M140 300 L 340 370 M140 300 L 340 490"/>
+    <path d="M140 440 L 340 130 M140 440 L 340 250 M140 440 L 340 370 M140 440 L 340 490"/>
+    <path d="M340 130 L 540 200 M340 130 L 540 330 M340 130 L 540 450"/>
+    <path d="M340 250 L 540 200 M340 250 L 540 330 M340 250 L 540 450"/>
+    <path d="M340 370 L 540 200 M340 370 L 540 330 M340 370 L 540 450"/>
+    <path d="M340 490 L 540 200 M340 490 L 540 330 M340 490 L 540 450"/>
+  </g>
+  <g stroke="#3ED0A2" stroke-opacity="0.6" stroke-width="1.6">
+    <path d="M140 300 L 340 250 L 540 330"/>
+  </g>
+
+  <g fill="#EEF3F0">
+    <circle cx="140" cy="160" r="9" fill-opacity="0.75"/><circle cx="140" cy="300" r="9"/><circle cx="140" cy="440" r="9" fill-opacity="0.75"/>
+  </g>
+  <g fill="#3ED0A2">
+    <circle cx="340" cy="130" r="8" fill-opacity="0.55"/><circle cx="340" cy="250" r="10"/><circle cx="340" cy="370" r="8" fill-opacity="0.55"/><circle cx="340" cy="490" r="8" fill-opacity="0.4"/>
+    <circle cx="540" cy="200" r="8" fill-opacity="0.5"/><circle cx="540" cy="330" r="11"/><circle cx="540" cy="450" r="8" fill-opacity="0.45"/>
+  </g>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2.2" fill="#EEF3F0" fill-opacity="0.4" text-anchor="middle">
+    <text x="140" y="556">INPUT</text>
+    <text x="340" y="556">HIDDEN</text>
+    <text x="540" y="556">OUTPUT</text>
+  </g>
+
+  <!-- attention grid -->
+  <g transform="translate(648,96)">
+    <text x="0" y="-16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2.4" fill="#3ED0A2">ATTENTION</text>
+    <g fill="#3ED0A2">
+      <rect x="0" y="0" width="26" height="26" fill-opacity="0.85"/><rect x="30" y="0" width="26" height="26" fill-opacity="0.2"/><rect x="60" y="0" width="26" height="26" fill-opacity="0.45"/><rect x="90" y="0" width="26" height="26" fill-opacity="0.12"/><rect x="120" y="0" width="26" height="26" fill-opacity="0.6"/><rect x="150" y="0" width="26" height="26" fill-opacity="0.18"/>
+      <rect x="0" y="30" width="26" height="26" fill-opacity="0.2"/><rect x="30" y="30" width="26" height="26" fill-opacity="0.7"/><rect x="60" y="30" width="26" height="26" fill-opacity="0.15"/><rect x="90" y="30" width="26" height="26" fill-opacity="0.5"/><rect x="120" y="30" width="26" height="26" fill-opacity="0.25"/><rect x="150" y="30" width="26" height="26" fill-opacity="0.4"/>
+      <rect x="0" y="60" width="26" height="26" fill-opacity="0.4"/><rect x="30" y="60" width="26" height="26" fill-opacity="0.14"/><rect x="60" y="60" width="26" height="26" fill-opacity="0.9"/><rect x="90" y="60" width="26" height="26" fill-opacity="0.22"/><rect x="120" y="60" width="26" height="26" fill-opacity="0.35"/><rect x="150" y="60" width="26" height="26" fill-opacity="0.16"/>
+      <rect x="0" y="90" width="26" height="26" fill-opacity="0.15"/><rect x="30" y="90" width="26" height="26" fill-opacity="0.42"/><rect x="60" y="90" width="26" height="26" fill-opacity="0.2"/><rect x="90" y="90" width="26" height="26" fill-opacity="0.75"/><rect x="120" y="90" width="26" height="26" fill-opacity="0.18"/><rect x="150" y="90" width="26" height="26" fill-opacity="0.55"/>
+      <rect x="0" y="120" width="26" height="26" fill-opacity="0.55"/><rect x="30" y="120" width="26" height="26" fill-opacity="0.24"/><rect x="60" y="120" width="26" height="26" fill-opacity="0.3"/><rect x="90" y="120" width="26" height="26" fill-opacity="0.16"/><rect x="120" y="120" width="26" height="26" fill-opacity="0.8"/><rect x="150" y="120" width="26" height="26" fill-opacity="0.28"/>
+    </g>
+  </g>
+
+  <!-- document analysis output -->
+  <g transform="translate(636,318)">
+    <rect width="286" height="212" rx="10" fill="#EEF3F0" fill-opacity="0.06" stroke="#EEF3F0" stroke-opacity="0.18"/>
+    <text x="22" y="38" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2.2" fill="#3ED0A2">EXTRACTED FIELDS</text>
+    <g fill="#EEF3F0" fill-opacity="0.5">
+      <rect x="22" y="58" width="180" height="8" rx="4"/>
+      <rect x="22" y="82" width="132" height="8" rx="4" fill-opacity="0.3"/>
+      <rect x="22" y="106" width="206" height="8" rx="4" fill-opacity="0.4"/>
+      <rect x="22" y="130" width="98" height="8" rx="4" fill-opacity="0.25"/>
+    </g>
+    <g>
+      <rect x="22" y="160" width="90" height="24" rx="12" fill="#3ED0A2" fill-opacity="0.85"/>
+      <rect x="120" y="160" width="66" height="24" rx="12" fill="#EEF3F0" fill-opacity="0.14"/>
+      <rect x="194" y="160" width="50" height="24" rx="12" fill="#EEF3F0" fill-opacity="0.1"/>
+    </g>
+  </g>
+</svg>

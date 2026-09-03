@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1120" role="img" aria-label="Schematic composition showing students connecting to faculty, research projects, internships and career outcomes">
+  <defs>
+    <linearGradient id="hn-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E1F1A"/>
+      <stop offset="0.55" stop-color="#0B1512"/>
+      <stop offset="1" stop-color="#08110F"/>
+    </linearGradient>
+    <linearGradient id="hn-glow" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#3ED0A2" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#3ED0A2" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="hn-grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0v48" fill="none" stroke="#EEF3F0" stroke-opacity="0.055" stroke-width="1"/>
+    </pattern>
+    <filter id="hn-soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="1120" fill="url(#hn-bg)"/>
+  <rect width="960" height="1120" fill="url(#hn-grid)"/>
+  <ellipse cx="740" cy="240" rx="360" ry="300" fill="url(#hn-glow)" filter="url(#hn-soft)"/>
+
+  <!-- horizon rule + axis labels -->
+  <g stroke="#EEF3F0" stroke-opacity="0.16">
+    <path d="M72 176h816"/>
+    <path d="M72 1000h816"/>
+  </g>
+  <g fill="#3ED0A2" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" letter-spacing="3.4">
+    <text x="72" y="148">PATHWAY MAP</text>
+  </g>
+  <g fill="#EEF3F0" fill-opacity="0.42" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" letter-spacing="2.6">
+    <text x="72" y="1042">LEARN</text>
+    <text x="252" y="1042">DISCOVER</text>
+    <text x="470" y="1042">CONNECT</text>
+    <text x="672" y="1042">BUILD</text>
+    <text x="828" y="1042">BLOOM</text>
+  </g>
+
+  <!-- connective network -->
+  <g fill="none" stroke="#3ED0A2" stroke-opacity="0.55" stroke-width="1.6">
+    <path d="M148 856 C 268 856 268 660 388 660"/>
+    <path d="M148 856 C 300 856 320 470 476 470"/>
+    <path d="M388 660 C 520 660 560 470 636 470"/>
+    <path d="M388 660 C 520 660 566 806 660 806"/>
+    <path d="M476 470 C 600 470 620 288 744 288"/>
+    <path d="M636 470 C 720 470 700 288 744 288"/>
+    <path d="M660 806 C 760 806 800 560 848 560"/>
+    <path d="M744 288 C 830 288 848 420 848 560"/>
+  </g>
+  <g fill="none" stroke="#EEF3F0" stroke-opacity="0.14" stroke-width="1">
+    <path d="M148 856 C 380 900 620 940 848 560"/>
+    <path d="M476 470 C 560 620 600 740 660 806"/>
+  </g>
+
+  <!-- nodes -->
+  <g>
+    <circle cx="148" cy="856" r="13" fill="#EEF3F0"/>
+    <circle cx="148" cy="856" r="26" fill="none" stroke="#EEF3F0" stroke-opacity="0.28"/>
+    <circle cx="388" cy="660" r="9" fill="#3ED0A2"/>
+    <circle cx="476" cy="470" r="11" fill="#3ED0A2"/>
+    <circle cx="636" cy="470" r="7" fill="#EEF3F0" fill-opacity="0.8"/>
+    <circle cx="660" cy="806" r="8" fill="#3ED0A2" fill-opacity="0.75"/>
+    <circle cx="744" cy="288" r="10" fill="#EEF3F0"/>
+    <circle cx="848" cy="560" r="15" fill="#3ED0A2"/>
+    <circle cx="848" cy="560" r="30" fill="none" stroke="#3ED0A2" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- node captions -->
+  <g font-family="Inter, system-ui, sans-serif" font-size="19" fill="#EEF3F0" fill-opacity="0.86">
+    <text x="122" y="912">Student</text>
+    <text x="356" y="716">Mentor</text>
+    <text x="444" y="430">Faculty</text>
+    <text x="612" y="430">Lab</text>
+    <text x="620" y="862">Internship</text>
+    <text x="708" y="248">Project</text>
+    <text x="786" y="620">Career</text>
+  </g>
+
+  <!-- data panel -->
+  <g>
+    <rect x="556" y="654" width="316" height="132" rx="10" fill="#0B1512" fill-opacity="0.86" stroke="#EEF3F0" stroke-opacity="0.16"/>
+    <text x="580" y="690" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="2.6" fill="#3ED0A2">PROGRESSION</text>
+    <g stroke="#3ED0A2" stroke-width="6" stroke-linecap="round">
+      <path d="M580 722h72" stroke-opacity="0.95"/>
+      <path d="M664 722h60" stroke-opacity="0.7"/>
+      <path d="M736 722h48" stroke-opacity="0.45"/>
+      <path d="M796 722h52" stroke-opacity="0.22"/>
+    </g>
+    <text x="580" y="760" font-family="Inter, system-ui, sans-serif" font-size="17" fill="#EEF3F0" fill-opacity="0.6">Discover · Connect · Experience · Bloom</text>
+  </g>
+
+  <!-- histogram of domains -->
+  <g transform="translate(72,470)">
+    <text x="0" y="-26" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="2.6" fill="#EEF3F0" fill-opacity="0.5">DOMAINS</text>
+    <g fill="#EEF3F0" fill-opacity="0.2">
+      <rect x="0" y="66" width="16" height="54" rx="2"/>
+      <rect x="26" y="34" width="16" height="86" rx="2"/>
+      <rect x="52" y="82" width="16" height="38" rx="2"/>
+      <rect x="78" y="12" width="16" height="108" rx="2" fill="#3ED0A2" fill-opacity="0.85"/>
+      <rect x="104" y="52" width="16" height="68" rx="2"/>
+      <rect x="130" y="94" width="16" height="26" rx="2"/>
+      <rect x="156" y="44" width="16" height="76" rx="2"/>
+    </g>
+    <path d="M0 132h172" stroke="#EEF3F0" stroke-opacity="0.2"/>
+  </g>
+</svg>

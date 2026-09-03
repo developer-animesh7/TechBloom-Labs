@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="TechBloom mark">
+  <rect width="64" height="64" rx="14" fill="#0B1512"/>
+  <g stroke="#3ED0A2" stroke-width="3.2" stroke-linecap="round" fill="none">
+    <path d="M32 52V30"/>
+    <path d="M32 34c-6.5 0-11-4-11-10"/>
+    <path d="M32 30c6.5 0 11-4.4 11-11"/>
+  </g>
+  <circle cx="21" cy="24" r="4.2" fill="#3ED0A2"/>
+  <circle cx="43" cy="19" r="5.4" fill="#F6F4EF"/>
+  <circle cx="32" cy="42" r="3.2" fill="#F6F4EF" opacity=".55"/>
+</svg>

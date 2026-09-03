@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 56" role="img" aria-label="TechBloom">
+  <g>
+    <rect width="56" height="56" rx="12" fill="#0B1512"/>
+    <g stroke="#3ED0A2" stroke-width="2.8" stroke-linecap="round" fill="none">
+      <path d="M28 45V26"/>
+      <path d="M28 30c-5.7 0-9.6-3.5-9.6-8.7"/>
+      <path d="M28 26c5.7 0 9.6-3.8 9.6-9.6"/>
+    </g>
+    <circle cx="18.4" cy="21" r="3.7" fill="#3ED0A2"/>
+    <circle cx="37.6" cy="16.6" r="4.7" fill="#F6F4EF"/>
+    <circle cx="28" cy="36.6" r="2.8" fill="#F6F4EF" opacity=".55"/>
+  </g>
+  <text x="72" y="36" font-family="'Space Grotesk', 'Segoe UI', system-ui, sans-serif" font-size="26" font-weight="600" letter-spacing="-0.7" fill="#0B1512">Tech<tspan fill="#0C7A5E">Bloom</tspan></text>
+</svg>

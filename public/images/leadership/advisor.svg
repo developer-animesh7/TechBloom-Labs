@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" role="img" aria-label="Placeholder portrait panel reserved for a leadership photograph">
+  <defs>
+    <linearGradient id="pb-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EDE9E0"/>
+      <stop offset="1" stop-color="#DCE2DC"/>
+    </linearGradient>
+    <linearGradient id="pb-form" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0C7A5E" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#0C7A5E" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#pb-bg)"/>
+  <g stroke="#0B1512" stroke-opacity="0.08">
+    <path d="M0 90h600M0 180h600M0 270h600M0 360h600M0 450h600M0 540h600M0 630h600"/>
+    <path d="M75 0v720M150 0v720M225 0v720M300 0v720M375 0v720M450 0v720M525 0v720"/>
+  </g>
+  <rect x="150" y="150" width="300" height="300" rx="150" fill="url(#pb-form)"/>
+  <path d="M300 410c108 0 186 76 196 176H104c10-100 88-176 196-176z" fill="url(#pb-form)"/>
+  <circle cx="300" cy="278" r="112" fill="none" stroke="#0C7A5E" stroke-opacity="0.4"/>
+  <path d="M104 586c10-100 88-176 196-176s186 76 196 176" fill="none" stroke="#0C7A5E" stroke-opacity="0.32"/>
+  <path d="M300 130v-56M300 686v-40" stroke="#0B1512" stroke-opacity="0.18"/>
+</svg>

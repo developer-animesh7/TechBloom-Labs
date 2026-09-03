@@ -1,0 +1,366 @@
+/* ==========================================================================
+   TechBloom Labs — Responsive overrides
+   Desktop 12 columns → tablet 8 columns → mobile 4 columns.
+   Each breakpoint recomposes layouts; nothing is merely scaled down.
+   Verified at 1440, 1280, 1024, 768, 430, 390, 375 and 360.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1440 and below — full editorial scale, slightly tighter panels
+   -------------------------------------------------------------------------- */
+@media (max-width: 1439px) {
+  .hero__panel { max-width: 268px; }
+  .hero__panel--top { left: 0; }
+  .hero__panel--bottom { right: 0; }
+}
+
+/* --------------------------------------------------------------------------
+   1280 and below — 12 columns kept, gutters and spans tightened
+   -------------------------------------------------------------------------- */
+@media (max-width: 1279px) {
+  .trust-strip__list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .tpillars { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .fgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .listing { grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); }
+  .listing__action { grid-column: 1 / -1; justify-self: start; }
+  .pcard--standard { grid-column: span 3; }
+  .career { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); }
+}
+
+/* --------------------------------------------------------------------------
+   1119 and below — mobile navigation takes over (see components.css burger)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1119px) {
+  .hero__inner { grid-template-columns: minmax(0, 1fr); gap: clamp(32px, 5vw, 56px); }
+  .hero__copy { max-width: 44rem; }
+  .hero__title { max-width: 26ch; }
+  .hero__frame { aspect-ratio: 16 / 11; }
+  .hero__media { max-width: 44rem; }
+
+  .about__body { grid-template-columns: minmax(0, 1fr); }
+  .about__media { position: static; max-width: 34rem; }
+
+  .apply { grid-template-columns: minmax(0, 1fr); }
+  .apply__aside { position: static; }
+
+  .propose { grid-template-columns: minmax(0, 1fr); }
+  .propose__aside { position: static; max-width: 44rem; }
+
+  .support { grid-template-columns: minmax(0, 1fr); }
+  .support__aside { position: static; max-width: 44rem; }
+
+  .career { grid-template-columns: minmax(0, 1fr); }
+  .career__panel { position: static; }
+
+  .why { grid-template-columns: minmax(0, 1fr); }
+  .why__left { position: static; }
+
+  .contact { grid-template-columns: minmax(0, 1fr); }
+  .contact--compact .contact__panel { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .tracking__row { grid-template-columns: minmax(0, 1fr) auto; }
+  .tracking__flow { grid-column: 1 / -1; padding-top: var(--s-3); }
+}
+
+/* --------------------------------------------------------------------------
+   1023 and below — 8 column thinking: two-up compositions
+   -------------------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  .grid12 { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+  .col-3 { grid-column: span 4; }
+  .col-4 { grid-column: span 4; }
+  .col-5,
+  .col-6 { grid-column: span 8; }
+  .col-7,
+  .col-8,
+  .col-9,
+  .col-10,
+  .col-11 { grid-column: span 8; }
+  .start-2,
+  .start-3,
+  .start-4,
+  .start-6,
+  .start-7,
+  .start-8 { grid-column-start: auto; }
+
+  .journey__rail { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .journey__step { padding-inline: clamp(16px, 2.4vw, 26px); }
+  .journey__step:nth-child(odd) { padding-left: 0; }
+  .journey__step:nth-child(3),
+  .journey__step:nth-child(4) { border-top: 1px solid var(--ink-hair); }
+  .journey__step:nth-child(3) { border-left: 0; }
+
+  .trust-strip__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .leaders { grid-template-columns: minmax(0, 1fr); }
+
+  .eco { grid-template-columns: minmax(0, 1fr); }
+
+  .programs { grid-template-columns: minmax(0, 1fr); }
+
+  .hub__filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .steps { grid-template-columns: minmax(0, 1fr); }
+
+  .pgrid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .pcard--feature { grid-column: span 4; }
+  .pcard--wide { grid-column: span 4; }
+  .pcard--standard { grid-column: span 2; }
+  .pcard--wide .pcard__hit { grid-template-columns: minmax(0, 1fr); }
+  .pcard--wide .pcard__media { border-right: 0; border-bottom: 1px solid var(--line); min-height: 0; aspect-ratio: 16 / 9; }
+
+  .pdetail__grid { grid-template-columns: minmax(0, 1fr); }
+
+  .tpillars { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .roadmap__years { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .site-footer__mark { font-size: clamp(2.2rem, 13vw, 6rem); }
+}
+
+/* --------------------------------------------------------------------------
+   767 and below — single column stacks, touch spacing
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .hero { padding-top: calc(var(--header-h) + 36px); }
+  .hero__frame { aspect-ratio: 4 / 3; }
+  .hero__panel { position: static; max-width: none; box-shadow: none; }
+  .hero__visual { display: grid; gap: var(--s-3); }
+  .hero__panel--top,
+  .hero__panel--bottom { inset: auto; }
+
+  /* Global mobile typography & whitespace adjustments */
+  .t-display { font-size: clamp(1.75rem, 7vw, 2.15rem) !important; line-height: 1.16 !important; }
+  .t-h1 { font-size: clamp(1.6rem, 6.5vw, 1.95rem) !important; line-height: 1.2 !important; }
+  .t-h2 { font-size: clamp(1.35rem, 5vw, 1.65rem) !important; line-height: 1.25 !important; }
+  .t-lead { font-size: clamp(0.92rem, 3.6vw, 1.05rem) !important; line-height: 1.55 !important; }
+
+  .page-head {
+    padding-top: calc(var(--header-h) + 24px) !important;
+    padding-bottom: clamp(28px, 5vw, 44px) !important;
+  }
+  .page-head__title {
+    font-size: clamp(1.6rem, 6.5vw, 1.95rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Compact editorial journey steps on mobile */
+  .journey {
+    padding-block: var(--s-2) !important;
+  }
+  .journey__rail {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+  .journey__step {
+    padding: 10px 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 3px !important;
+    border-left: 0 !important;
+    border-top: 1px solid var(--ink-hair) !important;
+  }
+  .journey__step:first-child {
+    border-top: 0 !important;
+  }
+  .journey__step + .journey__step {
+    padding-left: 0 !important;
+  }
+  .journey__node {
+    display: none !important;
+  }
+  .journey__head {
+    display: flex !important;
+    align-items: baseline !important;
+    gap: 8px !important;
+  }
+  .journey__num {
+    font-size: 0.72rem !important;
+    color: var(--accent-bright) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.08em !important;
+    flex-shrink: 0 !important;
+  }
+  .journey__title {
+    font-size: 1.02rem !important;
+    font-weight: 600 !important;
+    line-height: 1.25 !important;
+    color: var(--text-on-ink) !important;
+    margin: 0 !important;
+  }
+  .journey__body {
+    font-size: 0.84rem !important;
+    line-height: 1.45 !important;
+    color: var(--text-on-ink-2) !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding-left: 24px !important;
+  }
+
+  /* Brand manifesto compact on mobile */
+  .manifesto {
+    padding: clamp(36px, 6vw, 56px) 0 !important;
+  }
+  .manifesto__statement {
+    font-size: clamp(1.35rem, 5.5vw, 1.85rem) !important;
+    line-height: 1.25 !important;
+    max-width: none !important;
+    letter-spacing: -0.015em !important;
+    margin-bottom: var(--s-3) !important;
+  }
+  .manifesto__lead {
+    font-size: 0.92rem !important;
+    line-height: 1.55 !important;
+  }
+  .manifesto__pillars {
+    gap: var(--s-4) !important;
+    padding-top: var(--s-4) !important;
+    margin-top: var(--s-4) !important;
+  }
+  .manifesto__pillar-title {
+    font-size: 1.05rem !important;
+  }
+  .manifesto__pillar-desc {
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .trust-strip__list { grid-template-columns: minmax(0, 1fr); gap: var(--s-4); }
+
+  .leaders__item { grid-template-columns: minmax(0, 1fr); align-items: start; }
+  .leaders__portrait { max-width: 220px; }
+
+  .flowline::before { left: 15px; }
+  .flowline__stage { padding-left: 52px !important; }
+  .flowline__num { position: static; width: auto; }
+  .flowline__head { flex-wrap: wrap; gap: var(--s-2); }
+  .flowline__dot { left: 10px; top: clamp(28px, 8vw, 36px); transform: none; }
+  .flowline__stage:hover .flowline__dot { transform: scale(1.15); }
+
+  .hub__filters { grid-template-columns: minmax(0, 1fr); }
+  .hub__dimensions { gap: 6px; }
+
+  .listing { grid-template-columns: minmax(0, 1fr); gap: var(--s-4); }
+  .listing__meta { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .steps__item { grid-template-columns: auto minmax(0, 1fr); }
+
+  .tracking__row { grid-template-columns: minmax(0, 1fr); gap: var(--s-3); }
+  .tracking__flow { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; }
+  .tracking__label { font-size: 0.66rem; }
+
+  .pgrid { grid-template-columns: minmax(0, 1fr); }
+  .pcard--feature,
+  .pcard--wide,
+  .pcard--standard { grid-column: span 1; }
+  .pcard--standard .pcard__summary { font-size: var(--fs-sm); }
+  .pcard__reveal { grid-template-rows: 1fr; }
+
+  .domain__hit { grid-template-columns: auto minmax(0, 1fr); row-gap: 8px; }
+  .domain__icon { grid-row: span 2; }
+  .domain__count { grid-column: 2; justify-self: start; }
+  .domain__index { display: none; }
+  .domain__panel { padding-left: 52px; }
+
+  .timeline::before { left: 15px; }
+  .timeline__item { grid-template-columns: 32px minmax(0, 1fr); }
+  .timeline__num { display: none; }
+
+  .fgrid { grid-template-columns: minmax(0, 1fr); }
+  .fbar { align-items: stretch; }
+  .fbar__field { min-width: 0; }
+  .fbar__count { margin-left: 0; }
+
+  .roadmap__years { grid-template-columns: minmax(0, 1fr); }
+  .roadmap__pathway li { font-size: 0.72rem; }
+
+  .tpillars { grid-template-columns: minmax(0, 1fr); }
+
+  .why__list li { grid-template-columns: 34px minmax(0, 1fr); }
+
+  .scats { grid-template-columns: minmax(0, 1fr); }
+
+  .contact--compact .contact__panel { grid-template-columns: minmax(0, 1fr); }
+  .contact__form { padding: var(--s-5); }
+
+  .final__signature { gap: var(--s-3); }
+
+  .modal__foot { justify-content: stretch; }
+  .modal__foot .btn { flex: 1 1 auto; }
+}
+
+/* --------------------------------------------------------------------------
+   430 and below — 4 column thinking, condensed type and full-width actions
+   -------------------------------------------------------------------------- */
+@media (max-width: 430px) {
+  :root {
+    --grid-gap: 14px;
+    --grid-row-gap: 24px;
+  }
+
+  .grid12 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
+  .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 { grid-column: span 4; }
+
+  .actions { gap: var(--s-2); }
+  .actions .btn { width: 100%; }
+  .hero__actions .btn,
+  .final__actions .btn { width: 100%; }
+
+  .sec-head__eyebrow { gap: var(--s-3); }
+
+  .program { padding: var(--s-5); }
+  .program__amount { font-size: 2rem; }
+
+  .listing__meta { grid-template-columns: minmax(0, 1fr); }
+
+  .pcard__body { padding: var(--s-4); }
+
+  .site-footer__leaders { gap: var(--s-4); }
+  .site-footer__bottom { flex-direction: column; align-items: flex-start; }
+}
+
+/* --------------------------------------------------------------------------
+   390 / 375 / 360 — protect the smallest widths from overflow
+   -------------------------------------------------------------------------- */
+@media (max-width: 390px) {
+  :root { --gutter: 16px; }
+
+  .t-display { font-size: clamp(1.65rem, 6.5vw, 1.95rem) !important; line-height: 1.18 !important; }
+  .t-h1 { font-size: clamp(1.5rem, 6vw, 1.8rem) !important; line-height: 1.2 !important; }
+  .t-h2 { font-size: clamp(1.25rem, 4.8vw, 1.5rem) !important; line-height: 1.25 !important; }
+
+  .brand__text { font-size: 1.05rem; }
+  .chip { font-size: 0.74rem; }
+  .support__ticket { font-size: 1.25rem; }
+  .why__question { font-size: 1.5rem; }
+}
+
+@media (max-width: 360px) {
+  :root { --gutter: 16px; }
+
+  .hero__panel { padding: var(--s-3) var(--s-4); }
+  .journey__body { max-width: none; }
+  .final__signature { font-size: 1rem; }
+  .site-footer__mark { font-size: 2rem; }
+  .modal__head { padding-inline: var(--s-4); }
+  .modal__body { padding-inline: var(--s-4); }
+  .modal__foot { padding-inline: var(--s-4); }
+}
+
+/* --------------------------------------------------------------------------
+   Hover-capable pointers only: keep hover-revealed content visible on touch
+   -------------------------------------------------------------------------- */
+@media (hover: none) {
+  .pcard__reveal { grid-template-rows: 1fr; }
+  .nav__link::after { display: none; }
+}
+
+/* --------------------------------------------------------------------------
+   Short viewports: never let the hero force a scroll trap
+   -------------------------------------------------------------------------- */
+@media (max-height: 700px) and (min-width: 1120px) {
+  .hero { padding-top: calc(var(--header-h) + 40px); }
+  .hero__inner { padding-bottom: var(--s-8); }
+}

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" role="img" aria-label="Research bench composition with laboratory glassware, notebook grid and analysis plots">
+  <defs>
+    <linearGradient id="ar-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EFEBE2"/>
+      <stop offset="1" stop-color="#DCE5DF"/>
+    </linearGradient>
+    <pattern id="ar-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0v40" fill="none" stroke="#0B1512" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="ar-liquid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0C7A5E" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#0C7A5E"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="760" fill="url(#ar-bg)"/>
+  <rect width="1000" height="760" fill="url(#ar-grid)"/>
+
+  <!-- bench surface -->
+  <rect x="0" y="600" width="1000" height="160" fill="#0B1512" fill-opacity="0.08"/>
+  <path d="M0 600h1000" stroke="#0B1512" stroke-opacity="0.28"/>
+
+  <!-- beaker -->
+  <g>
+    <path d="M180 380h150l-16 34v170a26 26 0 0 1-26 26h-66a26 26 0 0 1-26-26V414z" fill="#FFFFFF" fill-opacity="0.55" stroke="#0B1512" stroke-opacity="0.55" stroke-width="2.4"/>
+    <path d="M182 470h146v114a26 26 0 0 1-26 26h-94a26 26 0 0 1-26-26z" fill="url(#ar-liquid)" opacity="0.9"/>
+    <g stroke="#0B1512" stroke-opacity="0.4" stroke-width="2">
+      <path d="M300 430h22"/><path d="M300 460h22"/><path d="M300 490h22"/>
+    </g>
+    <circle cx="230" cy="520" r="7" fill="#FFFFFF" fill-opacity="0.5"/>
+    <circle cx="262" cy="552" r="4.5" fill="#FFFFFF" fill-opacity="0.45"/>
+  </g>
+
+  <!-- flask -->
+  <g>
+    <path d="M404 396h72v70l62 132a30 30 0 0 1-27 44h-142a30 30 0 0 1-27-44l62-132z" fill="#FFFFFF" fill-opacity="0.5" stroke="#0B1512" stroke-opacity="0.55" stroke-width="2.4"/>
+    <path d="M382 540h116l31 66a24 24 0 0 1-21 36h-136a24 24 0 0 1-21-36z" fill="#0C7A5E" fill-opacity="0.55"/>
+    <rect x="398" y="376" width="84" height="16" rx="6" fill="#0B1512" fill-opacity="0.6"/>
+  </g>
+
+  <!-- test tube rack -->
+  <g transform="translate(600,430)">
+    <rect x="0" y="128" width="188" height="18" rx="4" fill="#0B1512" fill-opacity="0.5"/>
+    <g stroke="#0B1512" stroke-opacity="0.5" stroke-width="2.2" fill="#FFFFFF" fill-opacity="0.5">
+      <rect x="16" y="20" width="26" height="122" rx="13"/>
+      <rect x="58" y="20" width="26" height="122" rx="13"/>
+      <rect x="100" y="20" width="26" height="122" rx="13"/>
+      <rect x="142" y="20" width="26" height="122" rx="13"/>
+    </g>
+    <g fill="#0C7A5E">
+      <rect x="18" y="84" width="22" height="56" rx="11" fill-opacity="0.85"/>
+      <rect x="60" y="62" width="22" height="78" rx="11" fill-opacity="0.6"/>
+      <rect x="102" y="98" width="22" height="42" rx="11" fill-opacity="0.9"/>
+      <rect x="144" y="72" width="22" height="68" rx="11" fill-opacity="0.45"/>
+    </g>
+  </g>
+
+  <!-- analysis plot card -->
+  <g transform="translate(596,96)">
+    <rect x="0" y="0" width="330" height="252" rx="10" fill="#FFFFFF" fill-opacity="0.86" stroke="#0B1512" stroke-opacity="0.2"/>
+    <text x="24" y="40" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" letter-spacing="2.4" fill="#0C7A5E">ANALYSIS</text>
+    <g stroke="#0B1512" stroke-opacity="0.16">
+      <path d="M24 76h282"/><path d="M24 124h282"/><path d="M24 172h282"/>
+    </g>
+    <path d="M24 196 L 72 168 L 118 178 L 164 132 L 210 140 L 256 92 L 306 70" fill="none" stroke="#0C7A5E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="#0C7A5E">
+      <circle cx="72" cy="168" r="4"/><circle cx="164" cy="132" r="4"/><circle cx="256" cy="92" r="4"/><circle cx="306" cy="70" r="5"/>
+    </g>
+    <path d="M24 216h282" stroke="#0B1512" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- notebook -->
+  <g transform="translate(150,110)">
+    <rect x="0" y="0" width="300" height="204" rx="8" fill="#FFFFFF" fill-opacity="0.8" stroke="#0B1512" stroke-opacity="0.2"/>
+    <g stroke="#0B1512" stroke-opacity="0.18">
+      <path d="M28 52h244"/><path d="M28 86h244"/><path d="M28 120h196"/><path d="M28 154h222"/>
+    </g>
+    <rect x="28" y="24" width="104" height="12" rx="4" fill="#0C7A5E" fill-opacity="0.8"/>
+    <path d="M14 0v204" stroke="#0B1512" stroke-opacity="0.25"/>
+  </g>
+</svg>
