@@ -6,10 +6,12 @@ Corporate web platform for TechBloom Labs — an ecosystem connecting students, 
 
 - **Positioning:** *Where research meets real-world innovation.*
 - **Address:** 305 Jessore Road, Kolkata 700089, West Bengal, India
-- **Contact:** animeshpatra7908@gmail.com
+- **Contact:** contact@techbloomlabs.com
 - **Leadership:**
   - **Prof. Dr. Himadri Nath Saha** — Chief Advisor & Head
   - **Prof. Bhabani Prasad Roy** — Chief Marketing Adviser
+  - **Sreyan Saha** — DIRECTOR OF AI AND INNOVATION
+  - **Tanisha Saha** — Director of Web Development
 
 ---
 
@@ -38,10 +40,10 @@ npm run preview  # preview production bundle
 - **Projects (`/projects`)**: Curated project portfolio with domain filtering.
 - **Project Detail (`/projects/:slug`)**: Full project specifications, problem formulation, architecture overview, and inquiry actions.
 - **Our Team (`/experts`)**:
-  - Leadership: Prof. Dr. Himadri Nath Saha & Prof. Bhabani Prasad Roy
+  - Leadership: Prof. Dr. Himadri Nath Saha, Prof. Bhabani Prasad Roy, Sreyan Saha, Tanisha Saha
   - World-Class Mentors: Avnish Kumar, Soummyo Priyo Chattopadhyay, Phillip G. Bradford
   - Engineering Team: Animesh Patra, Amitava Giri, Soumosish Jana
-- **Contact (`/contact`)**: Centralized contact interface routed to `animeshpatra7908@gmail.com`.
+- **Contact (`/contact`)**: Centralized contact interface routed to `contact@techbloomlabs.com`.
 - **Support (`/support`)**: Support issue triage and ticket drafting.
 - **Privacy Policy (`/privacy`)** & **Terms of Use (`/terms`)**: Transparent legal disclaimers and data handling principles.
 
@@ -50,6 +52,6 @@ npm run preview  # preview production bundle
 ## Configuration
 
 Environment variables can be specified in `.env` (refer to `.env.example`):
-- `VITE_CONTACT_EMAIL`: Official contact destination (defaults to `animeshpatra7908@gmail.com`).
+- `VITE_CONTACT_EMAIL`: Official contact destination (defaults to `contact@techbloomlabs.com`).
 - `VITE_CONTACT_ENDPOINT`: Optional network endpoint for handling JSON form submissions.
 - `VITE_SITE_URL`: Base URL for Open Graph and metadata generation.

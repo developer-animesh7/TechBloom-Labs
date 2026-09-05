@@ -5,14 +5,23 @@ import SectionHeading from '../components/common/SectionHeading.jsx';
 import Reveal from '../components/common/Reveal.jsx';
 import Button from '../components/common/Button.jsx';
 import ArrowIcon from '../components/common/ArrowIcon.jsx';
-import { chiefAdvisorHead, chiefMarketingAdviser, mentors, engineeringTeam, companyName } from '../data/company.js';
+import {
+  chiefAdvisorHead,
+  chiefMarketingAdviser,
+  directorAI,
+  directorWeb,
+  mentors,
+  engineeringTeam,
+  companyName,
+  CONTACT_EMAIL
+} from '../data/company.js';
 import { Award, Document, Check } from '../assets/icons/index.jsx';
 
 /**
  * Our Team Page — Dedicated editorial presentation of TechBloom Labs team hierarchy:
- * 1. Leadership (Prof. Dr. Himadri Nath Saha & Prof. Bhabani Prasad Roy)
+ * 1. Leadership (Prof. Dr. Himadri Nath Saha, Prof. Bhabani Prasad Roy, Sreyan Saha, Tanisha Saha)
  * 2. Top World-Class Mentors (AWS, Deloitte Canada, Computer Science academia)
- * 3. Engineering Team (Clean, technical typographic presentation — NO photos)
+ * 3. Engineering Team (Clean, technical typographic presentation with verified profile links)
  */
 export default function ExpertsPage() {
   useEffect(() => {
@@ -62,7 +71,7 @@ export default function ExpertsPage() {
           <div style={{ marginTop: 'var(--s-6)' }}>
             <div className="team-subhead">
               <h2 className="team-subhead__title">Leadership</h2>
-              <span className="team-subhead__count">02 PROFILES</span>
+              <span className="team-subhead__count">04 PROFILES</span>
             </div>
 
             <div className="team-leadership-grid">
@@ -146,6 +155,42 @@ export default function ExpertsPage() {
                   </div>
                 </div>
               </article>
+
+              {/* Profile 03: Sreyan Saha */}
+              <article className="team-lead-card">
+                <div className="team-lead-card__media">
+                  <img
+                    src={directorAI.portrait}
+                    alt={directorAI.portraitAlt}
+                    className="team-lead-card__img"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+
+                <div className="team-lead-card__body">
+                  <span className="badge badge--open">{directorAI.role}</span>
+                  <h3 className="team-lead-card__name">{directorAI.name}</h3>
+                </div>
+              </article>
+
+              {/* Profile 04: Tanisha Saha */}
+              <article className="team-lead-card">
+                <div className="team-lead-card__media">
+                  <img
+                    src={directorWeb.portrait}
+                    alt={directorWeb.portraitAlt}
+                    className="team-lead-card__img"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+
+                <div className="team-lead-card__body">
+                  <span className="badge badge--open">{directorWeb.role}</span>
+                  <h3 className="team-lead-card__name">{directorWeb.name}</h3>
+                </div>
+              </article>
             </div>
           </div>
 
@@ -165,7 +210,21 @@ export default function ExpertsPage() {
                     <span className="mentor-card__num">{mentor.num}</span>
                     <span className="badge badge--sm">Mentor</span>
                   </div>
-                  <h3 className="mentor-card__name">{mentor.name}</h3>
+                  <h3 className="mentor-card__name">
+                    {mentor.profileUrl || mentor.linkedin ? (
+                      <a
+                        href={mentor.profileUrl || mentor.linkedin}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        style={{ color: 'inherit', textDecoration: 'none' }}
+                        aria-label={`${mentor.name} profile (opens in a new tab)`}
+                      >
+                        {mentor.name}
+                      </a>
+                    ) : (
+                      mentor.name
+                    )}
+                  </h3>
                   <p className="mentor-card__role">{mentor.role}</p>
 
                   {mentor.linkedin && (
@@ -177,6 +236,19 @@ export default function ExpertsPage() {
                       aria-label={`${mentor.name} LinkedIn profile (opens in a new tab)`}
                     >
                       <span>LinkedIn Profile</span>
+                      <ArrowIcon size={12} />
+                    </a>
+                  )}
+
+                  {mentor.profileUrl && (
+                    <a
+                      href={mentor.profileUrl}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="mentor-card__link"
+                      aria-label={`${mentor.name} profile (opens in a new tab)`}
+                    >
+                      <span>Profile</span>
                       <ArrowIcon size={12} />
                     </a>
                   )}
@@ -203,9 +275,37 @@ export default function ExpertsPage() {
                     </div>
                     <span className="engineer-card__index">{member.num}</span>
                   </div>
-                  <h3 className="engineer-card__name">{member.name}</h3>
+                  <h3 className="engineer-card__name">
+                    {member.linkedin ? (
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        style={{ color: 'inherit', textDecoration: 'none' }}
+                        aria-label={`${member.name} LinkedIn profile (opens in a new tab)`}
+                      >
+                        {member.name}
+                      </a>
+                    ) : (
+                      member.name
+                    )}
+                  </h3>
                   <p className="engineer-card__role">{member.role}</p>
                   <span className="engineer-card__domain">{member.domain}</span>
+
+                  {member.linkedin && (
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="mentor-card__link"
+                      style={{ marginTop: 'var(--s-3)' }}
+                      aria-label={`${member.name} LinkedIn profile (opens in a new tab)`}
+                    >
+                      <span>LinkedIn Profile</span>
+                      <ArrowIcon size={12} />
+                    </a>
+                  )}
                 </div>
               ))}
             </div>
@@ -221,7 +321,10 @@ export default function ExpertsPage() {
               Collaborate With Our Team
             </Reveal>
             <Reveal as="p" className="t-lead" delay={80}>
-              Whether you are an institution seeking research guidance, a domain specialist interested in mentorship, or an engineer building systems, connect with TechBloom Labs.
+              Whether you are an institution seeking research guidance, a domain specialist interested in mentorship, or an engineer building systems, connect with TechBloom Labs at{' '}
+              <a className="link" href={`mailto:${CONTACT_EMAIL}`}>
+                {CONTACT_EMAIL}
+              </a>.
             </Reveal>
             <Reveal className="actions" delay={120} style={{ justifyContent: 'center', marginTop: 'var(--s-4)' }}>
               <Button to="/contact" variant="primary" arrow>

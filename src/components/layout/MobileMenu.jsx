@@ -1,10 +1,10 @@
 import { useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Close, Pin } from '../../assets/icons/index.jsx';
+import { Close, Pin, Mail } from '../../assets/icons/index.jsx';
 import BloomMark from '../../assets/illustrations/BloomMark.jsx';
 import NavCTA from '../navigation/NavCTA.jsx';
 import { mobileNav, legalNav } from '../../data/navigation.js';
-import { companyName, address } from '../../data/company.js';
+import { companyName, address, CONTACT_EMAIL } from '../../data/company.js';
 
 const FOCUSABLE = 'a[href], button:not([disabled])';
 
@@ -125,6 +125,15 @@ export default function MobileMenu({ open, onClose }) {
         <NavCTA variant="bright" size="md" onClick={onClose} />
         <p className="nav-drawer__meta">
           <Pin size={15} /> {address.street}, {address.city}, {address.region}
+        </p>
+        <p className="nav-drawer__meta" style={{ marginTop: '4px' }}>
+          <Mail size={15} />{' '}
+          <a
+            href={`mailto:${CONTACT_EMAIL}`}
+            style={{ color: 'var(--accent-bright)', textDecoration: 'none' }}
+          >
+            {CONTACT_EMAIL}
+          </a>
         </p>
       </div>
     </div>

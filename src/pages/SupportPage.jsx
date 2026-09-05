@@ -5,7 +5,7 @@ import Reveal from '../components/common/Reveal.jsx';
 import Button from '../components/common/Button.jsx';
 import Support from '../components/support/Support.jsx';
 import VerifiedOpportunities from '../components/trust/VerifiedOpportunities.jsx';
-import { companyName, tagline } from '../data/company.js';
+import { companyName, tagline, CONTACT_EMAIL } from '../data/company.js';
 
 export default function SupportPage() {
   useEffect(() => {
@@ -49,7 +49,10 @@ export default function SupportPage() {
               Still Need Help?
             </Reveal>
             <Reveal as="p" className="t-lead" delay={80}>
-              Our coordination team is available to assist with onboarding, institutional inquiries, and partner integration.
+              Our coordination team is available to assist with onboarding, institutional inquiries, and partner integration. You can also write directly to{' '}
+              <a className="link" href={`mailto:${CONTACT_EMAIL}`}>
+                {CONTACT_EMAIL}
+              </a>.
             </Reveal>
             <Reveal className="actions" delay={120} style={{ justifyContent: 'center' }}>
               <Button to="/contact" variant="primary" arrow>

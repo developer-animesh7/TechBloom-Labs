@@ -72,7 +72,33 @@ export const chiefMarketingAdviser = {
 // Aliases for compatibility
 export const chiefExecutive = chiefAdvisorHead;
 export const chiefAdvisor = chiefMarketingAdviser;
-export const leadership = [chiefAdvisorHead, chiefMarketingAdviser];
+
+export const directorAI = {
+  name: 'Sreyan Saha',
+  displayName: 'Sreyan Saha',
+  role: 'DIRECTOR OF AI AND INNOVATION',
+  fullRole: 'DIRECTOR OF AI AND INNOVATION — TechBloom Labs',
+  initials: 'SS',
+  portrait: '/images/leadership/Sreyan Saha.jpeg',
+  portraitAlt: 'Sreyan Saha, DIRECTOR OF AI AND INNOVATION at TechBloom Labs'
+};
+
+export const directorWeb = {
+  name: 'Tanisha Saha',
+  displayName: 'Tanisha Saha',
+  role: 'Director of Web Development',
+  fullRole: 'Director of Web Development — TechBloom Labs',
+  initials: 'TS',
+  portrait: '/images/leadership/Tanisha Saha.jpeg',
+  portraitAlt: 'Tanisha Saha, Director of Web Development at TechBloom Labs'
+};
+
+export const leadership = [
+  chiefAdvisorHead,
+  chiefMarketingAdviser,
+  directorAI,
+  directorWeb
+];
 
 /* --------------------------------------------------------------------------
    Top World-Class Mentors (Strictly verified profiles without placeholder data)
@@ -95,7 +121,8 @@ export const mentors = [
     id: 'M-03',
     num: '03',
     name: 'Phillip G. Bradford',
-    role: 'Associate Professor-in-Residence, Computer Science'
+    role: 'Associate Professor-in-Residence, Computer Science',
+    profileUrl: 'https://stamford.uconn.edu/person/phillip-g-bradford/'
   }
 ];
 
@@ -109,7 +136,8 @@ export const engineeringTeam = [
     name: 'Animesh Patra',
     role: 'Software Development Engineer — AI',
     initials: 'AP',
-    domain: 'Artificial Intelligence & Systems'
+    domain: 'Artificial Intelligence & Systems',
+    linkedin: 'https://www.linkedin.com/in/animesh-patra2004/'
   },
   {
     id: 'ENG-02',
@@ -117,7 +145,8 @@ export const engineeringTeam = [
     name: 'Amitava Giri',
     role: 'AI & Cloud Engineer',
     initials: 'AG',
-    domain: 'Cloud Architecture & Intelligence'
+    domain: 'Cloud Architecture & Intelligence',
+    linkedin: 'https://www.linkedin.com/in/amitava-giri/'
   },
   {
     id: 'ENG-03',
@@ -125,17 +154,16 @@ export const engineeringTeam = [
     name: 'Soumosish Jana',
     role: 'Full Stack Engineer — AI',
     initials: 'SJ',
-    domain: 'Full Stack Applications & AI'
+    domain: 'Full Stack Applications & AI',
+    linkedin: 'https://www.linkedin.com/in/soumosish-jana-a28050342/'
   }
 ];
 
 /* --------------------------------------------------------------------------
    Contact destination.
-   No email address has been supplied, so none is invented here. Set
-   VITE_CONTACT_EMAIL in .env and every form composes its message to it.
-   Set VITE_CONTACT_ENDPOINT to submit over the network instead.
+   When set, every form composes its message to it.
    -------------------------------------------------------------------------- */
-export const CONTACT_EMAIL = env.VITE_CONTACT_EMAIL || 'animeshpatra7908@gmail.com';
+export const CONTACT_EMAIL = env.VITE_CONTACT_EMAIL || 'contact@techbloomlabs.com';
 export const CONTACT_PHONE = env.VITE_CONTACT_PHONE || '';
 export const CONTACT_ENDPOINT = env.VITE_CONTACT_ENDPOINT || '';
 export const SITE_URL = env.VITE_SITE_URL || website;

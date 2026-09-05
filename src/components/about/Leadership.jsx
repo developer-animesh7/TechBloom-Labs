@@ -4,12 +4,12 @@ import SectionHeading from '../common/SectionHeading.jsx';
 import PageContainer from '../layout/PageContainer.jsx';
 import Section from '../layout/Section.jsx';
 import Button from '../common/Button.jsx';
-import { chiefAdvisorHead, chiefMarketingAdviser } from '../../data/company.js';
+import { chiefAdvisorHead, chiefMarketingAdviser, directorAI, directorWeb } from '../../data/company.js';
 import { testimonials } from '../../data/testimonials.js';
 
 /**
  * Leadership section on About page.
- * Displays Chief Advisor & Head and Chief Marketing Adviser with compact, refined cards.
+ * Displays Leadership team with compact, refined cards.
  */
 export default function Leadership() {
   return (
@@ -20,7 +20,7 @@ export default function Leadership() {
           eyebrow="Leadership"
           id="leadership-title"
           title="The People Behind TechBloom Labs"
-          lead="TechBloom Labs is guided by distinguished academic leadership and strategic marketing advisory."
+          lead="TechBloom Labs is guided by distinguished academic leadership, strategic advisory, and innovation directors."
           aside={
             <Button to="/experts" arrow>
               Meet Our Team
@@ -74,6 +74,42 @@ export default function Leadership() {
                 <span className="chip chip--sm">Chief Marketing Adviser</span>
                 <span className="chip chip--sm">Strategic Advisory</span>
               </div>
+            </div>
+          </Reveal>
+
+          {/* Profile 03: Sreyan Saha */}
+          <Reveal className="team-lead-card" delay={150}>
+            <div className="team-lead-card__media">
+              <img
+                src={directorAI.portrait}
+                alt={directorAI.portraitAlt}
+                className="team-lead-card__img"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            <div className="team-lead-card__body">
+              <span className="badge badge--open">{directorAI.role}</span>
+              <h3 className="team-lead-card__name">{directorAI.name}</h3>
+            </div>
+          </Reveal>
+
+          {/* Profile 04: Tanisha Saha */}
+          <Reveal className="team-lead-card" delay={200}>
+            <div className="team-lead-card__media">
+              <img
+                src={directorWeb.portrait}
+                alt={directorWeb.portraitAlt}
+                className="team-lead-card__img"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            <div className="team-lead-card__body">
+              <span className="badge badge--open">{directorWeb.role}</span>
+              <h3 className="team-lead-card__name">{directorWeb.name}</h3>
             </div>
           </Reveal>
         </div>

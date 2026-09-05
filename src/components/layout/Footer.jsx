@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import BloomMark from '../../assets/illustrations/BloomMark.jsx';
 import PageContainer from './PageContainer.jsx';
 import { footerNav, legalNav } from '../../data/navigation.js';
-import { companyName, tagline, address, leadership } from '../../data/company.js';
+import { companyName, tagline, address, leadership, CONTACT_EMAIL } from '../../data/company.js';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -32,6 +32,14 @@ export default function Footer() {
               {address.city}
               <br />
               {address.region}
+              <br />
+              <a
+                className="link"
+                href={`mailto:${CONTACT_EMAIL}`}
+                style={{ color: 'var(--accent-bright)', textDecoration: 'none', display: 'inline-block', marginTop: '6px' }}
+              >
+                {CONTACT_EMAIL}
+              </a>
             </address>
           </div>
 
