@@ -5,10 +5,18 @@
  */
 export default function LeaderCard({ leader, index, onSelect }) {
   const num = String(index + 1).padStart(2, '0');
+  const nameLower = (leader.name || '').toLowerCase();
+  const slug = nameLower.includes('himadri')
+    ? 'himadri'
+    : nameLower.includes('bhabani')
+      ? 'bhabani'
+      : nameLower.includes('sreyan')
+        ? 'sreyan'
+        : 'tanisha';
 
   return (
     <article
-      className="team-leadership-card"
+      className={`team-leadership-card team-leadership-card--${slug} leader-card--${slug}`}
       onClick={() => onSelect(leader)}
       tabIndex={0}
       role="button"
@@ -20,11 +28,11 @@ export default function LeaderCard({ leader, index, onSelect }) {
       }}
       aria-label={`View details for ${leader.name}`}
     >
-      <div className="team-leadership-card__media">
+      <div className="team-leadership-card__media leader-card__image">
         <img
           src={leader.portrait}
           alt={leader.portraitAlt || `${leader.name}, ${leader.role} at TechBloom Labs`}
-          className={`team-leadership-card__img team-leadership-card__img--${index}`}
+          className={`team-leadership-card__img team-leadership-card__img--${index} team-leadership-card__img--${slug}`}
           loading="lazy"
           decoding="async"
         />

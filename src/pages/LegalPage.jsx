@@ -69,12 +69,14 @@ const CONTENT = {
 export default function LegalPage({ kind = 'privacy' }) {
   const content = CONTENT[kind] || CONTENT.privacy;
 
+  const docTitle = kind === 'privacy' ? 'Privacy' : kind === 'terms' ? 'Terms' : content.title;
+
   useEffect(() => {
-    document.title = `${content.title} — ${companyName}`;
+    document.title = `${docTitle}: ${companyName}`;
     return () => {
-      document.title = 'TechBloom Labs — Where Learning Meets Opportunity';
+      document.title = 'TechBloom Labs: Where Learning Meets Opportunity';
     };
-  }, [content.title]);
+  }, [docTitle]);
 
   return (
     <>

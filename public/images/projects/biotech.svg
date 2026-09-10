@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" role="img" aria-label="Biotechnology laboratory experiment tracking with DNA sequence helix, well plates and protocol run stages">
+  <defs>
+    <linearGradient id="bio-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8F1ED"/>
+      <stop offset="100%" stop-color="#D4E4DC"/>
+    </linearGradient>
+    <linearGradient id="bio-plate" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#E7EDE7" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="640" fill="url(#bio-bg)"/>
+  
+  <!-- Subtle coordinate grid -->
+  <g stroke="#2C6455" stroke-opacity="0.08" stroke-width="1">
+    <path d="M50 0v640M150 0v640M250 0v640M350 0v640M450 0v640M550 0v640M650 0v640M750 0v640M850 0v640M950 0v640"/>
+    <path d="M0 64h1000M0 128h1000M0 192h1000M0 256h1000M0 320h1000M0 384h1000M0 448h1000M0 512h1000M0 576h1000"/>
+  </g>
+
+  <!-- Left: Multi-well microplate representation -->
+  <g transform="translate(80, 120)">
+    <rect width="360" height="380" rx="14" fill="url(#bio-plate)" stroke="#2C6455" stroke-opacity="0.25" stroke-width="2"/>
+    <text x="24" y="38" font-family="ui-monospace, monospace" font-size="12" letter-spacing="2" fill="#2C6455" font-weight="700">ASSAY WELL PLATE · RUN #084</text>
+    
+    <!-- 4x6 Well Grid -->
+    <g fill="#FFFFFF" stroke="#2C6455" stroke-opacity="0.3" stroke-width="1.5">
+      <!-- Row 1 -->
+      <circle cx="60" cy="90" r="18"/>
+      <circle cx="120" cy="90" r="18"/>
+      <circle cx="180" cy="90" r="18"/>
+      <circle cx="240" cy="90" r="18"/>
+      <circle cx="300" cy="90" r="18"/>
+
+      <!-- Row 2 -->
+      <circle cx="60" cy="150" r="18"/>
+      <circle cx="120" cy="150" r="18"/>
+      <circle cx="180" cy="150" r="18"/>
+      <circle cx="240" cy="150" r="18"/>
+      <circle cx="300" cy="150" r="18"/>
+
+      <!-- Row 3 -->
+      <circle cx="60" cy="210" r="18"/>
+      <circle cx="120" cy="210" r="18"/>
+      <circle cx="180" cy="210" r="18"/>
+      <circle cx="240" cy="210" r="18"/>
+      <circle cx="300" cy="210" r="18"/>
+
+      <!-- Row 4 -->
+      <circle cx="60" cy="270" r="18"/>
+      <circle cx="120" cy="270" r="18"/>
+      <circle cx="180" cy="270" r="18"/>
+      <circle cx="240" cy="270" r="18"/>
+      <circle cx="300" cy="270" r="18"/>
+
+      <!-- Row 5 -->
+      <circle cx="60" cy="330" r="18"/>
+      <circle cx="120" cy="330" r="18"/>
+      <circle cx="180" cy="330" r="18"/>
+      <circle cx="240" cy="330" r="18"/>
+      <circle cx="300" cy="330" r="18"/>
+    </g>
+
+    <!-- Active Sample Titration Indicators -->
+    <g fill="#0C7A5E">
+      <circle cx="60" cy="90" r="12" fill-opacity="0.85"/>
+      <circle cx="120" cy="90" r="12" fill-opacity="0.7"/>
+      <circle cx="180" cy="90" r="12" fill-opacity="0.55"/>
+      <circle cx="240" cy="90" r="12" fill-opacity="0.3"/>
+      <circle cx="300" cy="90" r="12" fill-opacity="0.15"/>
+
+      <circle cx="60" cy="150" r="12" fill-opacity="0.9"/>
+      <circle cx="120" cy="150" r="12" fill-opacity="0.8"/>
+      <circle cx="180" cy="150" r="12" fill-opacity="0.6"/>
+      <circle cx="240" cy="150" r="12" fill-opacity="0.4"/>
+
+      <circle cx="60" cy="210" r="12" fill-opacity="0.75"/>
+      <circle cx="120" cy="210" r="12" fill-opacity="0.65"/>
+      <circle cx="180" cy="210" r="12" fill-opacity="0.45"/>
+    </g>
+    <g fill="#3ED0A2">
+      <circle cx="60" cy="270" r="12" fill-opacity="0.8"/>
+      <circle cx="120" cy="270" r="12" fill-opacity="0.6"/>
+      <circle cx="180" cy="270" r="12" fill-opacity="0.35"/>
+      <circle cx="60" cy="330" r="12" fill-opacity="0.9"/>
+      <circle cx="120" cy="330" r="12" fill-opacity="0.75"/>
+    </g>
+  </g>
+
+  <!-- Right: Stylized DNA Double Helix Structure -->
+  <g transform="translate(540, 90)">
+    <!-- Base pair connectors -->
+    <g stroke="#2C6455" stroke-opacity="0.45" stroke-width="2">
+      <line x1="80" y1="40" x2="280" y2="40"/>
+      <line x1="110" y1="90" x2="250" y2="90"/>
+      <line x1="150" y1="140" x2="210" y2="140"/>
+      <line x1="180" y1="190" x2="180" y2="190"/>
+      <line x1="150" y1="240" x2="210" y2="240"/>
+      <line x1="110" y1="290" x2="250" y2="290"/>
+      <line x1="80" y1="340" x2="280" y2="340"/>
+      <line x1="110" y1="390" x2="250" y2="390"/>
+      <line x1="150" y1="440" x2="210" y2="440"/>
+    </g>
+
+    <!-- Helix Strand 1 -->
+    <path d="M80 40 C140 100, 220 160, 220 210 C220 260, 140 320, 80 340 C20 360, 20 420, 80 460" 
+          fill="none" stroke="#0C7A5E" stroke-width="4.5" stroke-linecap="round"/>
+
+    <!-- Helix Strand 2 -->
+    <path d="M280 40 C220 100, 140 160, 140 210 C140 260, 220 320, 280 340 C340 360, 340 420, 280 460" 
+          fill="none" stroke="#2C6455" stroke-width="4.5" stroke-linecap="round"/>
+
+    <!-- Nucleotide nodes -->
+    <g fill="#0C7A5E">
+      <circle cx="80" cy="40" r="8"/>
+      <circle cx="110" cy="90" r="7"/>
+      <circle cx="150" cy="140" r="7"/>
+      <circle cx="210" cy="240" r="7"/>
+      <circle cx="250" cy="290" r="7"/>
+      <circle cx="280" cy="340" r="8"/>
+    </g>
+    <g fill="#3ED0A2">
+      <circle cx="280" cy="40" r="8"/>
+      <circle cx="250" cy="90" r="7"/>
+      <circle cx="210" cy="140" r="7"/>
+      <circle cx="150" cy="240" r="7"/>
+      <circle cx="110" cy="290" r="7"/>
+      <circle cx="80" cy="340" r="8"/>
+    </g>
+
+    <!-- Lab Telemetry Data Card -->
+    <g transform="translate(20, 390)">
+      <rect width="320" height="96" rx="8" fill="#FFFFFF" fill-opacity="0.85" stroke="#2C6455" stroke-opacity="0.2" stroke-width="1.5"/>
+      <text x="16" y="28" font-family="ui-monospace, monospace" font-size="11" letter-spacing="1.5" fill="#2C6455" font-weight="700">EXPERIMENT PROTOCOL TRACKING</text>
+      <text x="16" y="52" font-family="ui-monospace, monospace" font-size="10" fill="#4C5A54">SEQUENCE: LAB-EXP-TX-9902</text>
+      <text x="16" y="74" font-family="ui-monospace, monospace" font-size="10" fill="#0C7A5E" font-weight="600">VALIDATED PROTOCOL STAGES: 100%</text>
+    </g>
+  </g>
+</svg>

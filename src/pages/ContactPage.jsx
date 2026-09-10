@@ -35,7 +35,7 @@ export default function ContactPage() {
   }, [search]);
 
   useEffect(() => {
-    document.title = `Contact — ${companyName}`;
+    document.title = `Contact: ${companyName}`;
     window.scrollTo(0, 0);
   }, []);
 

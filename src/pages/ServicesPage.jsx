@@ -14,7 +14,7 @@ export default function ServicesPage() {
   const [activeRow, setActiveRow] = useState(null);
 
   useEffect(() => {
-    document.title = `Services — ${companyName}`;
+    document.title = `Services: ${companyName}`;
     window.scrollTo(0, 0);
   }, []);
 

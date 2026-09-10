@@ -7,7 +7,7 @@ import { companyName } from '../data/company.js';
 
 export default function NotFoundPage() {
   useEffect(() => {
-    document.title = `404 — Page Not Found — ${companyName}`;
+    document.title = `404 — Page Not Found: ${companyName}`;
   }, []);
 
   return (

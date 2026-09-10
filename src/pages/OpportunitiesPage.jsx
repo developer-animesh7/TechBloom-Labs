@@ -15,7 +15,7 @@ export default function OpportunitiesPage() {
   const [query, setQuery] = useState('');
 
   useEffect(() => {
-    document.title = `Opportunities — ${companyName}`;
+    document.title = `Opportunities: ${companyName}`;
     window.scrollTo(0, 0);
   }, []);
 

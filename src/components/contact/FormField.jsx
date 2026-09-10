@@ -14,6 +14,7 @@ export default function FormField({
   value,
   onChange,
   onBlur,
+  onClear,
   error,
   help,
   required = false,
@@ -76,7 +77,19 @@ export default function FormField({
             aria-describedby={describedBy}
           />
           <span className="filedrop__label">Choose a file</span>
-          <span className="filedrop__name">{fileName || 'No file selected'}</span>
+          <span className="filedrop__name" title={fileName || undefined}>
+            {fileName || 'No file selected'}
+          </span>
+          {fileName && onClear ? (
+            <button
+              type="button"
+              className="filedrop__clear"
+              onClick={onClear}
+              aria-label="Remove selected file"
+            >
+              ✕ Remove
+            </button>
+          ) : null}
         </div>
       ) : (
         <input

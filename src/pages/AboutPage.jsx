@@ -9,7 +9,7 @@ import { companyName } from '../data/company.js';
 
 export default function AboutPage() {
   useEffect(() => {
-    document.title = `About — ${companyName}`;
+    document.title = `About: ${companyName}`;
     window.scrollTo(0, 0);
   }, []);
 

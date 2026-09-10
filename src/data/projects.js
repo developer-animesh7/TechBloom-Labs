@@ -373,6 +373,8 @@ export const projects = [
     status: 'open',
     duration: '2 months',
     mode: 'Offline / Hybrid',
+    image: '/images/projects/biotech.svg',
+    alt: 'Biotechnology laboratory experiment tracking with DNA sequence helix, well plates and protocol run stages',
     summary:
       'Experiment tracking for a working lab: protocols, runs, samples and results, organised so a result can be found again months later.',
     scope: [
@@ -383,48 +385,6 @@ export const projects = [
     ],
     stack: ['Django', 'PostgreSQL', 'File storage'],
     mentorship: 'Faculty-led'
-  },
-  {
-    id: 'digital-operations',
-    number: '11',
-    title: 'Digital Operations Management Platform',
-    category: 'software',
-    feature: 'standard',
-    status: 'active',
-    duration: '6 months',
-    mode: 'Hybrid',
-    summary:
-      'Operational backbone for a multi-team organisation: request intake, assignment, service levels, documents and reporting.',
-    scope: [
-      'Request intake and assignment',
-      'Task and document management',
-      'Service-level tracking',
-      'Notifications',
-      'Operational reporting'
-    ],
-    stack: ['TypeScript', 'NestJS', 'PostgreSQL', 'Redis'],
-    mentorship: 'Industry mentor'
-  },
-  {
-    id: 'clinical-analytics',
-    number: '12',
-    title: 'Clinical Data Analytics Views',
-    category: 'healthcare',
-    feature: 'standard',
-    status: 'review',
-    duration: '6 months',
-    mode: 'Research',
-    summary:
-      'Analytical views over de-identified operational healthcare data: throughput, resource use and service patterns over time.',
-    scope: [
-      'Operational data modelling',
-      'Throughput and utilisation views',
-      'Trend analysis',
-      'Report generation'
-    ],
-    stack: ['Python', 'SQL', 'Dashboarding'],
-    mentorship: 'Faculty-led research',
-    note: 'Operational analytics only. No diagnostic or treatment claims are made.'
   }
 ];
 

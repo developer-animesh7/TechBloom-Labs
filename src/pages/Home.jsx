@@ -27,7 +27,7 @@ import { services } from '../data/services.js';
  */
 export default function Home() {
   useEffect(() => {
-    document.title = 'TechBloom Labs — Where Learning Meets Opportunity';
+    document.title = 'TechBloom Labs: Where Learning Meets Opportunity';
     window.scrollTo(0, 0);
   }, []);
 

@@ -364,7 +364,8 @@
   outline: none;
 }
 
-.team-leadership-card__media {
+.team-leadership-card__media,
+.leader-card__image {
   width: 100%;
   aspect-ratio: 4 / 3;
   border-radius: var(--r-sm);
@@ -375,7 +376,8 @@
   flex-shrink: 0;
 }
 
-.team-leadership-card__img {
+.team-leadership-card__img,
+.leader-card__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -383,23 +385,32 @@
   transition: transform 0.4s var(--ease);
 }
 
-.team-leadership-card__img--0 {
-  object-position: center 20%;
+.team-leadership-card__img--0,
+.team-leadership-card__img--himadri,
+.leader-card--himadri img {
+  object-position: 36% 14%;
 }
 
-.team-leadership-card__img--1 {
-  object-position: center 20%;
+.team-leadership-card__img--1,
+.team-leadership-card__img--bhabani,
+.leader-card--bhabani img {
+  object-position: 50% 28%;
 }
 
-.team-leadership-card__img--2 {
-  object-position: center 22%;
+.team-leadership-card__img--2,
+.team-leadership-card__img--sreyan,
+.leader-card--sreyan img {
+  object-position: 50% 28%;
 }
 
-.team-leadership-card__img--3 {
-  object-position: center 28%;
+.team-leadership-card__img--3,
+.team-leadership-card__img--tanisha,
+.leader-card--tanisha img {
+  object-position: 50% 48%;
 }
 
-.team-leadership-card:hover .team-leadership-card__img {
+.team-leadership-card:hover .team-leadership-card__img,
+.leader-card:hover .leader-card__image img {
   transform: scale(1.03);
 }
 
@@ -770,15 +781,34 @@
 }
 
 /* --------------------------------------------------------------------------
-   8. Responsive Behavior & Breakpoints
+   8. Responsive Behavior & Intentional Breakpoints
    -------------------------------------------------------------------------- */
-@media (max-width: 1024px) {
+@media (max-width: 1199px) {
   .team-leaders-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
+  .team-mentors-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .team-engineers-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .team-mentor-card {
+    padding: 14px;
+  }
+  .team-mentor-card__name {
+    font-size: 1.1rem;
+    min-height: 2.4em;
+  }
+}
+
+@media (max-width: 820px) {
   .team-mentors-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -788,36 +818,280 @@
 }
 
 @media (max-width: 768px) {
+  .team-hero {
+    padding-top: calc(var(--header-h) + 20px);
+    padding-bottom: 32px;
+  }
+  .team-hero__title {
+    font-size: clamp(2rem, 7vw, 2.75rem);
+    margin-bottom: 8px;
+  }
+  .team-hero__lead {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin-bottom: 18px;
+    max-width: none;
+  }
+  .team-section {
+    padding: clamp(28px, 4.5vw, 42px) 0;
+  }
   .team-section__header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: 6px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+  }
+  .team-section__title {
+    font-size: clamp(1.45rem, 5.2vw, 1.85rem);
   }
   .team-section__aside {
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+  .team-section__hint {
+    font-size: 0.75rem;
   }
 }
 
-@media (max-width: 640px) {
+/* Mobile: Compact intentional compositions for Mentors, Leaders, and Engineers */
+@media (max-width: 680px) {
+  /* Mentors: Compact horizontal card preventing single-person screen consumption */
   .team-mentors-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
+  .team-mentor-card {
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 14px;
+    min-height: 110px;
+  }
+  .team-mentor-card__media {
+    width: 88px;
+    height: 88px;
+    min-width: 88px;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--r-md);
+  }
+  .team-mentor-card__initials {
+    font-size: 1.8rem;
+  }
+  .team-mentor-card__placeholder-label {
+    display: none;
+  }
+  .team-mentor-card__info {
+    padding-top: 0;
+    min-width: 0;
+    flex-grow: 1;
+  }
+  .team-mentor-card__meta {
+    margin-bottom: 4px;
+  }
+  .team-mentor-card__name {
+    min-height: 0;
+    font-size: 1.05rem;
+    line-height: 1.25;
+    margin: 0 0 2px;
+  }
+  .team-mentor-card__role {
+    min-height: 0;
+    font-size: 0.82rem;
+    line-height: 1.35;
+    margin: 0 0 3px;
+  }
+  .team-mentor-card__aff {
+    font-size: 0.68rem;
+    margin: 0 0 4px;
+  }
+  .team-mentor-card__foot {
+    min-height: 0;
+    padding-top: 4px;
+    margin-top: 2px;
+    border-top: 0;
+  }
+
+  /* Leadership: Compact vertical card with controlled portrait frame & face-first cropping */
   .team-leaders-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .team-leadership-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 14px;
+    min-height: auto;
+  }
+  .team-leadership-card__media,
+  .leader-card__image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    max-height: 175px;
+    min-width: 0;
+    height: auto;
+    margin-bottom: 12px;
+    border-radius: var(--r-sm);
+    border-bottom: 1px solid var(--line);
+  }
+  .team-leadership-card__img,
+  .leader-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .team-leadership-card__img--0,
+  .team-leadership-card__img--himadri,
+  .leader-card--himadri img {
+    object-position: 36% 14%;
+  }
+  .team-leadership-card__img--1,
+  .team-leadership-card__img--bhabani,
+  .leader-card--bhabani img {
+    object-position: 50% 28%;
+  }
+  .team-leadership-card__img--2,
+  .team-leadership-card__img--sreyan,
+  .leader-card--sreyan img {
+    object-position: 50% 28%;
+  }
+  .team-leadership-card__img--3,
+  .team-leadership-card__img--tanisha,
+  .leader-card--tanisha img {
+    object-position: 50% 50%;
+  }
+  .team-leadership-card__body {
+    min-width: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .team-leadership-card__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+  .team-leadership-card__name {
+    min-height: 0;
+    font-size: 1.12rem;
+    line-height: 1.25;
+    margin: 0 0 8px;
+    display: block;
+    -webkit-line-clamp: unset;
+  }
+  .team-leadership-card__role-wrap {
+    min-height: 0;
+    padding-top: 2px;
+    margin-top: auto;
+  }
+  .team-leadership-card__role-badge {
+    padding: 4px 10px;
+    font-size: 0.72rem;
+    line-height: 1.35;
+    max-width: 100%;
+  }
+
+  /* Engineers: Compact execution rows */
+  .team-engineering-panel {
+    padding: clamp(14px, 3vw, 20px);
+    border-radius: var(--r-md);
   }
   .team-engineers-grid {
     grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .team-engineer-card {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+  }
+  .team-engineer-card__header {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+  .team-engineer-card__num {
+    display: none;
+  }
+  .team-engineer-card__initials {
+    width: 36px;
+    height: 36px;
+    font-size: 0.8rem;
+  }
+  .team-engineer-card__content {
+    min-width: 0;
+    flex-grow: 1;
+  }
+  .team-engineer-card__name {
+    font-size: 0.98rem;
+    margin: 0 0 2px;
+    line-height: 1.25;
+  }
+  .team-engineer-card__role {
+    font-size: 0.78rem;
+    line-height: 1.35;
+    margin: 0;
+  }
+  .team-engineer-card__domain {
+    display: none;
+  }
+  .team-engineer-card__foot {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+  .team-engineer-card__link {
+    padding: 6px 10px;
+    background: rgba(12, 122, 94, 0.08);
+    border-radius: var(--r-sm);
+    font-size: 0.74rem;
+  }
+
+  /* CTA Section */
+  .team-cta-box {
+    padding: 24px 0;
+  }
+  .team-cta-box__title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+  .team-cta-box__lead {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-bottom: 16px;
   }
 }
 
 @media (max-width: 480px) {
-  .team-hero__title {
-    font-size: 2.2rem;
-  }
   .team-hero__actions .btn {
     width: 100%;
   }
-  .team-cta-box__actions .btn {
+  .team-cta-box__actions .btn,
+  .team-cta-box__actions a.btn {
     width: 100%;
+  }
+  .team-modal-box {
+    padding: 20px 16px;
+    max-height: 88vh;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 375px) {
+  .team-mentor-card__media {
+    width: 76px;
+    height: 76px;
+    min-width: 76px;
+  }
+  .team-mentor-card {
+    gap: 10px;
+    padding: 10px 12px;
+  }
+  .team-engineer-card__link span {
+    display: none;
   }
 }

@@ -5,7 +5,7 @@ import SectionHeading from '../common/SectionHeading.jsx';
 import Reveal from '../common/Reveal.jsx';
 import Button from '../common/Button.jsx';
 import ArrowIcon from '../common/ArrowIcon.jsx';
-import { projects } from '../../data/projects.js';
+import { projects, getCategory } from '../../data/projects.js';
 
 /**
  * Compact Featured Projects Preview for the homepage.
@@ -32,29 +32,34 @@ export default function FeaturedProjectsPreview() {
         />
 
         <div className="compact-projects-grid" style={{ marginTop: 'var(--s-5)' }}>
-          {featured.map((project, idx) => (
-            <Reveal key={project.id} className="compact-project-card" delay={idx * 80}>
-              <div className="compact-project-card__top">
-                <span className="compact-project-card__domain">{project.domain}</span>
-                <span className="compact-project-card__mode t-xs">{project.mode}</span>
-              </div>
+          {featured.map((project, idx) => {
+            const category = getCategory(project.category);
+            const domainName = category?.short || category?.name || 'Technology';
 
-              <h3 className="compact-project-card__title t-h4">
-                <Link to={`/projects/${project.id}`} className="compact-project-card__link">
-                  {project.title}
-                </Link>
-              </h3>
+            return (
+              <Reveal key={project.id} className="compact-project-card" delay={idx * 80}>
+                <div className="compact-project-card__top">
+                  <span className="compact-project-card__domain">{domainName}</span>
+                  <span className="compact-project-card__mode t-xs">{project.mode}</span>
+                </div>
 
-              <p className="compact-project-card__blurb t-sm">{project.blurb}</p>
+                <h3 className="compact-project-card__title t-h4">
+                  <Link to={`/projects/${project.id}`} className="compact-project-card__link">
+                    {project.title}
+                  </Link>
+                </h3>
 
-              <div className="compact-project-card__footer">
-                <Link to={`/projects/${project.id}`} className="link link--subtle">
-                  <span>Explore Project</span>
-                  <ArrowIcon size={14} />
-                </Link>
-              </div>
-            </Reveal>
-          ))}
+                <p className="compact-project-card__blurb t-sm">{project.summary}</p>
+
+                <div className="compact-project-card__footer">
+                  <Link to={`/projects/${project.id}`} className="link link--subtle">
+                    <span>Explore Project</span>
+                    <ArrowIcon size={14} />
+                  </Link>
+                </div>
+              </Reveal>
+            );
+          })}
         </div>
 
         <div style={{ textAlign: 'center', marginTop: 'var(--s-6)' }}>

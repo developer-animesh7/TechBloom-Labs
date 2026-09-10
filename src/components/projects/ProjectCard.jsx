@@ -39,7 +39,7 @@ export default function ProjectCard({ project, to, delay = 0 }) {
               style={{ '--plate-accent': category?.accent || 'var(--accent)' }}
               aria-hidden="true"
             >
-              <span className="project-item__plate-num">{project.number}</span>
+              <span className="project-item__plate-tag">{category?.short || 'Platform'}</span>
             </div>
           )}
         </div>
@@ -47,7 +47,7 @@ export default function ProjectCard({ project, to, delay = 0 }) {
         <div className="project-item__content">
           <div className="project-item__top">
             <h3 className="project-item__title">{project.title}</h3>
-            <span className="project-item__num">{project.number}</span>
+            <span className="project-item__badge">{category?.short || category?.name}</span>
           </div>
 
           <p className="project-item__summary">{project.summary}</p>

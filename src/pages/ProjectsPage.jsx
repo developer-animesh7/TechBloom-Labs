@@ -27,7 +27,7 @@ export default function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   useEffect(() => {
-    document.title = `Projects — ${companyName}`;
+    document.title = `Projects: ${companyName}`;
     window.scrollTo(0, 0);
   }, []);
 

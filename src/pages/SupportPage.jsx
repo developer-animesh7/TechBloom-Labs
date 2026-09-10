@@ -9,7 +9,7 @@ import { companyName, tagline, CONTACT_EMAIL } from '../data/company.js';
 
 export default function SupportPage() {
   useEffect(() => {
-    document.title = `Support — ${companyName}`;
+    document.title = `Support: ${companyName}`;
     window.scrollTo(0, 0);
   }, []);
 

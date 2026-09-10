@@ -10,7 +10,7 @@ import { companyName, tagline } from '../data/company.js';
 
 export default function InternshipsPage() {
   useEffect(() => {
-    document.title = `Internships — ${companyName}`;
+    document.title = `Internships: ${companyName}`;
     window.scrollTo(0, 0);
   }, []);
 

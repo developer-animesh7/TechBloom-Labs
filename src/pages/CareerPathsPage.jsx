@@ -8,7 +8,7 @@ import { companyName, tagline } from '../data/company.js';
 
 export default function CareerPathsPage() {
   useEffect(() => {
-    document.title = `Career Paths — ${companyName}`;
+    document.title = `Career Paths: ${companyName}`;
     window.scrollTo(0, 0);
   }, []);
 

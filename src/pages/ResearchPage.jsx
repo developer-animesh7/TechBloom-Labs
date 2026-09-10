@@ -16,7 +16,7 @@ import { companyName } from '../data/company.js';
 
 export default function ResearchPage() {
   useEffect(() => {
-    document.title = `Research & Innovation — ${companyName}`;
+    document.title = `Research & Innovation: ${companyName}`;
     window.scrollTo(0, 0);
   }, []);
 

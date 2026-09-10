@@ -876,6 +876,29 @@
   transform: translateX(3px);
 }
 
+.project-item__badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(12, 122, 94, 0.08);
+  border: 1px solid rgba(12, 122, 94, 0.2);
+  padding: 2px 8px;
+  border-radius: var(--r-pill);
+  flex-shrink: 0;
+}
+
+.project-item__plate-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
 @media (max-width: 640px) {
   .project-item__link {
     flex-direction: column;
@@ -885,16 +908,36 @@
     max-width: 100%;
     min-width: 0;
     aspect-ratio: 16 / 9;
-    max-height: 140px;
+    max-height: 130px;
     border-right: 0;
     border-bottom: 1px solid var(--line);
   }
   .project-item__content {
-    padding: 14px 16px;
+    padding: 12px 14px;
+  }
+  .project-item__title {
+    font-size: 1.05rem;
   }
   .project-item__summary {
+    font-size: 0.82rem;
+    line-height: 1.4;
     -webkit-line-clamp: 2;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+  }
+  .project-item__footer {
+    padding-top: 6px;
+  }
+  .project-item__tech {
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .project-item__media {
+    max-height: 110px;
+  }
+  .project-item__content {
+    padding: 10px 12px;
   }
 }
 
@@ -1610,6 +1653,19 @@
   gap: 8px;
   margin-bottom: var(--s-4);
 }
+@media (max-width: 680px) {
+  .filter-bar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+    gap: 6px;
+    scrollbar-width: none;
+  }
+  .filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+}
 .filter-tab {
   padding: 8px 16px;
   border-radius: var(--r-pill);
@@ -1620,6 +1676,14 @@
   font-weight: 500;
   cursor: pointer;
   transition: all var(--dur) var(--ease);
+}
+@media (max-width: 680px) {
+  .filter-tab {
+    padding: 6px 12px;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
 }
 .filter-tab:hover {
   border-color: var(--ink);

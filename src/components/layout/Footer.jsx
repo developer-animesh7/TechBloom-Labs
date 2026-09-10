@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import BloomMark from '../../assets/illustrations/BloomMark.jsx';
 import PageContainer from './PageContainer.jsx';
-import { footerNav, legalNav } from '../../data/navigation.js';
-import { companyName, tagline, address, leadership, CONTACT_EMAIL } from '../../data/company.js';
+import { footerNav } from '../../data/navigation.js';
+import { companyName, tagline, address, CONTACT_EMAIL } from '../../data/company.js';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -18,6 +18,7 @@ export default function Footer() {
         </div>
 
         <div className="site-footer__grid">
+          {/* Brand header: Logo + Gradient tagline */}
           <div className="site-footer__brand">
             <Link to="/" className="brand on-ink" aria-label={`${companyName} home`}>
               <BloomMark size={32} />
@@ -25,24 +26,10 @@ export default function Footer() {
                 Tech<span>Bloom</span> <span className="brand__sub">Labs</span>
               </span>
             </Link>
-            <p className="t-sm site-footer__tagline">{tagline}.</p>
-            <address className="site-footer__addr">
-              {address.street}
-              <br />
-              {address.city}
-              <br />
-              {address.region}
-              <br />
-              <a
-                className="link"
-                href={`mailto:${CONTACT_EMAIL}`}
-                style={{ color: 'var(--accent-bright)', textDecoration: 'none', display: 'inline-block', marginTop: '6px' }}
-              >
-                {CONTACT_EMAIL}
-              </a>
-            </address>
+            <p className="site-footer__tagline">{tagline}.</p>
           </div>
 
+          {/* Navigation columns: Company, Explore, Support, Legal */}
           <div className="site-footer__nav-cols">
             {footerNav.map((column) => (
               <nav className="footer-col" key={column.title} aria-label={column.title}>
@@ -59,31 +46,32 @@ export default function Footer() {
               </nav>
             ))}
           </div>
+
+          {/* Contact & Address block: placed after navigation on mobile, on left on desktop */}
+          <div className="site-footer__contact">
+            <address className="site-footer__addr">
+              {address.street}
+              <br />
+              {address.city}
+              <br />
+              {address.region}
+              <br />
+              <a
+                className="link"
+                href={`mailto:${CONTACT_EMAIL}`}
+                style={{ color: 'var(--accent-bright)', textDecoration: 'none', display: 'inline-block', marginTop: '6px' }}
+              >
+                {CONTACT_EMAIL}
+              </a>
+            </address>
+          </div>
         </div>
 
-        <div className="site-footer__leadership-section">
-          <h3 className="site-footer__leadership-title">Leadership</h3>
-          <dl className="site-footer__leaders">
-            {leadership.map((person) => (
-              <div className="site-footer__leader" key={person.name}>
-                <dt>{person.role}</dt>
-                <dd>{person.name}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-
+        {/* Bottom copyright row only — no duplicate Privacy / Terms */}
         <div className="site-footer__bottom">
           <p>
             © {year} {companyName}. All rights reserved.
           </p>
-          <nav className="site-footer__legal" aria-label="Legal">
-            {legalNav.map((item) => (
-              <Link key={item.label} to={item.to}>
-                {item.label}
-              </Link>
-            ))}
-          </nav>
         </div>
       </PageContainer>
     </footer>

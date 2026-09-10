@@ -35,7 +35,7 @@ export default function ExpertsPage() {
   const [selectedPerson, setSelectedPerson] = useState(null);
 
   useEffect(() => {
-    document.title = `Our Team — ${companyName}`;
+    document.title = `Our Team: ${companyName}`;
     window.scrollTo(0, 0);
   }, []);
 

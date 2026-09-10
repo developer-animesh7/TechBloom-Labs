@@ -15,7 +15,7 @@ export default function ProjectDetailPage() {
 
   useEffect(() => {
     if (project) {
-      document.title = `${project.title} — ${companyName}`;
+      document.title = `${project.title}: ${companyName}`;
       window.scrollTo(0, 0);
     }
   }, [project]);
@@ -57,8 +57,8 @@ export default function ProjectDetailPage() {
             <span className="tag" style={{ '--tag-color': category?.accent }}>
               {category?.name || project.category}
             </span>
-            <span className="t-mono t-sm">Project #{project.number}</span>
             <span className="badge badge--open">Active Platform</span>
+            <span className="badge badge--sm">{project.duration}</span>
           </div>
 
           <Reveal as="h1" className="t-h1 page-head__title">
