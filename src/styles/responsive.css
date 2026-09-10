@@ -342,7 +342,7 @@ html, body {
 
   .pcard__body { padding: var(--s-4); }
 
-  .site-footer__bottom { justify-content: center; text-align: center; }
+  .site-footer__bottom { justify-content: flex-start; text-align: left; }
 }
 
 /* --------------------------------------------------------------------------

@@ -152,6 +152,23 @@
 .chip--static { cursor: default; }
 .chip--static:hover { border-color: var(--line); color: var(--text-2); }
 
+.chip--sm {
+  min-height: 28px;
+  padding: 4px 10px;
+  font-size: 0.74rem;
+  line-height: 1.35;
+}
+
+@media (max-width: 480px) {
+  .chip {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 .tag {
   display: inline-flex;
   align-items: center;
@@ -1120,11 +1137,17 @@
   .site-footer__grid {
     display: flex;
     flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     gap: 0;
     padding-bottom: 0;
   }
   .site-footer__brand {
-    max-width: none;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     gap: 8px;
     padding-bottom: var(--s-4);
     border-bottom: 1px solid var(--ink-hair);
@@ -1138,7 +1161,10 @@
   .site-footer__nav-cols {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px 16px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    gap: 24px 20px;
     padding-bottom: var(--s-4);
     border-bottom: 1px solid var(--ink-hair);
     margin-bottom: var(--s-4);
@@ -1158,7 +1184,9 @@
     color: var(--text-on-ink-2);
   }
   .site-footer__contact {
-    max-width: none;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     padding-bottom: var(--s-4);
   }
   .site-footer__addr {
@@ -1168,17 +1196,19 @@
   }
   .site-footer__bottom {
     display: flex;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    text-align: left;
     padding: var(--s-4) 0 var(--s-5);
     border-top: 1px solid var(--ink-hair);
     font-size: 0.76rem;
     color: var(--text-on-ink-3);
+    width: 100%;
+    box-sizing: border-box;
   }
   .site-footer__bottom p {
     margin: 0;
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
 }
 

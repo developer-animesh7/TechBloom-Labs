@@ -31,12 +31,12 @@ export default function ExpertsPreview() {
 
         <div className="team-leadership-grid" style={{ marginTop: 'var(--s-5)' }}>
           {/* Profile 01: Prof. Dr. Himadri Nath Saha */}
-          <Reveal className="team-lead-card">
+          <Reveal className="team-lead-card team-lead-card--himadri">
             <div className="team-lead-card__media">
               <img
                 src={chiefAdvisorHead.portrait}
                 alt={chiefAdvisorHead.portraitAlt}
-                className="team-lead-card__img"
+                className="team-lead-card__img team-lead-card__img--himadri"
                 loading="lazy"
                 decoding="async"
               />
@@ -57,7 +57,7 @@ export default function ExpertsPreview() {
                 <span className="chip chip--sm">Fellow IEI & IETE</span>
               </div>
 
-              <div style={{ marginTop: 'var(--s-3)' }}>
+              <div className="team-lead-card__cta">
                 <Link to="/experts" className="link link--subtle">
                   <span>View Full Profile</span>
                   <ArrowIcon size={14} />
@@ -67,12 +67,12 @@ export default function ExpertsPreview() {
           </Reveal>
 
           {/* Profile 02: Prof. Bhabani Prasad Roy */}
-          <Reveal className="team-lead-card" delay={100}>
+          <Reveal className="team-lead-card team-lead-card--bhabani" delay={100}>
             <div className="team-lead-card__media">
               <img
                 src={chiefMarketingAdviser.portrait}
                 alt={chiefMarketingAdviser.portraitAlt}
-                className="team-lead-card__img"
+                className="team-lead-card__img team-lead-card__img--bhabani"
                 loading="lazy"
                 decoding="async"
               />
@@ -93,9 +93,9 @@ export default function ExpertsPreview() {
                 <span className="chip chip--sm">Institutional Outreach</span>
               </div>
 
-              <div style={{ marginTop: 'var(--s-3)' }}>
+              <div className="team-lead-card__cta">
                 <Link to="/experts" className="link link--subtle">
-                  <span>View Profile</span>
+                  <span>View Full Profile</span>
                   <ArrowIcon size={14} />
                 </Link>
               </div>

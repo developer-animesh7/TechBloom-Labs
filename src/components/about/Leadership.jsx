@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Divider from '../common/Divider.jsx';
 import Reveal from '../common/Reveal.jsx';
 import SectionHeading from '../common/SectionHeading.jsx';
@@ -43,12 +44,12 @@ export default function Leadership() {
 
         <div className="team-leadership-grid" style={{ marginBottom: 'clamp(28px, 4vw, 44px)' }}>
           {/* Profile 01: Prof. Dr. Himadri Nath Saha */}
-          <Reveal className="team-lead-card">
+          <Reveal className="team-lead-card team-lead-card--himadri">
             <div className="team-lead-card__media">
               <img
                 src={chiefAdvisorHead.portrait}
                 alt={chiefAdvisorHead.portraitAlt}
-                className="team-lead-card__img"
+                className="team-lead-card__img team-lead-card__img--himadri"
                 loading="lazy"
                 decoding="async"
               />
@@ -62,16 +63,22 @@ export default function Leadership() {
                 <span className="chip chip--sm">Ph.D. in Engineering (Jadavpur Univ.)</span>
                 <span className="chip chip--sm">Senior Member IEEE</span>
               </div>
+              <div className="team-lead-card__cta">
+                <Link to="/experts" className="link link--subtle">
+                  <span>View Full Profile</span>
+                  <ArrowIcon size={14} />
+                </Link>
+              </div>
             </div>
           </Reveal>
 
           {/* Profile 02: Prof. Bhabani Prasad Roy */}
-          <Reveal className="team-lead-card" delay={100}>
+          <Reveal className="team-lead-card team-lead-card--bhabani" delay={100}>
             <div className="team-lead-card__media">
               <img
                 src={chiefMarketingAdviser.portrait}
                 alt={chiefMarketingAdviser.portraitAlt}
-                className="team-lead-card__img"
+                className="team-lead-card__img team-lead-card__img--bhabani"
                 loading="lazy"
                 decoding="async"
               />
@@ -84,6 +91,12 @@ export default function Leadership() {
               <div className="team-lead-card__chips">
                 <span className="chip chip--sm">Chief Marketing Adviser</span>
                 <span className="chip chip--sm">Strategic Advisory</span>
+              </div>
+              <div className="team-lead-card__cta">
+                <Link to="/experts" className="link link--subtle">
+                  <span>View Full Profile</span>
+                  <ArrowIcon size={14} />
+                </Link>
               </div>
             </div>
           </Reveal>

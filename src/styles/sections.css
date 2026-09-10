@@ -2297,13 +2297,6 @@
   border-color: var(--accent);
   box-shadow: var(--sh-1);
 }
-@media (max-width: 520px) {
-  .team-lead-card {
-    grid-template-columns: 100px 1fr;
-    gap: 14px;
-    padding: 16px;
-  }
-}
 
 .team-lead-card__media {
   width: 130px;
@@ -2314,18 +2307,22 @@
   background: var(--sunk);
   flex-shrink: 0;
 }
-@media (max-width: 520px) {
-  .team-lead-card__media {
-    width: 100px;
-    height: 125px;
-  }
-}
 .team-lead-card__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 20%;
   display: block;
+}
+
+/* Specific focal points for leadership portrait alignment */
+.team-lead-card__img--himadri,
+.team-lead-card--himadri .team-lead-card__img {
+  object-position: 36% 14%;
+}
+.team-lead-card__img--bhabani,
+.team-lead-card--bhabani .team-lead-card__img {
+  object-position: 50% 25%;
 }
 
 .team-lead-card__avatar {
@@ -2341,17 +2338,13 @@
   color: var(--accent);
   letter-spacing: -0.03em;
 }
-@media (max-width: 520px) {
-  .team-lead-card__avatar {
-    font-size: 1.8rem;
-  }
-}
 
 .team-lead-card__body {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
   min-width: 0;
+  height: 100%;
 }
 .team-lead-card__name {
   font-family: var(--font-display);
@@ -2371,6 +2364,96 @@
   flex-wrap: wrap;
   gap: 6px;
   margin-top: var(--s-2);
+}
+.team-lead-card__chips .chip {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  max-width: 100%;
+  height: auto;
+  line-height: 1.35;
+}
+.team-lead-card__cta {
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+/* Mobile responsive composition: intentional vertical card */
+@media (max-width: 640px) {
+  .team-lead-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    gap: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .team-lead-card__media {
+    width: 100%;
+    height: 200px;
+    max-height: 220px;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--line);
+  }
+  .team-lead-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .team-lead-card__avatar {
+    height: 180px;
+    font-size: 2rem;
+  }
+  .team-lead-card__body {
+    display: flex;
+    flex-direction: column;
+    padding: clamp(16px, 4.5vw, 20px);
+    flex: 1;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .team-lead-card__name {
+    font-size: clamp(1.2rem, 4.5vw, 1.35rem);
+    line-height: 1.25;
+    margin: 2px 0 0;
+  }
+  .team-lead-card__summary {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .team-lead-card__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+    margin-bottom: 6px;
+    width: 100%;
+  }
+  .team-lead-card__chips .chip {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    max-width: 100%;
+    height: auto;
+    min-height: 28px;
+    padding: 5px 11px;
+    font-size: 0.74rem;
+    line-height: 1.35;
+    text-align: left;
+  }
+  .team-lead-card__cta {
+    margin-top: auto;
+    padding-top: 8px;
+  }
 }
 
 /* 2. Top World-Class Mentors (Compact editorial list) */
