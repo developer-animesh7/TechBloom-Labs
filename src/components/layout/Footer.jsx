@@ -13,7 +13,7 @@ export default function Footer() {
         {/* Editorial closing statement */}
         <div className="site-footer__marquee" aria-label="Brand Signature">
           <p className="site-footer__headline">
-            DISCOVER. CONNECT. EXPERIENCE. BLOOM.
+            RESEARCH · INDUSTRY · INNOVATION · IMPACT
           </p>
         </div>
 

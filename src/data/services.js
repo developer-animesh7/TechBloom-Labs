@@ -27,12 +27,12 @@ export const services = [
     id: 'research-dev',
     title: 'Research & Project Development',
     blurb:
-      'Structured technical and academic support for student, academic, research, and organizational initiatives requiring rigorous design and execution.',
+      'Structured technical and engineering support for research initiatives, advanced prototypes, and organizational innovation programs requiring rigorous design and execution.',
     capabilities: [
       'Project scope formulation',
-      'Academic research frameworks',
-      'Feasibility evaluation & tracking',
-      'Guided milestone management'
+      'Applied research frameworks',
+      'Feasibility evaluation & benchmarking',
+      'Milestone architecture & delivery'
     ],
     intent: 'research-project',
     accent: 'var(--dom-ai)'
@@ -175,8 +175,8 @@ export const servicesProcess = [
   },
   {
     step: '03',
-    title: 'Expert & Mentor Matching',
-    body: 'Projects are paired with seasoned faculty advisors and technical leads.'
+    title: 'Technical & Domain Advisory',
+    body: 'Initiatives are guided by specialized engineering leads and senior domain advisors.'
   },
   {
     step: '04',

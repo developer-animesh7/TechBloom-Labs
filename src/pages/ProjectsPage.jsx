@@ -41,14 +41,13 @@ export default function ProjectsPage() {
       <Section tone="sunk" className="page-head" size="lg">
         <PageContainer>
           <Reveal as="p" className="t-label" variant="fade">
-            Research & Engineering Portfolio
+            Technology & Engineering Portfolio
           </Reveal>
           <Reveal as="h1" className="t-h1 page-head__title">
-            Project Concepts Across <em>Ten</em> Disciplines.
+            Products & Solutions Across <em>Ten</em> Disciplines.
           </Reveal>
           <Reveal as="p" className="t-lead" delay={80}>
-            These are active project concepts and architecture frameworks available through TechBloom Labs.
-            Work directly with faculty researchers and domain advisors to build real-world systems.
+            Explore active software platforms, AI architectures, and domain-specific technology solutions engineered by TechBloom Labs.
           </Reveal>
         </PageContainer>
       </Section>
@@ -57,10 +56,10 @@ export default function ProjectsPage() {
         <PageContainer>
           <SectionHeading
             number="01"
-            eyebrow="Project Discovery"
+            eyebrow="Portfolio Directory"
             id="projects-archive-title"
-            title="Explore Real-World Concepts"
-            lead="Filter by domain to inspect scope, technical stack, mentorship model, and timeline."
+            title="Engineered Technology Solutions"
+            lead="Filter by domain to inspect technical capabilities, platform architectures, and verified implementations."
           />
 
           {/* Filter Bar */}
@@ -82,17 +81,16 @@ export default function ProjectsPage() {
             })}
           </div>
 
-          <Divider style={{ margin: 'var(--s-4) 0 var(--s-6)' }} />
+          <Divider style={{ margin: 'var(--s-4) 0 var(--s-5)' }} />
 
-          {/* Projects Grid */}
-          <ul className="project-grid">
+          {/* Compact Horizontal Projects List */}
+          <ul className="project-list">
             {filteredProjects.map((project, index) => (
               <ProjectCard
                 key={project.id}
                 project={project}
-                layout={index === 0 && selectedCategory === 'all' ? 'feature' : 'standard'}
                 to={`/projects/${project.id}`}
-                delay={Math.min(index * 50, 300)}
+                delay={Math.min(index * 40, 200)}
               />
             ))}
           </ul>

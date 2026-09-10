@@ -50,8 +50,8 @@ export default function ContactPage() {
             Let&rsquo;s Work Together.
           </Reveal>
           <Reveal as="p" className="t-lead" delay={80}>
-            Have an inquiry about internships, research projects, faculty mentorship, organizational partnerships,
-            or software development? Reach out directly using the form below.
+            Have an inquiry about technology solutions, software engineering, enterprise partnerships,
+            or research collaboration? Reach out directly using the form below.
           </Reveal>
         </PageContainer>
       </Section>

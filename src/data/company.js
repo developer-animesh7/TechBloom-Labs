@@ -7,7 +7,7 @@ const env = import.meta.env ?? {};
 export const companyName = 'TechBloom Labs';
 export const tagline = 'Where Learning Meets Opportunity';
 export const primaryStatement = 'WHERE RESEARCH MEETS REAL-WORLD INNOVATION.';
-export const brandSignature = ['Discover.', 'Connect.', 'Experience.', 'Bloom.'];
+export const brandSignature = ['RESEARCH', 'INDUSTRY', 'INNOVATION', 'IMPACT'];
 export const website = 'https://discover-bloom.preview.static.emergentagent.com/';
 
 export const address = {
@@ -186,20 +186,20 @@ export const socialProfiles = [
 export const mission = {
   label: 'Our Mission',
   body:
-    'Bridge the gap between academic education and real-world opportunities by making research, mentorship, internships, projects and career guidance easier to discover and access.'
+    'Engineer and scale transformative software, AI systems, and technology products by bridging advanced academic research with rigorous industry execution.'
 };
 
 export const vision = {
   label: 'Our Vision',
   body:
-    'An ecosystem where every student can discover their potential, find the right people to learn from, gain meaningful experience and build a future with direction.'
+    'A world-class technology company delivering scalable digital solutions, high-impact enterprise products, and intelligent infrastructure across global industries.'
 };
 
 export const aboutIntro =
-  'TechBloom Labs brings students, faculty, researchers, universities and organizations into one connected ecosystem. Discover what you can pursue, connect with the right mentors, work on real-world projects, participate in structured internships and build a stronger path toward employment, research or higher education.';
+  'TechBloom Labs is an Indo–US–Canadian technology venture dedicated to building innovative, technology-driven products and solutions. Combining scientific research with modern software engineering, we build robust AI architectures, cloud platforms, and specialized industry systems.';
 
 export const heroCopy =
-  'A degree is only the beginning. TechBloom Labs connects students with faculty, mentors, research projects, internships and future career pathways — so academic knowledge becomes meaningful experience.';
+  'TechBloom Labs is a technology and product engineering company. We combine advanced research, software craftsmanship, and applied AI to architect, deploy, and scale enterprise-grade digital products and solutions.';
 
 export default {
   companyName,
@@ -226,10 +226,10 @@ export default {
    Brand journey — the signature four stages, used by JourneySteps.jsx
    -------------------------------------------------------------------------- */
 export const journeySteps = [
-  { step: '01', title: 'Discover', body: 'Find opportunities aligned with your interests.' },
-  { step: '02', title: 'Connect', body: 'Meet verified experts, researchers and mentors.' },
-  { step: '03', title: 'Experience', body: 'Work on meaningful projects and internships.' },
-  { step: '04', title: 'Bloom', body: 'Build skills, evidence and portfolio direction.' }
+  { step: '01', title: 'Research', body: 'Pioneering scientific discovery and applied research capabilities.' },
+  { step: '02', title: 'Industry', body: 'Translating complex domain requirements into strategic technical roadmaps.' },
+  { step: '03', title: 'Innovation', body: 'Architecting intelligent software, AI models, and scalable infrastructure.' },
+  { step: '04', title: 'Impact', body: 'Deploying enterprise technology solutions that deliver measurable real-world value.' }
 ];
 
 /* --------------------------------------------------------------------------
@@ -312,12 +312,12 @@ export const ecosystemPillars = [
    Final call to action
    -------------------------------------------------------------------------- */
 export const finalCTA = {
-  heading: 'Start Your TechBloom Labs Journey.',
+  heading: 'Build Scalable Technology With Us.',
   lines: [
-    'Your degree gives you a foundation.',
-    'Your projects give you experience.',
-    'Your mentors give you direction.',
-    'Your opportunities give you momentum.',
-    'TechBloom Labs brings them together.'
+    'Research provides the foundation.',
+    'Engineering delivers the capability.',
+    'Innovation shapes the architecture.',
+    'Industry collaboration drives real-world impact.',
+    'TechBloom Labs builds the technology that scales.'
   ]
 };

@@ -74,8 +74,7 @@ export default function ProposeProjectForm({ onClose }) {
   return (
     <form className="form" onSubmit={onSubmit} noValidate>
       <p className="t-sm">
-        Tell us the idea. A feasibility review comes back with scope, a suggested mentor and a
-        realistic duration.
+        Tell us about your technical requirements. Our engineering team will conduct an architectural feasibility assessment with roadmap recommendations and milestone scoping.
       </p>
 
       <div className="form__grid">

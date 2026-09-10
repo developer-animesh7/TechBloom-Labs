@@ -1,6 +1,7 @@
 /**
  * Compact editorial leadership card.
- * Clean, structured presentation of executive leadership.
+ * Standardized executive presentation with uniform dimensions,
+ * controlled image container, and wrapped role badge.
  */
 export default function LeaderCard({ leader, index, onSelect }) {
   const num = String(index + 1).padStart(2, '0');
@@ -19,34 +20,32 @@ export default function LeaderCard({ leader, index, onSelect }) {
       }}
       aria-label={`View details for ${leader.name}`}
     >
-      <div className="team-leadership-card__top">
-        <span className="team-leadership-card__index">{num}</span>
-        <span className="badge badge--open">{leader.role}</span>
-      </div>
-
       <div className="team-leadership-card__media">
         <img
           src={leader.portrait}
           alt={leader.portraitAlt || `${leader.name}, ${leader.role} at TechBloom Labs`}
-          className="team-leadership-card__img"
+          className={`team-leadership-card__img team-leadership-card__img--${index}`}
           loading="lazy"
           decoding="async"
         />
       </div>
 
       <div className="team-leadership-card__body">
+        <div className="team-leadership-card__meta">
+          <span className="team-leadership-card__index">{num}</span>
+          <span className="team-leadership-card__tag">Leadership</span>
+        </div>
+
         <h3 className="team-leadership-card__name">{leader.name}</h3>
-        {leader.summary && (
-          <p className="team-leadership-card__summary">{leader.summary}</p>
-        )}
-        {leader.chips && leader.chips.length > 0 && (
-          <div className="team-leadership-card__chips">
-            {leader.chips.map((chip, idx) => (
-              <span key={idx} className="chip chip--sm">{chip}</span>
-            ))}
+
+        <div className="team-leadership-card__role-wrap">
+          <div className="team-leadership-card__role-badge">
+            <span className="team-leadership-card__role-dot" aria-hidden="true">●</span>
+            <span className="team-leadership-card__role-text">{leader.role}</span>
           </div>
-        )}
+        </div>
       </div>
     </article>
   );
 }
+

@@ -3,91 +3,64 @@ import ArrowIcon from '../common/ArrowIcon.jsx';
 import Reveal from '../common/Reveal.jsx';
 import { getCategory } from '../../data/projects.js';
 
-const STATUS_LABEL = {
-  open: 'Open for students',
-  review: 'In review',
-  active: 'Under way'
-};
-
-const STATUS_TONE = {
-  open: 'badge--open',
-  review: 'badge--review',
-  active: 'badge--live'
-};
-
 /**
- * Project card with support for direct URL navigation or modal callback.
+ * Compact horizontal editorial project card.
+ * Designed for quick scanning: small visual, clear title, short summary,
+ * technology metadata, and subtle CTA leading to /projects/:slug.
  */
-export default function ProjectCard({ project, layout = 'standard', onOpen, to, delay = 0 }) {
+export default function ProjectCard({ project, to, delay = 0 }) {
   const category = getCategory(project.category);
   const destination = to || `/projects/${project.id}`;
 
-  const content = (
-    <>
-      {project.image ? (
-        <span className="pcard__media media media--16x9">
-          <img src={project.image} alt={project.alt || ''} loading="lazy" decoding="async" />
-        </span>
-      ) : (
-        <span
-          className="pcard__plate"
-          style={{ '--plate-accent': category?.accent }}
-          aria-hidden="true"
-        >
-          <span className="pcard__plate-num t-num">{project.number}</span>
-        </span>
-      )}
-
-      <span className="pcard__body">
-        <span className="pcard__top">
-          <span className="tag" style={{ '--tag-color': category?.accent }}>
-            {category?.short}
-          </span>
-          <span className="pcard__num t-mono">{project.number}</span>
-        </span>
-
-        <span className="pcard__title t-h3">{project.title}</span>
-        <span className="pcard__summary t-body">{project.summary}</span>
-
-        <span className="pcard__reveal">
-          <span className="pcard__meta">
-            <span className="t-label">{project.duration}</span>
-            <span className="t-label">{project.mode}</span>
-            {project.stack?.length ? (
-              <span className="t-label">{project.stack.slice(0, 3).join(' · ')}</span>
-            ) : null}
-          </span>
-        </span>
-
-        <span className="pcard__foot">
-          <span className={`badge ${STATUS_TONE[project.status] || ''}`}>
-            {STATUS_LABEL[project.status] || project.status}
-          </span>
-          <span className="pcard__cta link">
-            View project
-            <ArrowIcon size={16} shift={false} />
-          </span>
-        </span>
-      </span>
-    </>
-  );
+  // Technology / category metadata
+  const techString = project.stack && project.stack.length > 0
+    ? project.stack.slice(0, 3).join(' · ')
+    : category?.name || 'Technology';
 
   return (
-    <Reveal as="li" className={`pcard pcard--${layout}`} delay={delay}>
-      {onOpen ? (
-        <button
-          type="button"
-          className="pcard__hit"
-          onClick={() => onOpen(project)}
-          aria-label={`Open details for ${project.title}`}
-        >
-          {content}
-        </button>
-      ) : (
-        <Link to={destination} className="pcard__hit" aria-label={`View project details for ${project.title}`}>
-          {content}
-        </Link>
-      )}
+    <Reveal as="li" className="project-item" delay={delay}>
+      <Link
+        to={destination}
+        className="project-item__link"
+        aria-label={`View project details for ${project.title}`}
+      >
+        <div className="project-item__media">
+          {project.image ? (
+            <img
+              src={project.image}
+              alt={project.alt || `${project.title} visualization`}
+              className="project-item__img"
+              loading="lazy"
+              decoding="async"
+            />
+          ) : (
+            <div
+              className="project-item__plate"
+              style={{ '--plate-accent': category?.accent || 'var(--accent)' }}
+              aria-hidden="true"
+            >
+              <span className="project-item__plate-num">{project.number}</span>
+            </div>
+          )}
+        </div>
+
+        <div className="project-item__content">
+          <div className="project-item__top">
+            <h3 className="project-item__title">{project.title}</h3>
+            <span className="project-item__num">{project.number}</span>
+          </div>
+
+          <p className="project-item__summary">{project.summary}</p>
+
+          <div className="project-item__footer">
+            <span className="project-item__tech">{techString}</span>
+            <span className="project-item__cta">
+              <span>View Project</span>
+              <ArrowIcon size={13} />
+            </span>
+          </div>
+        </div>
+      </Link>
     </Reveal>
   );
 }

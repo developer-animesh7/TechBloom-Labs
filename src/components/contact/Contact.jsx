@@ -14,7 +14,7 @@ import {
   leadership
 } from '../../data/company.js';
 
-const QUICK_INTENTS = ['internship', 'research-project', 'faculty-mentorship', 'partnership', 'career-guidance'];
+const QUICK_INTENTS = ['technology-project', 'software-development', 'research-project', 'partnership', 'general-inquiry'];
 
 /**
  * Contact section.
@@ -39,8 +39,8 @@ export default function Contact({ compact = false, initialInterest = '', context
           }
           lead={
             compact
-              ? 'Students, faculty, universities and organizations are all welcome. Tell us what you are trying to do and we will point you to the right part of the ecosystem.'
-              : 'Tell us what you are working on. Every enquiry reaches the same team — students, faculty, universities and organizations included.'
+              ? 'Tell us about your project, technology requirements, or partnership goals. Our engineering and advisory team will connect with you promptly.'
+              : 'Connect with our team to discuss custom technology development, applied AI solutions, enterprise architectures, or technical partnerships.'
           }
         />
 

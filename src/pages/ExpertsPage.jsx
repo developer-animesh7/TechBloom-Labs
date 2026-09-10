@@ -23,7 +23,7 @@ import {
  * Redesigned according to the structural hierarchy and information architecture
  * inspired by the reference:
  * 1. Introduction / Hero
- * 2. Section 01 / Guidance — Top World-Class Mentors (Large visual portrait cards)
+ * 2. Section 01 / Guidance — Our Mentors (Large visual portrait cards)
  * 3. Section 02 / Leadership — Executive Leadership (Compact editorial profile cards)
  * 4. Section 03 / Execution — Core Engineering Team (Typographic execution cards)
  * 5. Section 04 / Collaboration CTA ("Build What Matters")
@@ -66,7 +66,7 @@ export default function ExpertsPage() {
   // Formatted mentors with categories
   const formattedMentors = mentors.map((m) => ({
     ...m,
-    category: 'World-Class Mentor'
+    category: 'Mentor'
   }));
 
   // Formatted engineers with categories
@@ -124,14 +124,14 @@ export default function ExpertsPage() {
       </header>
 
       {/* ====================================================================
-          2. SECTION 01: TOP WORLD-CLASS MENTORS (LARGE VISUAL CARDS)
+          2. SECTION 01: OUR MENTORS (LARGE VISUAL CARDS)
           ==================================================================== */}
       <section className="team-section team-section--paper" id="mentors" aria-labelledby="team-mentors-title">
         <PageContainer>
           <div className="team-section__header">
             <div>
               <span className="team-section__kicker">01 / Guidance</span>
-              <h2 className="team-section__title" id="team-mentors-title">Top World-Class Mentors</h2>
+              <h2 className="team-section__title" id="team-mentors-title">Our Mentors</h2>
             </div>
             <div className="team-section__aside">
               <span className="team-section__count">03 Mentors</span>

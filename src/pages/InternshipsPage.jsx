@@ -33,7 +33,7 @@ export default function InternshipsPage() {
               Apply for an Internship
             </Button>
             <Button to="/projects" variant="ghost">
-              Explore Project Concepts
+              Explore Technology Projects
             </Button>
           </Reveal>
         </PageContainer>

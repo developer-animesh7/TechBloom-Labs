@@ -56,7 +56,7 @@ export default function Home() {
             id="about-preview-title"
             titleNode={
               <>
-                Where academic knowledge becomes <em>meaningful</em> experience.
+                Where scientific research translates into <em>scalable</em> technology.
               </>
             }
             lead={aboutIntro}
@@ -73,9 +73,9 @@ export default function Home() {
             <div className="about__media">
               <ImageReveal
                 src="/images/about/about-main.svg"
-                alt="Mentorship and research planning in practice"
+                alt="Applied engineering and research planning in practice"
                 ratio="4x3"
-                caption="Mentorship in practice"
+                caption="Research & engineering in practice"
               />
             </div>
 
@@ -104,7 +104,7 @@ export default function Home() {
                   <div className="mission-framework-card__points">
                     <div className="mission-framework-point">
                       <span className="mission-framework-point__num">01</span>
-                      <span className="mission-framework-point__label">Academic Research</span>
+                      <span className="mission-framework-point__label">Scientific Research</span>
                     </div>
                     <div className="mission-framework-point">
                       <span className="mission-framework-point__num">02</span>
@@ -112,7 +112,7 @@ export default function Home() {
                     </div>
                     <div className="mission-framework-point">
                       <span className="mission-framework-point__num">03</span>
-                      <span className="mission-framework-point__label">Real Deployments</span>
+                      <span className="mission-framework-point__label">Scalable Solutions</span>
                     </div>
                   </div>
                 </div>
@@ -135,7 +135,7 @@ export default function Home() {
             number="02"
             eyebrow="Core Services"
             id="services-preview-title"
-            title="Specialized Engineering & Research"
+            title="Specialized Engineering & Technology Solutions"
             lead="From agricultural data models and pharmaceutical workflows to enterprise software and applied AI, we translate research rigor into reliable real-world systems."
             aside={
               <Button to="/services" arrow>

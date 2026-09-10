@@ -21,7 +21,7 @@ export default function ExpertsPreview() {
           eyebrow="Our Team"
           id="team-preview-title"
           title="Leadership & Core Advisory"
-          lead="Distinguished academic experience and strategic guidance steering TechBloom Labs technology initiatives."
+          lead="Distinguished technical and research expertise, combined with strategic leadership, steering TechBloom Labs technology initiatives."
           aside={
             <Button to="/experts" arrow>
               Meet Our Team

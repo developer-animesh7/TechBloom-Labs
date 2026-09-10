@@ -428,15 +428,15 @@ export const projects = [
   }
 ];
 
-/* Steps shown in the Choose Your Own Project section. */
+/* Steps shown in the Custom Engineering Solutions section. */
 export const proposalSteps = [
-  { step: '01', title: 'Student submits idea', body: 'Title, domain, problem statement, expected outcome, duration and skills.' },
-  { step: '02', title: 'TechBloom Labs reviews feasibility', body: 'Scope, effort and available guidance are assessed together.' },
-  { step: '03', title: 'Suitable faculty or mentor identified', body: 'Matched on domain, research area and current capacity.' },
-  { step: '04', title: 'Project scope is discussed', body: 'Deliverables, milestones and evaluation criteria are agreed.' },
-  { step: '05', title: 'Development or research begins', body: 'Work proceeds with review points along the way.' },
-  { step: '06', title: 'Project is evaluated', body: 'Outcome assessed against the agreed scope.' },
-  { step: '07', title: 'Completion certificate awarded', body: 'Issued on successful evaluation of the project.' }
+  { step: '01', title: 'Problem & Specification Formulation', body: 'Define domain, challenge statement, functional specifications, and technical objectives.' },
+  { step: '02', title: 'Technical Feasibility Review', body: 'Architectural scope, engineering complexity, and domain requirements are evaluated.' },
+  { step: '03', title: 'Technical & Domain Lead Assignment', body: 'Matched with senior technical advisors and specialized engineering talent.' },
+  { step: '04', title: 'System Architecture & Milestone Scoping', body: 'Specifications, system interfaces, security standards, and milestones are agreed.' },
+  { step: '05', title: 'Agile Engineering & Development', body: 'Iterative implementation proceeds with rigorous review cycles and milestone tracking.' },
+  { step: '06', title: 'Quality Assurance & Evaluation', body: 'Deliverables are tested, validated, and evaluated against performance benchmarks.' },
+  { step: '07', title: 'Deployment & Verified Handover', body: 'Final deliverable deployment, technical documentation, and verified handover.' }
 ];
 
 export const projectDomainCount = projectCategories.length;

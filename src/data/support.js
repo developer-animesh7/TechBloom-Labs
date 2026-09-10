@@ -36,14 +36,14 @@ export const trustPillars = [
   {
     id: 'fees',
     icon: 'receipt',
-    title: 'Transparent Fees',
-    body: 'Program fees are displayed clearly before application or payment.'
+    title: 'Transparent Engagements',
+    body: 'Project scopes, milestones, and commercial terms are clearly defined prior to engagement.'
   },
   {
     id: 'applications',
     icon: 'lock',
-    title: 'Secure Applications',
-    body: 'Student information is protected with appropriate security measures.'
+    title: 'Enterprise Data Security',
+    body: 'Client, partner, and proprietary technical data is safeguarded with robust security standards.'
   },
   {
     id: 'support',
@@ -55,11 +55,10 @@ export const trustPillars = [
 
 /* Trust highlights shown near the hero. No numerical claims. */
 export const trustHighlights = [
-  { title: 'Faculty Mentorship', body: 'Verified researchers and industry mentors' },
-  { title: 'Certificates', body: 'On projects and internships' },
-  { title: 'Research Opportunities', body: 'Live projects across ten domains' },
-  { title: 'Structured Internships', body: 'Two-month and six-month programs' },
-  { title: 'Career Pathways', body: 'Roadmaps built around your degree' }
+  { title: 'Research Rigor', body: 'Scientific discovery translated into scalable software' },
+  { title: 'Enterprise Engineering', body: 'Robust cloud, AI, and digital architectures' },
+  { title: 'Specialized Domains', body: 'Proven technology frameworks across 10 sectors' },
+  { title: 'Technical Leadership', body: 'Advisory guidance from distinguished technologists' }
 ];
 
 /* Why TechBloom Labs — the questions a syllabus does not answer. */

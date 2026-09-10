@@ -18,7 +18,7 @@ export default function TeamModal({ person, onClose }) {
   if (!person) return null;
 
   const profileLink = person.profileUrl || person.linkedin;
-  const linkText = person.profileUrl ? 'View Faculty Profile' : 'View LinkedIn Profile';
+  const linkText = person.profileUrl ? 'View Research Profile' : 'View LinkedIn Profile';
 
   return (
     <div

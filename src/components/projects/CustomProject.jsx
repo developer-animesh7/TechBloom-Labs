@@ -20,18 +20,18 @@ export default function CustomProject() {
     <Section id="propose-project" tone="paper" size="lg" ruled labelledBy="propose-title">
       <PageContainer>
         <SectionHeading
-          number="08"
-          eyebrow="Choose Your Own Project"
+          number="02"
+          eyebrow="Custom Solutions"
           id="propose-title"
           titleNode={
             <>
-              Have an idea? Don&rsquo;t choose from our list. <em>Build your own.</em>
+              Have a custom technical challenge? <em>Engineer with TechBloom Labs.</em>
             </>
           }
-          lead="Propose your own project — title, domain, problem statement, idea, expected outcome, duration, skills and technologies. TechBloom Labs presents the workflow for feasibility review, mentor matching, guidance, tracking and certification."
+          lead="Propose a custom technology solution — specify domain requirements, problem statement, technical stack, and target deliverables. TechBloom Labs provides structured feasibility analysis, technical lead assignment, architectural design, and production delivery."
           aside={
             <Button onClick={() => setOpen(true)} arrow>
-              Propose Your Project
+              Propose a Project
             </Button>
           }
         />
@@ -60,13 +60,13 @@ export default function CustomProject() {
               <span className="propose__icon" aria-hidden="true">
                 <Idea size={22} />
               </span>
-              <p className="t-h4">The idea does not have to be finished.</p>
+              <p className="t-h4">From concept to scalable implementation.</p>
               <p className="t-sm">
-                A clear problem and an honest first approach are enough to start a feasibility review.
-                Scope is shaped together with the mentor who takes it on.
+                A well-defined business or technical challenge is enough to start architectural evaluation.
+                Technical scope and interface contracts are finalized together with our domain engineering team.
               </p>
               <Button variant="secondary" size="sm" onClick={() => setOpen(true)}>
-                Start a proposal
+                Start a Proposal
               </Button>
             </div>
           </Reveal>

@@ -49,6 +49,12 @@ export default function AboutHero() {
                   {approvedAboutCopy.decadeHistory}
                 </p>
               </Reveal>
+
+              <Reveal delay={200}>
+                <p className="about-hero__bridge" style={{ fontStyle: 'italic', color: 'var(--accent)', borderLeft: '2px solid var(--accent)', paddingLeft: '14px', margin: '14px 0 0', fontSize: '0.94rem', lineHeight: '1.55' }}>
+                  “{approvedAboutCopy.supportingStatement}”
+                </p>
+              </Reveal>
             </div>
 
             <Reveal delay={220}>

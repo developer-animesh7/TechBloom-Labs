@@ -36,11 +36,14 @@ export default function FinalCTA() {
           </Reveal>
 
           <Reveal className="final__signature" delay={140} aria-hidden="true">
-            {brandSignature.map((word) => (
-              <span key={word}>{word}</span>
+            {brandSignature.map((word, idx) => (
+              <span key={word}>
+                {word}
+                {idx < brandSignature.length - 1 && <span className="final__sep" style={{ opacity: 0.4, margin: '0 8px' }}>·</span>}
+              </span>
             ))}
           </Reveal>
-          <p className="sr-only">Discover. Connect. Experience. Bloom.</p>
+          <p className="sr-only">Research · Industry · Innovation · Impact</p>
 
           <Reveal className="final__actions actions" delay={200}>
             <Button variant="bright" to="/projects" arrow>

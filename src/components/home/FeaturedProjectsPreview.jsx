@@ -23,7 +23,7 @@ export default function FeaturedProjectsPreview() {
           eyebrow="Selected Projects"
           id="featured-projects-title"
           title="Engineered for Real-World Impact"
-          lead="Explore active project frameworks across key domains. Join existing concepts under expert guidance or propose your own."
+          lead="Explore active software frameworks and domain systems. High-reliability technology architectures engineered for scalability and practical deployment."
           aside={
             <Button to="/projects" arrow>
               View All Projects

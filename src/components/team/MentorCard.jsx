@@ -37,6 +37,7 @@ export default function MentorCard({ mentor, onSelect }) {
             <span className="team-mentor-card__initials">
               {mentor.initials || mentor.name.split(' ').map(n => n[0]).join('')}
             </span>
+            <span className="team-mentor-card__placeholder-label">Advisory Mentor</span>
           </div>
         )}
       </div>
@@ -54,8 +55,8 @@ export default function MentorCard({ mentor, onSelect }) {
           <p className="team-mentor-card__aff">{mentor.affiliation}</p>
         )}
 
-        {profileLink && (
-          <div className="team-mentor-card__foot">
+        <div className="team-mentor-card__foot">
+          {profileLink ? (
             <a
               href={profileLink}
               target="_blank"
@@ -67,8 +68,12 @@ export default function MentorCard({ mentor, onSelect }) {
               <span>{linkText}</span>
               <ArrowIcon size={12} />
             </a>
-          </div>
-        )}
+          ) : (
+            <span className="team-mentor-card__link team-mentor-card__link--static">
+              <span>{mentor.affiliation || 'Industry Advisory'}</span>
+            </span>
+          )}
+        </div>
       </div>
     </article>
   );

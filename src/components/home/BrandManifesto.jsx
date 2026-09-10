@@ -14,17 +14,17 @@ export default function BrandManifesto() {
     {
       num: '01',
       title: 'Ten Domain Frameworks',
-      desc: 'Precision agriculture, pharmaceutical workflows, veterinary data, healthcare systems, and applied AI systems built with domain rigor.'
+      desc: 'Precision agriculture, pharmaceutical workflows, livestock systems, healthcare platforms, and applied AI engineered with domain rigor.'
     },
     {
       num: '02',
-      title: 'Expert-Guided Discipline',
-      desc: 'Collaborative problem formulation under domain researchers and specialists, establishing high standards from inception.'
+      title: 'Technical & Research Discipline',
+      desc: 'Collaborative problem formulation under distinguished technical advisors and domain researchers, establishing engineering rigor from inception.'
     },
     {
       num: '03',
-      title: 'Practical Implementation',
-      desc: 'From concept design toward practical, real-world technology systems that address authentic institutional and industry needs.'
+      title: 'Scalable Implementation',
+      desc: 'From architectural design toward production-grade, enterprise technology products that deliver measurable real-world impact.'
     }
   ];
 
@@ -43,8 +43,7 @@ export default function BrandManifesto() {
           </Reveal>
 
           <Reveal as="p" className="manifesto__lead t-lead" delay={120}>
-            TechBloom Labs operates as a collaborative bridge between academic inquiry and practical application.
-            We connect students, domain researchers, and real datasets to develop technology frameworks with measurable real-world relevance.
+            Bridging academia and industry to develop real-world solutions through research, collaboration, and talent. We engineer high-performance software, intelligent systems, and scalable digital architectures that address authentic industry needs.
           </Reveal>
 
           <div className="manifesto__pillars" style={{ marginTop: 'var(--s-7)' }}>

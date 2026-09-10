@@ -36,7 +36,7 @@ export default function ServicesPage() {
               Discuss a Project
             </Button>
             <Button to="/projects" variant="ghost">
-              Browse Project Concepts
+              Browse Technology Projects
             </Button>
           </Reveal>
         </PageContainer>
@@ -116,7 +116,7 @@ export default function ServicesPage() {
             eyebrow="Delivery Model"
             id="process-title"
             title="How TechBloom Labs Delivers"
-            lead="From problem formulation through architectural design and mentor-guided development."
+            lead="From problem formulation through architectural design, engineering development, and scalable deployment."
           />
 
           <Divider />

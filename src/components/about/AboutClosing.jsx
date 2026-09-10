@@ -35,7 +35,7 @@ export default function AboutClosing() {
                 Explore Services
               </Button>
               <Button to="/projects" variant="secondary">
-                View Project Concepts
+                View Projects
               </Button>
               <Button to="/experts" variant="ghost">
                 Meet Our Team

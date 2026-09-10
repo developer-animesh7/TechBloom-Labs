@@ -21,7 +21,10 @@ export const approvedAboutCopy = {
     'At TechBloom Labs, we believe innovation is not just about adopting new technology—it is about creating products that make a measurable difference, empower people and organizations, and shape the future.',
 
   lifecycleExecution:
-    'From concept and research to product design, development, deployment, and continuous evolution, we work with a long-term entrepreneurial mindset to imagine, build, and scale products that matter.'
+    'From concept and research to product design, development, deployment, and continuous evolution, we work with a long-term entrepreneurial mindset to imagine, build, and scale products that matter.',
+
+  supportingStatement:
+    'Bridging academia and industry to develop real-world solutions through research, collaboration, and talent.'
 };
 
 /* Global collaboration nodes representing the Indo-US-Canadian venture */
