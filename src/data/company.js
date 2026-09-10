@@ -109,19 +109,27 @@ export const mentors = [
     num: '01',
     name: 'Avnish Kumar',
     role: 'AWS Engineer',
+    affiliation: 'AWS',
+    portrait: '/images/leadership/Avnish%20Kumar.png',
+    portraitAlt: 'Avnish Kumar, AWS Engineer and Mentor at TechBloom Labs',
     linkedin: 'https://www.linkedin.com/in/avnish-kumar-40a54328/'
   },
   {
     id: 'M-02',
     num: '02',
     name: 'Soummyo Priyo Chattopadhyay',
-    role: 'Deloitte Canada'
+    role: 'Deloitte Canada',
+    affiliation: 'Deloitte Canada',
+    initials: 'SC'
   },
   {
     id: 'M-03',
     num: '03',
     name: 'Phillip G. Bradford',
     role: 'Associate Professor-in-Residence, Computer Science',
+    affiliation: 'University of Connecticut',
+    portrait: '/images/leadership/Phillip%20G.%20Bradford.png',
+    portraitAlt: 'Phillip G. Bradford, Associate Professor-in-Residence, Computer Science and Mentor at TechBloom Labs',
     profileUrl: 'https://stamford.uconn.edu/person/phillip-g-bradford/'
   }
 ];
