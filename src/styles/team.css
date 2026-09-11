@@ -267,6 +267,15 @@
   color: var(--accent);
 }
 
+.team-mentor-card__location {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-2);
+  text-transform: uppercase;
+}
+
 .team-mentor-card__name {
   font-family: var(--font-display);
   font-size: clamp(1.2rem, 1.5vw, 1.4rem);
@@ -904,60 +913,115 @@
 
 /* Mobile: Compact intentional compositions for Mentors, Leaders, and Engineers */
 @media (max-width: 680px) {
-  /* Mentors: Compact horizontal card preventing single-person screen consumption */
+  /* Mentors: Compact horizontal card with pixel-perfect internal header grid */
   .team-mentors-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
   .team-mentor-card {
-    flex-direction: row;
-    align-items: center;
-    gap: 14px;
-    padding: 12px 14px;
-    min-height: 110px;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+    padding: 14px !important;
+    min-height: 110px !important;
+    height: auto !important;
+    background: var(--paper-raise) !important;
+    border: 1px solid var(--line) !important;
+    border-radius: var(--r-lg) !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
   .team-mentor-card__media {
-    width: 88px;
-    height: 88px;
-    min-width: 88px;
-    aspect-ratio: 1 / 1;
-    border-radius: var(--r-md);
+    width: 88px !important;
+    height: 88px !important;
+    min-width: 88px !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: var(--r-md) !important;
+    flex-shrink: 0 !important;
+    overflow: hidden !important;
+    border: 1px solid var(--line) !important;
+  }
+  .team-mentor-card__img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
   }
   .team-mentor-card__initials {
-    font-size: 1.8rem;
+    font-size: 1.8rem !important;
   }
   .team-mentor-card__placeholder-label {
-    display: none;
+    display: none !important;
   }
   .team-mentor-card__info {
-    padding-top: 0;
-    min-width: 0;
-    flex-grow: 1;
+    display: flex !important;
+    flex-direction: column !important;
+    padding-top: 0 !important;
+    min-width: 0 !important;
+    flex-grow: 1 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
   .team-mentor-card__meta {
-    margin-bottom: 4px;
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin-bottom: 6px !important;
+    box-sizing: border-box !important;
+  }
+  .team-mentor-card__index {
+    font-family: var(--font-mono) !important;
+    font-size: 0.82rem !important;
+    font-weight: 700 !important;
+    color: var(--accent) !important;
+    min-width: 28px !important;
+    flex-shrink: 0 !important;
+  }
+  .team-mentor-card__meta .badge--sm {
+    margin-right: auto !important;
+    flex-shrink: 0 !important;
+  }
+  .team-mentor-card__location {
+    font-family: var(--font-display), var(--font-sans) !important;
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+    color: var(--text-2) !important;
+    text-align: right !important;
+    margin-left: auto !important;
+    flex-shrink: 0 !important;
   }
   .team-mentor-card__name {
-    min-height: 0;
-    font-size: 1.05rem;
-    line-height: 1.25;
-    margin: 0 0 2px;
+    font-family: var(--font-display) !important;
+    font-size: 1.08rem !important;
+    font-weight: 600 !important;
+    color: var(--ink) !important;
+    line-height: 1.25 !important;
+    margin: 0 0 3px !important;
+    min-height: 0 !important;
+    word-break: break-word !important;
   }
   .team-mentor-card__role {
-    min-height: 0;
-    font-size: 0.82rem;
-    line-height: 1.35;
-    margin: 0 0 3px;
+    font-size: 0.84rem !important;
+    color: var(--text-2) !important;
+    line-height: 1.35 !important;
+    margin: 0 0 3px !important;
+    min-height: 0 !important;
   }
   .team-mentor-card__aff {
-    font-size: 0.68rem;
-    margin: 0 0 4px;
+    font-family: var(--font-mono) !important;
+    font-size: 0.72rem !important;
+    font-weight: 600 !important;
+    color: var(--accent) !important;
+    text-transform: uppercase !important;
+    margin: 0 !important;
   }
   .team-mentor-card__foot {
-    min-height: 0;
-    padding-top: 4px;
-    margin-top: 2px;
-    border-top: 0;
+    display: none !important;
   }
 
   /* Leadership: Compact vertical card with controlled portrait frame & face-first cropping */

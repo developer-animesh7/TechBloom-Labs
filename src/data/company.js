@@ -93,7 +93,7 @@ export const mentors = [
     name: 'Avnish Kumar',
     role: 'Amazon Engineer (AWS)',
     affiliation: 'Amazon Engineer (AWS)',
-    location: 'US',
+    location: 'USA',
     portrait: '/images/leadership/Avnish%20Kumar.png',
     portraitAlt: 'Avnish Kumar, Amazon Engineer (AWS)'
   },
@@ -113,7 +113,7 @@ export const mentors = [
     name: 'Saptarshi Banerjee',
     role: 'Amazon Engineer (AWS)',
     affiliation: 'Amazon Engineer (AWS)',
-    location: 'US',
+    location: 'USA',
     portrait: '/images/leadership/Saptarshi%20Banerjee%20.png',
     portraitAlt: 'Saptarshi Banerjee, Amazon Engineer (AWS)'
   },
@@ -123,6 +123,7 @@ export const mentors = [
     name: 'Soummyo Priyo Chattopadhyay',
     role: 'Deloitte Canada',
     affiliation: 'Deloitte Canada',
+    location: 'Canada',
     portrait: '/images/leadership/Soummyo%20Priyo%20Chattopadhyay.jpeg',
     portraitAlt: 'Soummyo Priyo Chattopadhyay, Deloitte Canada'
   },
