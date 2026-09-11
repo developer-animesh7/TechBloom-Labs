@@ -105,7 +105,7 @@ export default function Leadership() {
         {/* 2. Mentors Subsection */}
         <div className="about-people-subhead" style={{ marginTop: 'clamp(24px, 3.5vw, 36px)' }}>
           <h3 className="team-subhead__title">Mentors</h3>
-          <span className="team-subhead__count">03 MENTORS</span>
+          <span className="team-subhead__count">{String(mentors.length).padStart(2, '0')} MENTORS</span>
         </div>
 
         <div className="mentors-grid" style={{ marginBottom: 'clamp(32px, 4.5vw, 48px)' }}>

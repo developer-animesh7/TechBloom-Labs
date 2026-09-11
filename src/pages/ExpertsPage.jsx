@@ -134,7 +134,7 @@ export default function ExpertsPage() {
               <h2 className="team-section__title" id="team-mentors-title">Our Mentors</h2>
             </div>
             <div className="team-section__aside">
-              <span className="team-section__count">03 Mentors</span>
+              <span className="team-section__count">{String(formattedMentors.length).padStart(2, '0')} Mentors</span>
               <span className="team-section__hint">Click any profile to view details</span>
             </div>
           </div>

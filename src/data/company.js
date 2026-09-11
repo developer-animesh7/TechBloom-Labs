@@ -131,6 +131,15 @@ export const mentors = [
     portrait: '/images/leadership/Phillip%20G.%20Bradford.png',
     portraitAlt: 'Phillip G. Bradford, Associate Professor-in-Residence, Computer Science and Mentor at TechBloom Labs',
     profileUrl: 'https://stamford.uconn.edu/person/phillip-g-bradford/'
+  },
+  {
+    id: 'M-04',
+    num: '04',
+    name: 'Saptarshi Banerjee',
+    role: 'OpenAI Engineer',
+    affiliation: 'OpenAI',
+    portrait: '/images/leadership/Saptarshi%20Banerjee%20.png',
+    portraitAlt: 'Saptarshi Banerjee, OpenAI Engineer and Mentor at TechBloom Labs'
   }
 ];
 
