@@ -4,14 +4,9 @@ import Reveal from '../components/common/Reveal.jsx';
 import Button from '../components/common/Button.jsx';
 import ArrowIcon from '../components/common/ArrowIcon.jsx';
 import MentorCard from '../components/team/MentorCard.jsx';
-import LeaderCard from '../components/team/LeaderCard.jsx';
 import EngineerCard from '../components/team/EngineerCard.jsx';
 import TeamModal from '../components/team/TeamModal.jsx';
 import {
-  chiefAdvisorHead,
-  chiefMarketingAdviser,
-  directorAI,
-  directorWeb,
   mentors,
   engineeringTeam,
   companyName,
@@ -20,16 +15,9 @@ import {
 
 /**
  * Our Team Page (/experts)
- * Redesigned according to the structural hierarchy and information architecture
- * inspired by the reference:
- * 1. Introduction / Hero
- * 2. Section 01 / Guidance — Our Mentors (Large visual portrait cards)
- * 3. Section 02 / Leadership — Executive Leadership (Compact editorial profile cards)
- * 4. Section 03 / Execution — Core Engineering Team (Typographic execution cards)
- * 5. Section 04 / Collaboration CTA ("Build What Matters")
- *
- * Fully integrated with TechBloom Labs design tokens, colors, light/dark balance,
- * and strict verified data integrity.
+ * Exact two-section layout:
+ * 1. Our Mentors (6 mentors in 2 rows x 3 cards)
+ * 2. Our Leadership & Engineering Team (6 members in 2 rows x 3 cards)
  */
 export default function ExpertsPage() {
   const [selectedPerson, setSelectedPerson] = useState(null);
@@ -39,40 +27,14 @@ export default function ExpertsPage() {
     window.scrollTo(0, 0);
   }, []);
 
-  // Formatted leadership team with chips and categories for modal/display
-  const leadersList = [
-    {
-      ...chiefAdvisorHead,
-      category: 'Senior Advisory',
-      chips: ['Ph.D. in Engineering (Jadavpur Univ.)', 'Senior Member IEEE']
-    },
-    {
-      ...chiefMarketingAdviser,
-      category: 'Strategic Advisory',
-      chips: ['Chief Marketing Adviser', 'Strategic Advisory']
-    },
-    {
-      ...directorAI,
-      category: 'Innovation Leadership',
-      chips: ['DIRECTOR OF AI AND INNOVATION', 'AI Architecture']
-    },
-    {
-      ...directorWeb,
-      category: 'Engineering Leadership',
-      chips: ['Director of Web Development', 'Web Architecture']
-    }
-  ];
-
-  // Formatted mentors with categories
   const formattedMentors = mentors.map((m) => ({
     ...m,
     category: 'Mentor'
   }));
 
-  // Formatted engineers with categories
-  const formattedEngineers = engineeringTeam.map((e) => ({
+  const formattedTeam = engineeringTeam.map((e) => ({
     ...e,
-    category: 'Engineering Team'
+    category: 'Leadership & Engineering Team'
   }));
 
   return (
@@ -114,17 +76,17 @@ export default function ExpertsPage() {
             <Button
               variant="ghost"
               onClick={() => {
-                document.getElementById('leadership')?.scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('leadership-engineering')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              Meet Leadership
+              Leadership & Engineering
             </Button>
           </Reveal>
         </div>
       </header>
 
       {/* ====================================================================
-          2. SECTION 01: OUR MENTORS (LARGE VISUAL CARDS)
+          2. SECTION 01: OUR MENTORS (6 Mentors, 3 Columns x 2 Rows)
           ==================================================================== */}
       <section className="team-section team-section--paper" id="mentors" aria-labelledby="team-mentors-title">
         <PageContainer>
@@ -141,7 +103,7 @@ export default function ExpertsPage() {
 
           <div className="team-mentors-grid">
             {formattedMentors.map((mentor, idx) => (
-              <Reveal key={mentor.id} delay={idx * 80}>
+              <Reveal key={mentor.id} delay={idx * 60}>
                 <MentorCard
                   mentor={mentor}
                   onSelect={(p) => setSelectedPerson(p)}
@@ -153,27 +115,26 @@ export default function ExpertsPage() {
       </section>
 
       {/* ====================================================================
-          3. SECTION 02: LEADERSHIP (COMPACT EDITORIAL CARDS)
+          3. SECTION 02: OUR LEADERSHIP & ENGINEERING TEAM (6 Members, 3 Columns x 2 Rows)
           ==================================================================== */}
-      <section className="team-section team-section--sunk" id="leadership" aria-labelledby="team-leadership-title">
+      <section className="team-section team-section--sunk" id="leadership-engineering" aria-labelledby="team-leadership-eng-title">
         <PageContainer>
           <div className="team-section__header">
             <div>
-              <span className="team-section__kicker">02 / Leadership</span>
-              <h2 className="team-section__title" id="team-leadership-title">Our Leadership</h2>
+              <span className="team-section__kicker">02 / Execution</span>
+              <h2 className="team-section__title" id="team-leadership-eng-title">Our Leadership & Engineering Team</h2>
             </div>
             <div className="team-section__aside">
-              <span className="team-section__count">04 Profiles</span>
-              <span className="team-section__hint">Strategy · Innovation · Growth · Technology</span>
+              <span className="team-section__count">{String(formattedTeam.length).padStart(2, '0')} Members</span>
+              <span className="team-section__hint">Turning research into scalable systems</span>
             </div>
           </div>
 
-          <div className="team-leaders-grid">
-            {leadersList.map((leader, idx) => (
-              <Reveal key={leader.name} delay={idx * 60}>
-                <LeaderCard
-                  leader={leader}
-                  index={idx}
+          <div className="team-engineers-grid">
+            {formattedTeam.map((member, idx) => (
+              <Reveal key={member.id} delay={idx * 60}>
+                <EngineerCard
+                  engineer={member}
                   onSelect={(p) => setSelectedPerson(p)}
                 />
               </Reveal>
@@ -183,40 +144,9 @@ export default function ExpertsPage() {
       </section>
 
       {/* ====================================================================
-          4. SECTION 03: ENGINEERING TEAM (EXECUTION PANEL)
+          4. SECTION 03: COLLABORATION / CONTACT CTA
           ==================================================================== */}
-      <section className="team-section team-section--paper" id="engineering" aria-labelledby="team-engineers-title">
-        <PageContainer>
-          <div className="team-section__header">
-            <div>
-              <span className="team-section__kicker">03 / Execution</span>
-              <h2 className="team-section__title" id="team-engineers-title">Our Engineering Team</h2>
-            </div>
-            <div className="team-section__aside">
-              <span className="team-section__count">03 Profiles</span>
-              <span className="team-section__hint">Turning research into scalable systems</span>
-            </div>
-          </div>
-
-          <div className="team-engineering-panel">
-            <div className="team-engineers-grid">
-              {formattedEngineers.map((engineer, idx) => (
-                <Reveal key={engineer.id} delay={idx * 70}>
-                  <EngineerCard
-                    engineer={engineer}
-                    onSelect={(p) => setSelectedPerson(p)}
-                  />
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </PageContainer>
-      </section>
-
-      {/* ====================================================================
-          5. SECTION 04: COLLABORATION / CONTACT CTA
-          ==================================================================== */}
-      <section className="team-section team-section--sunk" aria-labelledby="team-cta-title">
+      <section className="team-section team-section--paper" aria-labelledby="team-cta-title">
         <PageContainer>
           <div className="team-cta-box">
             <Reveal>

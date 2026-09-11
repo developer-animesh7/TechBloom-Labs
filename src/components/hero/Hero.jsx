@@ -23,9 +23,7 @@ export default function Hero({ children }) {
 
       <PageContainer className="hero__inner">
         <div className="hero__copy">
-          <Reveal as="p" className="hero__eyebrow t-label" variant="fade">
-            {tagline}
-          </Reveal>
+
 
           <Reveal as="h1" className="hero__title t-display" delay={60}>
             Where research meets <em>real-world</em> innovation.

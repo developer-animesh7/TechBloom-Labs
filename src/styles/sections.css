@@ -1451,7 +1451,7 @@
 /* --------------------------------------------------------------------------
    Final CTA
    -------------------------------------------------------------------------- */
-.final { position: relative; overflow: hidden; }
+.final { position: relative; overflow: hidden; padding-bottom: clamp(64px, 7.5vw, 118px); }
 
 .final__grid {
   position: absolute;

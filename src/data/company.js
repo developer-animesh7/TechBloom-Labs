@@ -1,177 +1,195 @@
-/* ==========================================================================
-   Company — single source of truth for identity and contact detail.
-   ========================================================================== */
-
-const env = import.meta.env ?? {};
-
+/* --------------------------------------------------------------------------
+   Company meta & primary identification
+   -------------------------------------------------------------------------- */
 export const companyName = 'TechBloom Labs';
-export const tagline = 'Where Learning Meets Opportunity';
-export const primaryStatement = 'WHERE RESEARCH MEETS REAL-WORLD INNOVATION.';
+export const tagline = 'Enterprise Product Engineering & Research Venture';
+
+/* Environment configuration wrapper for safety */
+const env = (typeof import.meta !== 'undefined' && import.meta.env) ? import.meta.env : {};
+
+export const website = 'https://techbloomlabs.com';
+
+export const primaryStatement =
+  'Translating scientific discovery into enterprise software architectures, applied AI, and scalable digital products.';
+
 export const brandSignature = ['RESEARCH', 'INDUSTRY', 'INNOVATION', 'IMPACT'];
-export const website = 'https://discover-bloom.preview.static.emergentagent.com/';
 
 export const address = {
-  street: '305 Jessore Road',
-  city: 'Kolkata 700089',
-  region: 'West Bengal, India',
-  oneLine: '305 Jessore Road, Kolkata 700089, West Bengal, India'
+  headquarters: 'Salt Lake Sector V, Kolkata, West Bengal, India',
+  usHub: 'University of Connecticut, Stamford, CT, USA',
+  canadaHub: 'Trinity Western University, Langley, BC, Canada'
 };
 
-export const chiefAdvisorHead = {
-  name: 'Prof. Dr. Himadri Nath Saha',
-  displayName: 'Dr. Himadri Nath Saha',
-  role: 'Chief Advisor & Head',
-  fullRole: 'Chief Advisor & Head — TechBloom Labs',
-  initials: 'HS',
-  portrait: '/images/leadership/himadri-nath-saha.jpg',
-  portraitAlt: 'Prof. Dr. Himadri Nath Saha, Chief Advisor & Head at TechBloom Labs',
-  summary:
-    'Senior academician, engineer, and advisor with extensive contributions to computer science education, distributed systems research, and industry-academia programs.',
-  education: [
-    'Bachelor of Engineering — Jadavpur University',
-    'Master of Engineering — Indian Institute of Engineering, Science and Technology (IIEST, Shibpur)',
-    'Master of Business Administration',
-    'Ph.D. in Engineering — Jadavpur University'
-  ],
-  appointments: [
-    'Head of the Department, Computer Science, SNEC, Calcutta University'
-  ],
-  awards: [
-    'Gold Faculty Award — Infosys Technology Limited, 2013',
-    'Outstanding Contribution Award — Infosys Technology Limited, 2011',
-    'Best Innovative Faculty — Infosys Technology Limited, 2012',
-    'Best Faculty Award — Institute of Engineering & Management, 2011'
-  ],
-  fellowships: [
-    'Fellow of Institution of Engineers India (IEI)',
-    'Fellow of Institution of Electronics and Telecommunications Engineers (IETE)',
-    'Senior Member of IEEE'
-  ],
-  publications: [
-    'Author of Database Management System textbook'
-  ],
-  contributions: [
-    'Academic and research collaborations across engineering disciplines',
-    'International conference chairing and technical program committee involvement',
-    'Curriculum instruction across algorithms, database systems, and networking',
-    'Hands-on Internet of Things (IoT) workshops and visiting-professor engagements'
-  ]
-};
-
-export const chiefMarketingAdviser = {
+/* --------------------------------------------------------------------------
+   Executive Leadership (Approved Data Model)
+   -------------------------------------------------------------------------- */
+export const chiefExecutive = {
   name: 'Prof. Bhabani Prasad Roy',
-  displayName: 'Prof. Bhabani Prasad Roy',
   role: 'Chief Marketing Adviser',
-  fullRole: 'Chief Marketing Adviser — TechBloom Labs',
-  initials: 'BR',
-  portrait: '/images/leadership/Bhabani Prasad Roy.png',
-  portraitAlt: 'Prof. Bhabani Prasad Roy, Chief Marketing Adviser at TechBloom Labs',
-  summary: 'Chief Marketing Adviser guiding outreach, institutional initiatives, and market strategy at TechBloom Labs.'
+  summary:
+    'Guiding market positioning, enterprise partnerships, and commercial translation across global technology ecosystems.',
+  portrait: '/images/leadership/Bhabani%20Prasad%20Roy.png',
+  portraitAlt: 'Prof. Bhabani Prasad Roy, Chief Marketing Adviser at TechBloom Labs'
 };
 
-// Aliases for compatibility
-export const chiefExecutive = chiefAdvisorHead;
-export const chiefAdvisor = chiefMarketingAdviser;
+export const chiefAdvisor = {
+  name: 'Prof. Dr. Himadri Nath Saha',
+  role: 'SNEC',
+  summary:
+    'Leading academic collaboration, systems research, and research-to-product incubation across AI and engineering domains.',
+  portrait: '/images/leadership/himadri-nath-saha.jpg',
+  portraitAlt: 'Prof. Dr. Himadri Nath Saha, SNEC'
+};
+
+export const chiefAdvisorHead = chiefAdvisor;
+export const chiefMarketingAdviser = chiefExecutive;
 
 export const directorAI = {
   name: 'Sreyan Saha',
-  displayName: 'Sreyan Saha',
-  role: 'DIRECTOR OF AI AND INNOVATION',
-  fullRole: 'DIRECTOR OF AI AND INNOVATION — TechBloom Labs',
-  initials: 'SS',
-  portrait: '/images/leadership/Sreyan Saha.jpeg',
-  portraitAlt: 'Sreyan Saha, DIRECTOR OF AI AND INNOVATION at TechBloom Labs'
+  role: 'Director of AI & Innovation',
+  summary:
+    'Architecting intelligent AI systems, neural research pipelines, and domain-adapted machine learning models.',
+  portrait: '/images/leadership/Sreyan%20Saha.jpeg',
+  portraitAlt: 'Sreyan Saha, Director of AI & Innovation at TechBloom Labs'
 };
 
 export const directorWeb = {
   name: 'Tanisha Saha',
-  displayName: 'Tanisha Saha',
   role: 'Director of Web Development',
-  fullRole: 'Director of Web Development — TechBloom Labs',
-  initials: 'TS',
-  portrait: '/images/leadership/Tanisha Saha.jpeg',
+  summary:
+    'Engineering high-performance enterprise web architectures, accessible UI systems, and robust platform frameworks.',
+  portrait: '/images/leadership/Tanisha%20Saha.jpeg',
   portraitAlt: 'Tanisha Saha, Director of Web Development at TechBloom Labs'
 };
 
 export const leadership = [
-  chiefAdvisorHead,
-  chiefMarketingAdviser,
+  chiefAdvisor,
+  chiefExecutive,
   directorAI,
   directorWeb
 ];
 
 /* --------------------------------------------------------------------------
-   Top World-Class Mentors (Strictly verified profiles without placeholder data)
+   Top World-Class Mentors (Exactly 6 Mentors)
    -------------------------------------------------------------------------- */
 export const mentors = [
   {
     id: 'M-01',
     num: '01',
-    name: 'Avnish Kumar',
-    role: 'AWS Engineer',
-    affiliation: 'AWS',
-    portrait: '/images/leadership/Avnish%20Kumar.png',
-    portraitAlt: 'Avnish Kumar, AWS Engineer and Mentor at TechBloom Labs',
-    linkedin: 'https://www.linkedin.com/in/avnish-kumar-40a54328/'
+    name: 'Dr. Phillip G. Bradford',
+    role: 'Associate Professor-in-Residence, Computer Science',
+    affiliation: 'Associate Professor-in-Residence, Computer Science',
+    location: 'USA',
+    portrait: '/images/leadership/Phillip%20G.%20Bradford.png',
+    portraitAlt: 'Dr. Phillip G. Bradford, Associate Professor-in-Residence, Computer Science'
   },
   {
     id: 'M-02',
     num: '02',
-    name: 'Soummyo Priyo Chattopadhyay',
-    role: 'Deloitte Canada',
-    affiliation: 'Deloitte Canada',
-    initials: 'SC'
+    name: 'Avnish Kumar',
+    role: 'Amazon Engineer (AWS)',
+    affiliation: 'Amazon Engineer (AWS)',
+    location: 'US',
+    portrait: '/images/leadership/Avnish%20Kumar.png',
+    portraitAlt: 'Avnish Kumar, Amazon Engineer (AWS)'
   },
   {
     id: 'M-03',
     num: '03',
-    name: 'Phillip G. Bradford',
-    role: 'Associate Professor-in-Residence, Computer Science',
-    affiliation: 'University of Connecticut',
-    portrait: '/images/leadership/Phillip%20G.%20Bradford.png',
-    portraitAlt: 'Phillip G. Bradford, Associate Professor-in-Residence, Computer Science and Mentor at TechBloom Labs',
-    profileUrl: 'https://stamford.uconn.edu/person/phillip-g-bradford/'
+    name: 'Dr. Andrew J. Park',
+    role: 'Trinity Western University',
+    affiliation: 'Trinity Western University',
+    location: 'Canada',
+    portrait: '/images/leadership/Andrew%20J.%20Park.png',
+    portraitAlt: 'Dr. Andrew J. Park, Trinity Western University'
   },
   {
     id: 'M-04',
     num: '04',
     name: 'Saptarshi Banerjee',
-    role: 'OpenAI Engineer',
-    affiliation: 'OpenAI',
+    role: 'Amazon Engineer (AWS)',
+    affiliation: 'Amazon Engineer (AWS)',
+    location: 'US',
     portrait: '/images/leadership/Saptarshi%20Banerjee%20.png',
-    portraitAlt: 'Saptarshi Banerjee, OpenAI Engineer and Mentor at TechBloom Labs'
+    portraitAlt: 'Saptarshi Banerjee, Amazon Engineer (AWS)'
+  },
+  {
+    id: 'M-05',
+    num: '05',
+    name: 'Soummyo Priyo Chattopadhyay',
+    role: 'Deloitte Canada',
+    affiliation: 'Deloitte Canada',
+    portrait: '/images/leadership/Soummyo%20Priyo%20Chattopadhyay.jpeg',
+    portraitAlt: 'Soummyo Priyo Chattopadhyay, Deloitte Canada'
+  },
+  {
+    id: 'M-06',
+    num: '06',
+    name: 'Prof. Dr. Himadri Nath Saha',
+    role: 'SNEC',
+    affiliation: 'SNEC',
+    location: 'India',
+    portrait: '/images/leadership/himadri-nath-saha.jpg',
+    portraitAlt: 'Prof. Dr. Himadri Nath Saha, SNEC'
   }
 ];
 
 /* --------------------------------------------------------------------------
-   Engineering Team (Strictly typographic/technical — no photos)
+   Our Leadership & Engineering Team (Exactly 6 Members)
    -------------------------------------------------------------------------- */
 export const engineeringTeam = [
   {
-    id: 'ENG-01',
+    id: 'LEAD-01',
     num: '01',
+    name: 'Prof. Bhabani Prasad Roy',
+    role: 'Chief Marketing Adviser',
+    portrait: '/images/leadership/Bhabani%20Prasad%20Roy.png',
+    portraitAlt: 'Prof. Bhabani Prasad Roy, Chief Marketing Adviser'
+  },
+  {
+    id: 'LEAD-02',
+    num: '02',
+    name: 'Sreyan Saha',
+    role: 'Director of AI and Innovation',
+    portrait: '/images/leadership/Sreyan%20Saha.jpeg',
+    portraitAlt: 'Sreyan Saha, Director of AI and Innovation'
+  },
+  {
+    id: 'LEAD-03',
+    num: '03',
+    name: 'Tanisha Saha',
+    role: 'Director of Web Development',
+    portrait: '/images/leadership/Tanisha%20Saha.jpeg',
+    portraitAlt: 'Tanisha Saha, Director of Web Development'
+  },
+  {
+    id: 'ENG-01',
+    num: '04',
     name: 'Animesh Patra',
-    role: 'Software Development Engineer — AI',
-    initials: 'AP',
+    role: 'Software Development Engineer: AI',
     domain: 'Artificial Intelligence & Systems',
+    portrait: '/images/leadership/Animesh%20patra.jpg',
+    portraitAlt: 'Animesh Patra, Software Development Engineer: AI',
     linkedin: 'https://www.linkedin.com/in/animesh-patra2004/'
   },
   {
     id: 'ENG-02',
-    num: '02',
+    num: '05',
     name: 'Amitava Giri',
     role: 'AI & Cloud Engineer',
-    initials: 'AG',
     domain: 'Cloud Architecture & Intelligence',
+    portrait: '/images/leadership/Amitava%20Giri.png',
+    portraitAlt: 'Amitava Giri, AI & Cloud Engineer',
     linkedin: 'https://www.linkedin.com/in/amitava-giri/'
   },
   {
     id: 'ENG-03',
-    num: '03',
+    num: '06',
     name: 'Soumosish Jana',
-    role: 'Full Stack Engineer — AI',
-    initials: 'SJ',
+    role: 'Full Stack Engineer: AI',
     domain: 'Full Stack Applications & AI',
+    portrait: '/images/leadership/soumosish%20Jana.png',
+    portraitAlt: 'Soumosish Jana, Full Stack Engineer: AI',
     linkedin: 'https://www.linkedin.com/in/soumosish-jana-a28050342/'
   }
 ];
