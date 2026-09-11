@@ -25,7 +25,7 @@ export default function ResearchPage() {
       <Section tone="sunk" className="page-head" size="lg">
         <PageContainer>
           <Reveal as="p" className="t-label" variant="fade">
-            Research & Project Ecosystem
+            Research & Product Ecosystem
           </Reveal>
           <Reveal as="h1" className="t-h1 page-head__title">
             {researchStatement}
@@ -82,7 +82,7 @@ export default function ResearchPage() {
             number="02"
             eyebrow="Methodology"
             id="research-flow-title"
-            title="The Research & Project Lifecycle"
+            title="The Research & Product Lifecycle"
             lead="How ideas progress from exploratory questions to evaluated architectures."
           />
 

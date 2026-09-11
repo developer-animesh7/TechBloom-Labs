@@ -36,7 +36,7 @@ export default function ServicesPage() {
               Discuss a Project
             </Button>
             <Button to="/projects" variant="ghost">
-              Browse Technology Projects
+              Browse Our Products
             </Button>
           </Reveal>
         </PageContainer>

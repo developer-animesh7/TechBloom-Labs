@@ -7,7 +7,7 @@ export const primaryNav = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
   { label: 'Services', to: '/services' },
-  { label: 'Projects', to: '/projects' },
+  { label: 'Our Products', to: '/projects' },
   { label: 'Our Team', to: '/experts' }
 ];
 
@@ -20,7 +20,7 @@ export const mobileNav = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
   { label: 'Services', to: '/services' },
-  { label: 'Projects', to: '/projects' },
+  { label: 'Our Products', to: '/projects' },
   { label: 'Our Team', to: '/experts' },
   { label: 'Contact', to: '/contact' }
 ];
@@ -32,7 +32,7 @@ export const footerNav = [
     title: 'Company',
     links: [
       { label: 'About', to: '/about' },
-      { label: 'Projects', to: '/projects' },
+      { label: 'Our Products', to: '/projects' },
       { label: 'Our Team', to: '/experts' },
       { label: 'Contact', to: '/contact' }
     ]
@@ -41,7 +41,7 @@ export const footerNav = [
     title: 'Explore',
     links: [
       { label: 'Services', to: '/services' },
-      { label: 'Projects', to: '/projects' },
+      { label: 'Our Products', to: '/projects' },
       { label: 'Our Team', to: '/experts' }
     ]
   },

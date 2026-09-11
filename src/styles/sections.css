@@ -2283,13 +2283,13 @@
 
 .team-lead-card {
   display: grid;
-  grid-template-columns: 130px 1fr;
+  grid-template-columns: 120px 1fr;
   gap: clamp(16px, 2vw, 24px);
   align-items: start;
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: var(--r-md);
-  padding: clamp(18px, 2.2vw, 24px);
+  padding: clamp(14px, 1.8vw, 20px);
   transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
 }
 .team-lead-card:hover {
@@ -2299,8 +2299,8 @@
 }
 
 .team-lead-card__media {
-  width: 130px;
-  height: 155px;
+  width: 120px;
+  height: 142px;
   border-radius: var(--r-sm);
   overflow: hidden;
   border: 1px solid var(--line);

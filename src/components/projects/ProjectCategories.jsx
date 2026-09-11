@@ -22,7 +22,7 @@ export default function ProjectCategories() {
       <PageContainer>
         <SectionHeading
           number="07.2"
-          eyebrow="Project Domains"
+          eyebrow="Product Domains"
           id="domains-title"
           titleNode={
             <>
@@ -60,7 +60,7 @@ export default function ProjectCategories() {
                   </span>
                   <span className="domain__name t-h3">{category.name}</span>
                   <span className="domain__count t-label">
-                    {count} {count === 1 ? 'project' : 'projects'}
+                    {count} {count === 1 ? 'product' : 'products'}
                   </span>
                 </button>
 

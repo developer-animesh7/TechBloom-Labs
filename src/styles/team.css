@@ -172,7 +172,7 @@
   background: var(--paper-raise);
   border: 1px solid var(--line);
   border-radius: var(--r-lg);
-  padding: clamp(16px, 1.8vw, 22px);
+  padding: clamp(14px, 1.5vw, 18px);
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -343,7 +343,7 @@
   background: var(--paper-raise);
   border: 1px solid var(--line);
   border-radius: var(--r-md);
-  padding: clamp(14px, 1.6vw, 18px);
+  padding: clamp(12px, 1.4vw, 16px);
   cursor: pointer;
   display: flex;
   flex-direction: column;

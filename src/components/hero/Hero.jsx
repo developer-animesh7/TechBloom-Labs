@@ -37,7 +37,7 @@ export default function Hero({ children }) {
 
           <Reveal className="hero__actions actions" delay={210}>
             <Button variant="bright" to="/projects" arrow>
-              Explore Projects
+              Explore Our Products
             </Button>
             <Button variant="on-ink" to="/experts" arrow>
               Meet Our Team

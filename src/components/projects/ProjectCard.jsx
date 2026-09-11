@@ -22,7 +22,7 @@ export default function ProjectCard({ project, to, delay = 0 }) {
       <Link
         to={destination}
         className="project-item__link"
-        aria-label={`View project details for ${project.title}`}
+        aria-label={`View product details for ${project.title}`}
       >
         <div className="project-item__media">
           {project.image ? (
@@ -55,7 +55,7 @@ export default function ProjectCard({ project, to, delay = 0 }) {
           <div className="project-item__footer">
             <span className="project-item__tech">{techString}</span>
             <span className="project-item__cta">
-              <span>View Project</span>
+              <span>View Product</span>
               <ArrowIcon size={13} />
             </span>
           </div>

@@ -20,13 +20,13 @@ export default function FeaturedProjectsPreview() {
       <PageContainer>
         <SectionHeading
           number="04"
-          eyebrow="Selected Projects"
+          eyebrow="Our Products"
           id="featured-projects-title"
           title="Engineered for Real-World Impact"
           lead="Explore active software frameworks and domain systems. High-reliability technology architectures engineered for scalability and practical deployment."
           aside={
             <Button to="/projects" arrow>
-              View All Projects
+              View All Products
             </Button>
           }
         />
@@ -53,7 +53,7 @@ export default function FeaturedProjectsPreview() {
 
                 <div className="compact-project-card__footer">
                   <Link to={`/projects/${project.id}`} className="link link--subtle">
-                    <span>Explore Project</span>
+                    <span>Explore Product</span>
                     <ArrowIcon size={14} />
                   </Link>
                 </div>
@@ -64,7 +64,7 @@ export default function FeaturedProjectsPreview() {
 
         <div style={{ textAlign: 'center', marginTop: 'var(--s-6)' }}>
           <Button to="/projects" variant="primary" arrow>
-            View All Projects
+            View All Products
           </Button>
         </div>
       </PageContainer>

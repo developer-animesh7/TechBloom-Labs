@@ -27,7 +27,7 @@ export default function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   useEffect(() => {
-    document.title = `Projects: ${companyName}`;
+    document.title = `Our Products: ${companyName}`;
     window.scrollTo(0, 0);
   }, []);
 
@@ -56,9 +56,9 @@ export default function ProjectsPage() {
         <PageContainer>
           <SectionHeading
             number="01"
-            eyebrow="Portfolio Directory"
+            eyebrow="Our Products Directory"
             id="projects-archive-title"
-            title="Engineered Technology Solutions"
+            title="Engineered Technology Products"
             lead="Filter by domain to inspect technical capabilities, platform architectures, and verified implementations."
           />
 

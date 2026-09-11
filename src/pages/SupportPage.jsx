@@ -24,7 +24,7 @@ export default function SupportPage() {
             Help, Guidance & <em>Resolution.</em>
           </Reveal>
           <Reveal as="p" className="t-lead" delay={80}>
-            Have questions about your application, program fees, project mentorship, or certificates?
+            Have questions about your application, program fees, product mentorship, or certificates?
             Select an issue category below to open a ticket or contact our support coordinators.
           </Reveal>
           <Reveal className="actions" delay={120}>

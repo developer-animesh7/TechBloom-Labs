@@ -49,7 +49,7 @@ export default function ProjectDetailPage() {
         <PageContainer>
           <div style={{ marginBottom: 'var(--s-4)' }}>
             <Link to="/projects" className="link link--back">
-              ← Back to All Projects
+              ← Back to Our Products
             </Link>
           </div>
 
@@ -159,7 +159,7 @@ export default function ProjectDetailPage() {
 
               <div style={{ marginTop: 'var(--s-6)' }}>
                 <Link to="/projects" className="link link--back">
-                  ← Back to All Projects
+                  ← Back to Our Products
                 </Link>
               </div>
             </div>
@@ -206,7 +206,7 @@ export default function ProjectDetailPage() {
                   arrow
                   style={{ width: '100%' }}
                 >
-                  Discuss This Project
+                  Discuss This Product
                 </Button>
               </div>
             </aside>

@@ -47,7 +47,7 @@ export default function FinalCTA() {
 
           <Reveal className="final__actions actions" delay={200}>
             <Button variant="bright" to="/projects" arrow>
-              Explore Projects
+              Explore Our Products
             </Button>
             <Button variant="on-ink" to="/experts" arrow>
               Meet Our Team
