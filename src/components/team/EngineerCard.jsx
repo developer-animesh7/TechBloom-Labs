@@ -36,8 +36,8 @@ export default function EngineerCard({ engineer, onSelect }) {
             src={engineer.portrait}
             alt={engineer.portraitAlt || `${engineer.name}, ${engineer.role}`}
             className={`team-engineer-card__img team-engineer-card__img--${slug}`}
-            loading="lazy"
-            decoding="async"
+            loading="eager"
+            decoding="sync"
           />
         </div>
       )}

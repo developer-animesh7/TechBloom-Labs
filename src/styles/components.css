@@ -217,6 +217,22 @@
 .badge--review { color: var(--warn); border-color: #E8DFC5; background: #F7F1E1; }
 .badge--closed { color: var(--text-3); }
 
+.badge--sm {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  padding: 3px 9px !important;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+  color: #095C47 !important;
+  border: 1px solid #CFE6DC !important;
+  background: #E1EFE8 !important;
+  border-radius: 9999px !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
 .on-ink .badge,
 .section--ink .badge {
   background: rgba(238, 243, 240, 0.06);
