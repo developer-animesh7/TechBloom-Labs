@@ -9,6 +9,7 @@ import ServicesPage from './pages/ServicesPage.jsx';
 import ProjectsPage from './pages/ProjectsPage.jsx';
 import ProjectDetailPage from './pages/ProjectDetailPage.jsx';
 import ExpertsPage from './pages/ExpertsPage.jsx';
+import CareersPage from './pages/CareersPage.jsx';
 import InternshipsPage from './pages/InternshipsPage.jsx';
 import SupportPage from './pages/SupportPage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
@@ -49,6 +50,7 @@ export default function App() {
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/projects/:slug" element={<ProjectDetailPage />} />
           <Route path="/experts" element={<ExpertsPage />} />
+          <Route path="/careers" element={<CareersPage />} />
           <Route path="/internships" element={<InternshipsPage />} />
           <Route path="/support" element={<SupportPage />} />
           <Route path="/contact" element={<ContactPage />} />

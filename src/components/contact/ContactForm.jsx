@@ -16,7 +16,9 @@ import {
 
 export const INTEREST_OPTIONS = [
   { value: '', label: 'Select an option' },
-  { value: 'Internship', label: 'Internship', slug: 'internship' },
+  { value: 'Internship Application', label: 'Internship Application', slug: 'internship' },
+  { value: 'Job Application', label: 'Job Application', slug: 'job' },
+  { value: 'General Career Inquiry', label: 'General Career Inquiry', slug: 'career' },
   { value: 'Research Project', label: 'Research Project', slug: 'research-project' },
   { value: 'Faculty / Mentorship', label: 'Faculty / Mentorship', slug: 'faculty-mentorship' },
   { value: 'Partnership', label: 'Partnership', slug: 'partnership' },

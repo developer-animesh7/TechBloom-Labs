@@ -21,6 +21,12 @@ export default function ContactPage() {
     const params = new URLSearchParams(search);
     const param = readIntent(search).toLowerCase();
 
+    const typeParam = (params.get('type') || '').toLowerCase();
+    let careerInterest = '';
+    if (typeParam === 'internship') careerInterest = 'Internship Application';
+    else if (typeParam === 'job') careerInterest = 'Job Application';
+    else if (typeParam === 'general' || typeParam === 'career') careerInterest = 'General Career Inquiry';
+
     // Flexible matching: check slug, exact value, or partial match (e.g. 'agriculture' -> 'Agriculture Project')
     const match =
       INTEREST_OPTIONS.find((option) => option.slug === param) ||
@@ -29,7 +35,7 @@ export default function ContactPage() {
       INTEREST_OPTIONS.find((option) => param && option.value.toLowerCase().includes(param));
 
     return {
-      interest: match?.value || '',
+      interest: careerInterest || match?.value || '',
       context: params.get('program') || params.get('project') || ''
     };
   }, [search]);

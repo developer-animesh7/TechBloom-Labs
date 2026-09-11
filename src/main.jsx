@@ -14,6 +14,7 @@ import './styles/sections.css';
 import './styles/hero-system.css';
 import './styles/about.css';
 import './styles/team.css';
+import './styles/careers.css';
 import './styles/responsive.css';
 
 createRoot(document.getElementById('root')).render(

@@ -82,10 +82,10 @@ export const mentors = [
     num: '01',
     name: 'Dr. Phillip G. Bradford',
     role: 'Associate Professor-in-Residence, Computer Science',
-    affiliation: 'Associate Professor-in-Residence, Computer Science',
+    affiliation: 'University of Connecticut (UConn)',
     location: 'USA',
     portrait: '/images/leadership/Phillip%20G.%20Bradford.png',
-    portraitAlt: 'Dr. Phillip G. Bradford, Associate Professor-in-Residence, Computer Science'
+    portraitAlt: 'Dr. Phillip G. Bradford, Associate Professor-in-Residence, Computer Science, University of Connecticut (UConn)'
   },
   {
     id: 'M-02',
