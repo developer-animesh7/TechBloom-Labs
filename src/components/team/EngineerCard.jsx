@@ -1,8 +1,9 @@
 import ArrowIcon from '../common/ArrowIcon.jsx';
 
 /**
- * Uniform compact card component for Leadership & Engineering Team members.
- * Refined dimensions, 16:10.5 aspect ratio, aligned bottom footer.
+ * Uniform card component for Leadership & Engineering Team members.
+ * Renders portrait image when provided (Bhabani, Sreyan, Tanisha),
+ * or reflows cleanly as a compact text-led card when no photo is set (Animesh, Amitava, Soumosish).
  */
 export default function EngineerCard({ engineer, onSelect }) {
   const slug = (engineer.name || '').toLowerCase().includes('bhabani')
@@ -11,11 +12,13 @@ export default function EngineerCard({ engineer, onSelect }) {
       ? 'sreyan'
       : (engineer.name || '').toLowerCase().includes('tanisha')
         ? 'tanisha'
-        : 'default';
+        : 'text-card';
+
+  const hasPhoto = Boolean(engineer.portrait);
 
   return (
     <article
-      className={`team-engineer-card team-engineer-card--${slug}`}
+      className={`team-engineer-card team-engineer-card--${slug} ${!hasPhoto ? 'team-engineer-card--text-only' : ''}`}
       onClick={() => onSelect(engineer)}
       tabIndex={0}
       role="button"
@@ -27,15 +30,17 @@ export default function EngineerCard({ engineer, onSelect }) {
       }}
       aria-label={`View details for ${engineer.name}`}
     >
-      <div className="team-engineer-card__media">
-        <img
-          src={engineer.portrait}
-          alt={engineer.portraitAlt || `${engineer.name}, ${engineer.role}`}
-          className={`team-engineer-card__img team-engineer-card__img--${slug}`}
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
+      {hasPhoto && (
+        <div className="team-engineer-card__media">
+          <img
+            src={engineer.portrait}
+            alt={engineer.portraitAlt || `${engineer.name}, ${engineer.role}`}
+            className={`team-engineer-card__img team-engineer-card__img--${slug}`}
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      )}
 
       <div className="team-engineer-card__content">
         <div className="team-engineer-card__meta">

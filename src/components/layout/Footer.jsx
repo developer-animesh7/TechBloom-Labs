@@ -47,19 +47,15 @@ export default function Footer() {
             ))}
           </div>
 
-          {/* Contact & Address block: placed after navigation on mobile, on left on desktop */}
+          {/* Contact & Address block: placed after navigation on mobile */}
           <div className="site-footer__contact">
             <address className="site-footer__addr">
-              {address.street}
-              <br />
-              {address.city}
-              <br />
-              {address.region}
-              <br />
+              <span className="site-footer__addr-line">{address.street}</span>
+              <span className="site-footer__addr-line">{address.city}</span>
+              <span className="site-footer__addr-line">{address.region}</span>
               <a
-                className="link"
+                className="site-footer__email-link"
                 href={`mailto:${CONTACT_EMAIL}`}
-                style={{ color: 'var(--accent-bright)', textDecoration: 'none', display: 'inline-block', marginTop: '6px' }}
               >
                 {CONTACT_EMAIL}
               </a>
@@ -67,7 +63,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom copyright row only — no duplicate Privacy / Terms */}
+        {/* Bottom copyright row */}
         <div className="site-footer__bottom">
           <p>
             © {year} {companyName}. All rights reserved.

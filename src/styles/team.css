@@ -1155,3 +1155,13 @@
     display: none;
   }
 }
+
+
+.team-engineer-card--text-only {
+  padding: clamp(14px, 1.6vw, 18px);
+}
+.team-engineer-card--text-only .team-engineer-card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}

@@ -15,7 +15,11 @@ export const primaryStatement =
 export const brandSignature = ['RESEARCH', 'INDUSTRY', 'INNOVATION', 'IMPACT'];
 
 export const address = {
-  headquarters: 'Salt Lake Sector V, Kolkata, West Bengal, India',
+  street: '305 Jessore Road',
+  city: 'Kolkata 700089',
+  region: 'West Bengal, India',
+  oneLine: '305 Jessore Road, Kolkata 700089, West Bengal, India',
+  headquarters: '305 Jessore Road, Kolkata 700089, West Bengal, India',
   usHub: 'University of Connecticut, Stamford, CT, USA',
   canadaHub: 'Trinity Western University, Langley, BC, Canada'
 };
@@ -168,8 +172,6 @@ export const engineeringTeam = [
     name: 'Animesh Patra',
     role: 'Software Development Engineer: AI',
     domain: 'Artificial Intelligence & Systems',
-    portrait: '/images/leadership/Animesh%20patra.jpg',
-    portraitAlt: 'Animesh Patra, Software Development Engineer: AI',
     linkedin: 'https://www.linkedin.com/in/animesh-patra2004/'
   },
   {
@@ -178,8 +180,6 @@ export const engineeringTeam = [
     name: 'Amitava Giri',
     role: 'AI & Cloud Engineer',
     domain: 'Cloud Architecture & Intelligence',
-    portrait: '/images/leadership/Amitava%20Giri.png',
-    portraitAlt: 'Amitava Giri, AI & Cloud Engineer',
     linkedin: 'https://www.linkedin.com/in/amitava-giri/'
   },
   {
@@ -188,8 +188,6 @@ export const engineeringTeam = [
     name: 'Soumosish Jana',
     role: 'Full Stack Engineer: AI',
     domain: 'Full Stack Applications & AI',
-    portrait: '/images/leadership/soumosish%20Jana.png',
-    portraitAlt: 'Soumosish Jana, Full Stack Engineer: AI',
     linkedin: 'https://www.linkedin.com/in/soumosish-jana-a28050342/'
   }
 ];
