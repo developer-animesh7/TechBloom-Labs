@@ -55,42 +55,50 @@ export default function ServicesPage() {
           <Divider className="services__rule" />
 
           <div className="editorial-services">
-            {services.map((svc) => (
-              <article
-                key={svc.id}
-                className="service-card"
-              >
-                <div className="service-card__top">
-                  <div className="service-card__number-badge">
-                    <span className="service-card__num">{svc.number}</span>
-                    <span className="service-card__tag">Service</span>
+            {services.map((svc, index) => {
+              const displayNum = String(index + 1).padStart(2, '0');
+              return (
+                <article
+                  key={svc.id}
+                  className="service-card"
+                >
+                  <div className="service-card__top">
+                    <div className="service-card__number-badge">
+                      <span className="service-card__num">{displayNum}</span>
+                      <span className="service-card__tag">Service</span>
+                    </div>
+                    <span className="service-card__pulse" aria-hidden="true" />
                   </div>
-                  <span className="service-card__pulse" aria-hidden="true" />
-                </div>
 
-                <h2 className="service-card__title">
-                  {svc.title}
-                </h2>
+                  <h2 className="service-card__title">
+                    {svc.title}
+                  </h2>
 
-                <div className="service-card__desc">
-                  {svc.lines.map((line, idx) => (
-                    <p key={idx} className="service-card__line">
-                      {line}
-                    </p>
-                  ))}
-                </div>
+                  <div className="service-card__desc">
+                    {svc.lines.map((line, idx) => (
+                      <p key={idx} className="service-card__line">
+                        {line}
+                      </p>
+                    ))}
+                    {svc.disclaimer && (
+                      <p className="t-xs" style={{ fontStyle: 'italic', opacity: 0.7, marginTop: '8px', fontSize: '0.75rem', color: 'var(--ink-soft)' }}>
+                        * {svc.disclaimer}
+                      </p>
+                    )}
+                  </div>
 
-                <div className="service-card__cta">
-                  <Link
-                    to={`/contact?interest=${svc.intent}`}
-                    className="btn btn--sm btn--primary service-card__btn"
-                  >
-                    <span>Discuss a Project</span>
-                    <ArrowIcon size={14} />
-                  </Link>
-                </div>
-              </article>
-            ))}
+                  <div className="service-card__cta">
+                    <Link
+                      to={`/contact?interest=${svc.intent}`}
+                      className="btn btn--sm btn--primary service-card__btn"
+                    >
+                      <span>Discuss a Project</span>
+                      <ArrowIcon size={14} />
+                    </Link>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </PageContainer>
       </Section>

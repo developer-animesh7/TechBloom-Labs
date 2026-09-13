@@ -39,6 +39,93 @@ export const services = [
     accent: 'var(--accent-bright)'
   },
   {
+    number: '03',
+    id: 'agritech',
+    title: 'Agriculture Technology',
+    blurb:
+      'Digital agriculture management systems, crop seasonal workflows, field activity tracking, and comprehensive agricultural data platforms.',
+    capabilities: [
+      'Crop planning & harvest cycles',
+      'Soil records & irrigation tracking',
+      'Farm activity management',
+      'Agricultural operational analytics'
+    ],
+    lines: [
+      'Crop planning & harvest cycles',
+      'Soil records & irrigation tracking',
+      'Farm activity management',
+      'Agricultural operational analytics'
+    ],
+    intent: 'agriculture-project',
+    accent: 'var(--accent)'
+  },
+  {
+    number: '04',
+    id: 'livestock-systems',
+    title: 'Animal Genetics & Livestock Systems',
+    blurb:
+      'High-integrity animal profiles, lineage tracking, breeding records, livestock management workflows, and longitudinal research data organization.',
+    capabilities: [
+      'Animal profile & identification records',
+      'Lineage tracking & breeding history',
+      'Herd management workflows',
+      'Research data categorization'
+    ],
+    lines: [
+      'Animal profile & identification records',
+      'Lineage tracking & breeding history',
+      'Herd management workflows',
+      'Research data categorization'
+    ],
+    intent: 'research-project',
+    accent: 'var(--accent-bright)',
+    disclaimer: 'Records and reporting software only. Makes no veterinary or genetic health claims.'
+  },
+  {
+    number: '05',
+    id: 'pharma-tech',
+    title: 'Pharmaceutical Technology',
+    blurb:
+      'Pharmaceutical research workflow systems, laboratory records, drug inventory management, batch records, and quality-control documentation.',
+    capabilities: [
+      'Laboratory research workflow software',
+      'Batch management & traceability',
+      'Quality-control audit documentation',
+      'Inventory & compound workflow tracking'
+    ],
+    lines: [
+      'Laboratory research workflow software',
+      'Batch management & traceability',
+      'Quality-control audit documentation',
+      'Inventory & compound workflow tracking'
+    ],
+    intent: 'pharmaceutical-project',
+    accent: 'var(--accent)',
+    disclaimer: 'Documentation and operational software only. No medical efficacy claims.'
+  },
+  {
+    number: '06',
+    id: 'healthcare-tech',
+    title: 'Healthcare Technology',
+    blurb:
+      'Service coordination software, appointment scheduling, departmental operational systems, and administrative throughput reporting.',
+    capabilities: [
+      'Service coordination & scheduling',
+      'Patient workflow administration',
+      'Medical resource scheduling',
+      'Operational capacity reporting'
+    ],
+    lines: [
+      'Service coordination & scheduling',
+      'Patient workflow administration',
+      'Medical resource scheduling',
+      'Operational capacity reporting'
+    ],
+    intent: 'healthcare-project',
+    accent: 'var(--accent-bright)',
+    disclaimer: 'Service coordination software only. Does not diagnose, treat, or advise.'
+  },
+  {
     number: '07',
     id: 'product-building-development',
     title: 'Product Building & Development',
