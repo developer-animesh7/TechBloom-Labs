@@ -13,8 +13,8 @@ export default function BrandManifesto() {
   const pillars = [
     {
       num: '01',
-      title: 'Ten Domain Frameworks',
-      desc: 'Precision agriculture, pharmaceutical workflows, livestock systems, healthcare platforms, and applied AI engineered with domain rigor.'
+      title: 'Structured Practice Frameworks',
+      desc: 'Expert consulting, R&D, product engineering, market research, digital transformation, and professional development.'
     },
     {
       num: '02',

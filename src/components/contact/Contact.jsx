@@ -14,7 +14,7 @@ import {
   leadership
 } from '../../data/company.js';
 
-const QUICK_INTENTS = ['technology-project', 'software-development', 'research-project', 'partnership', 'general-inquiry'];
+const QUICK_INTENTS = ['consulting-services', 'research-development', 'product-building-development', 'partnership', 'general-inquiry'];
 
 /**
  * Contact section.

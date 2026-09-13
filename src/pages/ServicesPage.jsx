@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Section from '../components/layout/Section.jsx';
 import PageContainer from '../components/layout/PageContainer.jsx';
@@ -11,7 +11,6 @@ import { services, servicesProcess, servicesIntro } from '../data/services.js';
 import { companyName, tagline } from '../data/company.js';
 
 export default function ServicesPage() {
-  const [activeRow, setActiveRow] = useState(null);
 
   useEffect(() => {
     document.title = `Services: ${companyName}`;
@@ -47,63 +46,51 @@ export default function ServicesPage() {
         <PageContainer>
           <SectionHeading
             number="01"
-            eyebrow="Specialized Domains"
+            eyebrow="Specialized Capabilities"
             id="services-list-title"
-            title="Ten Engineering & Research Practices"
-            lead="Explore our domain-specific capabilities. Each practice pairs technical rigor with clear operational workflows."
+            title="Strategic Engineering & Advisory Practices"
+            lead="Explore our core service practices. Each capability combines deep domain expertise with structured execution to solve complex organizational challenges."
           />
 
           <Divider className="services__rule" />
 
           <div className="editorial-services">
-            {services.map((svc, index) => {
-              const isHovered = activeRow === svc.id;
-              return (
-                <article
-                  key={svc.id}
-                  className={`service-row${isHovered ? ' is-hovered' : ''}`}
-                  onMouseEnter={() => setActiveRow(svc.id)}
-                  onMouseLeave={() => setActiveRow(null)}
-                >
-                  <div className="service-row__num">
-                    <span>{svc.number}</span>
+            {services.map((svc) => (
+              <article
+                key={svc.id}
+                className="service-card"
+              >
+                <div className="service-card__top">
+                  <div className="service-card__number-badge">
+                    <span className="service-card__num">{svc.number}</span>
+                    <span className="service-card__tag">Service</span>
                   </div>
+                  <span className="service-card__pulse" aria-hidden="true" />
+                </div>
 
-                  <div className="service-row__main">
-                    <h2 className="service-row__title t-h3">
-                      {svc.title}
-                    </h2>
-                    <p className="service-row__blurb t-body">
-                      {svc.blurb}
+                <h2 className="service-card__title">
+                  {svc.title}
+                </h2>
+
+                <div className="service-card__desc">
+                  {svc.lines.map((line, idx) => (
+                    <p key={idx} className="service-card__line">
+                      {line}
                     </p>
+                  ))}
+                </div>
 
-                    {svc.disclaimer && (
-                      <p className="service-row__disclaimer t-xs">
-                        * {svc.disclaimer}
-                      </p>
-                    )}
-
-                    <ul className="service-row__caps">
-                      {svc.capabilities.map((cap) => (
-                        <li key={cap} className="chip chip--sm">
-                          {cap}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="service-row__action">
-                    <Link
-                      to={`/contact?interest=${svc.intent}`}
-                      className="btn btn--sm btn--primary service-row__btn"
-                    >
-                      <span>Discuss a Project</span>
-                      <ArrowIcon size={14} />
-                    </Link>
-                  </div>
-                </article>
-              );
-            })}
+                <div className="service-card__cta">
+                  <Link
+                    to={`/contact?interest=${svc.intent}`}
+                    className="btn btn--sm btn--primary service-card__btn"
+                  >
+                    <span>Discuss a Project</span>
+                    <ArrowIcon size={14} />
+                  </Link>
+                </div>
+              </article>
+            ))}
           </div>
         </PageContainer>
       </Section>

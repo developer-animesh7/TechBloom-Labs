@@ -298,7 +298,7 @@ export const ecosystemPillars = [
     weight: 'primary',
     icon: 'wrench',
     body:
-      'Explore our full suite of technical, research, agriculture, and healthcare systems built with domain rigor.',
+      'Explore our official consulting, research & development, product building, market analysis, and digital transformation services.',
     cta: 'View All Services',
     to: '/services'
   },

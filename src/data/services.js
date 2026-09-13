@@ -1,164 +1,102 @@
 /* ==========================================================================
-   Services — comprehensive domain offerings and engineering solutions.
-   Configured for editorial service rows with direct inquiries into Contact.
+   Services — Official Client Services & Practices
+   Canonical data source for all TechBloom Labs services.
+   Strictly incorporates verified client-provided titles and descriptions.
    ========================================================================== */
 
 export const servicesIntro =
-  'TechBloom Labs engineers software systems, research frameworks, and domain-specific operational platforms. From agriculture data models and pharmaceutical workflows to enterprise software and applied AI, we translate research rigor into reliable real-world systems.';
+  'TechBloom Labs provides expert consulting, research and development, product development, market research, digital transformation, and professional training solutions to solve complex organizational challenges and drive sustainable growth.';
 
 export const services = [
   {
     number: '01',
-    id: 'software-dev',
-    title: 'Technology & Software Development',
+    id: 'consulting-services',
+    title: 'Consulting Services',
     blurb:
-      'Custom software solutions, workflow engines, operational platforms, and robust digital products built for scale and long-term maintainability.',
-    capabilities: [
-      'Custom web & mobile applications',
-      'Workflow automation platforms',
-      'Operational dashboards & tooling',
-      'API integrations & microservices'
+      'We provide expert consulting to help organizations solve complex business challenges. Our team develops practical strategies aligned with your goals and market needs. We focus on improving efficiency, performance, and long-term growth. From planning to implementation, we support you at every stage.',
+    lines: [
+      'We provide expert consulting to help organizations solve complex business challenges.',
+      'Our team develops practical strategies aligned with your goals and market needs.',
+      'We focus on improving efficiency, performance, and long-term growth.',
+      'From planning to implementation, we support you at every stage.'
     ],
-    intent: 'software-development',
-    accent: 'var(--dom-software)'
+    intent: 'consulting-services',
+    accent: 'var(--accent)'
   },
   {
     number: '02',
-    id: 'research-dev',
-    title: 'Research & Project Development',
+    id: 'research-development',
+    title: 'Research & Development',
     blurb:
-      'Structured technical and engineering support for research initiatives, advanced prototypes, and organizational innovation programs requiring rigorous design and execution.',
-    capabilities: [
-      'Project scope formulation',
-      'Applied research frameworks',
-      'Feasibility evaluation & benchmarking',
-      'Milestone architecture & delivery'
+      'Our Research & Development services transform ideas into innovative and practical solutions. We conduct in-depth research to identify opportunities, technologies, and emerging trends. Our experts develop, test, and refine solutions to meet specific industry requirements. We help businesses stay competitive through continuous',
+    lines: [
+      'Our Research & Development services transform ideas into innovative and practical solutions.',
+      'We conduct in-depth research to identify opportunities, technologies, and emerging trends.',
+      'Our experts develop, test, and refine solutions to meet specific industry requirements.',
+      'We help businesses stay competitive through continuous'
     ],
-    intent: 'research-project',
-    accent: 'var(--dom-ai)'
-  },
-  {
-    number: '03',
-    id: 'agritech',
-    title: 'Agriculture Technology',
-    blurb:
-      'Digital agriculture management systems, crop seasonal workflows, field activity tracking, and comprehensive agricultural data platforms.',
-    capabilities: [
-      'Crop planning & harvest cycles',
-      'Soil records & irrigation tracking',
-      'Farm activity management',
-      'Agricultural operational analytics'
-    ],
-    intent: 'agriculture-project',
-    accent: 'var(--dom-agri)'
-  },
-  {
-    number: '04',
-    id: 'livestock-systems',
-    title: 'Animal Genetics & Livestock Systems',
-    blurb:
-      'High-integrity animal profiles, lineage tracking, breeding records, livestock management workflows, and longitudinal research data organization.',
-    capabilities: [
-      'Animal profile & identification records',
-      'Lineage tracking & breeding history',
-      'Herd management workflows',
-      'Research data categorization'
-    ],
-    intent: 'research-project',
-    accent: 'var(--dom-livestock)',
-    disclaimer: 'Records and reporting software only. Makes no veterinary or genetic health claims.'
-  },
-  {
-    number: '05',
-    id: 'pharma-tech',
-    title: 'Pharmaceutical Technology',
-    blurb:
-      'Pharmaceutical research workflow systems, laboratory records, drug inventory management, batch records, and quality-control documentation.',
-    capabilities: [
-      'Laboratory research workflow software',
-      'Batch management & traceability',
-      'Quality-control audit documentation',
-      'Inventory & compound workflow tracking'
-    ],
-    intent: 'pharmaceutical-project',
-    accent: 'var(--dom-pharma)',
-    disclaimer: 'Documentation and operational software only. No medical efficacy claims.'
-  },
-  {
-    number: '06',
-    id: 'healthcare-tech',
-    title: 'Healthcare Technology',
-    blurb:
-      'Service coordination software, appointment scheduling, departmental operational systems, and administrative throughput reporting.',
-    capabilities: [
-      'Service coordination & scheduling',
-      'Patient workflow administration',
-      'Medical resource scheduling',
-      'Operational capacity reporting'
-    ],
-    intent: 'healthcare-project',
-    accent: 'var(--dom-health)',
-    disclaimer: 'Service coordination software only. Does not diagnose, treat, or advise.'
+    intent: 'research-development',
+    accent: 'var(--accent-bright)'
   },
   {
     number: '07',
-    id: 'infrastructure-tech',
-    title: 'Infrastructure Project Management',
+    id: 'product-building-development',
+    title: 'Product Building & Development',
     blurb:
-      'Comprehensive project planning, construction site coordination, contractor task tracking, materials management, milestones, and documentation.',
-    capabilities: [
-      'Site coordination & contractor workflows',
-      'Milestone tracking & Gantt schedules',
-      'Material inventory & procurement logs',
-      'Progress reporting & compliance audits'
+      'We turn innovative ideas into market-ready products through structured development and execution. Our team supports product design, prototyping, testing, and continuous improvement. We combine customer insights, technology, and business strategy to build valuable solutions. From concept to launch, we help transform ideas into successful products.',
+    lines: [
+      'We turn innovative ideas into market-ready products through structured development and execution.',
+      'Our team supports product design, prototyping, testing, and continuous improvement.',
+      'We combine customer insights, technology, and business strategy to build valuable solutions.',
+      'From concept to launch, we help transform ideas into successful products.'
     ],
-    intent: 'infrastructure-project',
-    accent: 'var(--dom-infra)'
+    intent: 'product-building-development',
+    accent: 'var(--accent)'
   },
   {
     number: '08',
-    id: 'ai-data-science',
-    title: 'AI / ML & Data Science',
+    id: 'market-research-analysis',
+    title: 'Market Research & Analysis',
     blurb:
-      'Applied artificial intelligence, predictive modeling workflows, computer vision pipelines, and research-oriented data intelligence solutions.',
-    capabilities: [
-      'Applied deep learning & NLP',
-      'Predictive analytics & forecasting',
-      'Computer vision inspection workflows',
-      'Cohort & statistical trend modeling'
+      'We provide comprehensive market research to help businesses make informed decisions. Our services include customer analysis, competitor research, industry trends, and market opportunities. We convert data and insights into clear, actionable business recommendations. Our research helps organizations reduce risks and identify profitable growth opportunities.',
+    lines: [
+      'We provide comprehensive market research to help businesses make informed decisions.',
+      'Our services include customer analysis, competitor research, industry trends, and market opportunities.',
+      'We convert data and insights into clear, actionable business recommendations.',
+      'Our research helps organizations reduce risks and identify profitable growth opportunities.'
     ],
-    intent: 'technology-project',
-    accent: 'var(--dom-ai)'
+    intent: 'market-research-analysis',
+    accent: 'var(--accent-bright)'
   },
   {
     number: '09',
-    id: 'cybersecurity-ops',
-    title: 'Cybersecurity',
+    id: 'digital-transformation-services',
+    title: 'Digital Transformation Services',
     blurb:
-      'Security workflow systems, monitoring dashboards, vulnerability remediation queues, and interactive awareness training modules.',
-    capabilities: [
-      'Security monitoring interface design',
-      'Vulnerability workflow tracking',
-      'Security awareness & training platforms',
-      'Security telemetry & analytics'
+      'We help organizations modernize their processes, systems, and business operations. Our team identifies areas where digital technologies can improve efficiency and productivity. We support organizations in adopting innovative tools, platforms, and technology-driven workflows. Our solutions enable businesses to become more agile, connected, and future-ready.',
+    lines: [
+      'We help organizations modernize their processes, systems, and business operations.',
+      'Our team identifies areas where digital technologies can improve efficiency and productivity.',
+      'We support organizations in adopting innovative tools, platforms, and technology-driven workflows.',
+      'Our solutions enable businesses to become more agile, connected, and future-ready.'
     ],
-    intent: 'technology-project',
-    accent: 'var(--dom-cyber)'
+    intent: 'digital-transformation-services',
+    accent: 'var(--accent)'
   },
   {
     number: '10',
-    id: 'custom-solutions',
-    title: 'Custom Technology Solutions',
+    id: 'training-professional-development',
+    title: 'Training & Professional Development',
     blurb:
-      'Tailored architectural consulting, cross-domain platform integration, bespoke database modeling, and specialized organizational tooling.',
-    capabilities: [
-      'Multi-tenant architecture design',
-      'Legacy modernization & migration',
-      'High-throughput data ingestion',
-      'Custom organizational portals'
+      'We deliver specialized training programs to build practical skills and professional capabilities. Our programs cover technical, managerial, entrepreneurial, and industry-specific areas. Training is designed using interactive, practical, and outcome-focused learning methods. We empower individuals and teams to perform better and adapt to changing industry demands.',
+    lines: [
+      'We deliver specialized training programs to build practical skills and professional capabilities.',
+      'Our programs cover technical, managerial, entrepreneurial, and industry-specific areas.',
+      'Training is designed using interactive, practical, and outcome-focused learning methods.',
+      'We empower individuals and teams to perform better and adapt to changing industry demands.'
     ],
-    intent: 'technology-project',
-    accent: 'var(--dom-software)'
+    intent: 'training-professional-development',
+    accent: 'var(--accent-bright)'
   }
 ];
 

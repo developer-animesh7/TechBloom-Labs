@@ -31,9 +31,6 @@ export default function Home() {
     window.scrollTo(0, 0);
   }, []);
 
-  // Show 3-4 highlighted service categories on the homepage
-  const previewServices = services.slice(0, 4);
-
   return (
     <>
       {/* 1. Hero & Journey Steps */}
@@ -135,8 +132,8 @@ export default function Home() {
             number="02"
             eyebrow="Core Services"
             id="services-preview-title"
-            title="Specialized Engineering & Technology Solutions"
-            lead="From agricultural data models and pharmaceutical workflows to enterprise software and applied AI, we translate research rigor into reliable real-world systems."
+            title="Strategic Advisory & Engineering Solutions"
+            lead="From strategic consulting and R&D to product development, market intelligence, digital transformation, and professional training, we empower organizations with structured execution."
             aside={
               <Button to="/services" arrow>
                 View All Services
@@ -147,25 +144,29 @@ export default function Home() {
           <Divider style={{ margin: 'var(--s-4) 0 var(--s-5)' }} />
 
           <div className="editorial-services">
-            {previewServices.map((svc) => (
-              <article key={svc.id} className="service-row">
-                <div className="service-row__num">
-                  <span>{svc.number}</span>
+            {services.map((svc) => (
+              <article key={svc.id} className="service-card">
+                <div className="service-card__top">
+                  <div className="service-card__number-badge">
+                    <span className="service-card__num">{svc.number}</span>
+                    <span className="service-card__tag">Service</span>
+                  </div>
+                  <span className="service-card__pulse" aria-hidden="true" />
                 </div>
-                <div className="service-row__main">
-                  <h3 className="service-row__title t-h3">{svc.title}</h3>
-                  <p className="service-row__blurb t-body">{svc.blurb}</p>
-                  <ul className="service-row__caps">
-                    {svc.capabilities.slice(0, 3).map((cap) => (
-                      <li key={cap} className="chip chip--sm">
-                        {cap}
-                      </li>
-                    ))}
-                  </ul>
+
+                <h3 className="service-card__title">{svc.title}</h3>
+
+                <div className="service-card__desc">
+                  {svc.lines.map((line, idx) => (
+                    <p key={idx} className="service-card__line">
+                      {line}
+                    </p>
+                  ))}
                 </div>
-                <div className="service-row__action">
-                  <Link to={`/contact?interest=${svc.intent}`} className="btn btn--sm btn--primary service-row__btn">
-                    <span>Discuss Project</span>
+
+                <div className="service-card__cta">
+                  <Link to={`/contact?interest=${svc.intent}`} className="btn btn--sm btn--primary service-card__btn">
+                    <span>Discuss a Project</span>
                     <ArrowIcon size={14} />
                   </Link>
                 </div>

@@ -16,6 +16,12 @@ import {
 
 export const INTEREST_OPTIONS = [
   { value: '', label: 'Select an option' },
+  { value: 'Consulting Services', label: 'Consulting Services', slug: 'consulting-services' },
+  { value: 'Research & Development', label: 'Research & Development', slug: 'research-development' },
+  { value: 'Product Building & Development', label: 'Product Building & Development', slug: 'product-building-development' },
+  { value: 'Market Research & Analysis', label: 'Market Research & Analysis', slug: 'market-research-analysis' },
+  { value: 'Digital Transformation Services', label: 'Digital Transformation Services', slug: 'digital-transformation-services' },
+  { value: 'Training & Professional Development', label: 'Training & Professional Development', slug: 'training-professional-development' },
   { value: 'Internship Application', label: 'Internship Application', slug: 'internship' },
   { value: 'Job Application', label: 'Job Application', slug: 'job' },
   { value: 'General Career Inquiry', label: 'General Career Inquiry', slug: 'career' },
@@ -23,11 +29,6 @@ export const INTEREST_OPTIONS = [
   { value: 'Faculty / Mentorship', label: 'Faculty / Mentorship', slug: 'faculty-mentorship' },
   { value: 'Partnership', label: 'Partnership', slug: 'partnership' },
   { value: 'Technology Project', label: 'Technology Project', slug: 'technology-project' },
-  { value: 'Agriculture Project', label: 'Agriculture Project', slug: 'agriculture-project' },
-  { value: 'Pharmaceutical Project', label: 'Pharmaceutical Project', slug: 'pharmaceutical-project' },
-  { value: 'Healthcare Project', label: 'Healthcare Project', slug: 'healthcare-project' },
-  { value: 'Infrastructure Project', label: 'Infrastructure Project', slug: 'infrastructure-project' },
-  { value: 'Software Development', label: 'Software Development', slug: 'software-development' },
   { value: 'Career Guidance', label: 'Career Guidance', slug: 'career-guidance' },
   { value: 'General Inquiry', label: 'General Inquiry', slug: 'general-inquiry' },
   { value: 'Other', label: 'Other', slug: 'other' }
