@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" role="img" aria-label="Travel itinerary planner map with destination waypoints, booking reservation coordination and departure schedule">
+  <defs>
+    <linearGradient id="tr-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EBF1F4"/>
+      <stop offset="1" stop-color="#D7E4EA"/>
+    </linearGradient>
+    <linearGradient id="tr-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#F4F8FA" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1000" height="640" fill="url(#tr-bg)"/>
+
+  <!-- Topographic Contour Lines -->
+  <g fill="none" stroke="#1D3E4A" stroke-opacity="0.08" stroke-width="1.5">
+    <path d="M 0 140 C 200 120, 320 220, 500 180 C 680 140, 800 240, 1000 200"/>
+    <path d="M 0 240 C 180 210, 360 310, 540 270 C 720 230, 840 330, 1000 300"/>
+    <path d="M 0 340 C 220 300, 400 420, 600 360 C 800 300, 880 430, 1000 400"/>
+    <path d="M 0 440 C 240 400, 420 520, 640 460 C 840 400, 920 530, 1000 500"/>
+  </g>
+
+  <!-- Left: Interactive Route & Destination Waypoint Map -->
+  <g transform="translate(68, 76)">
+    <rect width="500" height="490" rx="14" fill="url(#tr-card)" stroke="#1D3E4A" stroke-opacity="0.14" stroke-width="1.5"/>
+
+    <!-- Header -->
+    <text x="28" y="38" font-family="ui-monospace, monospace" font-size="11" letter-spacing="2.2" fill="#0C7A5E" font-weight="700">TRAVELFLOW · EXPEDITION ROUTE</text>
+    <text x="28" y="56" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#1D3E4A" fill-opacity="0.55">Dynamic Waypoint Scheduling &amp; Elevation Telemetry</text>
+
+    <!-- Compass / Route Info -->
+    <g transform="translate(370, 24)">
+      <rect width="102" height="26" rx="6" fill="#E4EFEF"/>
+      <text x="51" y="17" font-family="ui-monospace, monospace" font-size="10" fill="#0C7A5E" text-anchor="middle" font-weight="700">148 KM TRAIL</text>
+    </g>
+
+    <line x1="28" y1="74" x2="472" y2="74" stroke="#1D3E4A" stroke-opacity="0.12" stroke-width="1.5"/>
+
+    <!-- Map Canvas Area -->
+    <g transform="translate(28, 92)">
+      <rect width="444" height="280" rx="10" fill="#F0F6F8" stroke="#1D3E4A" stroke-opacity="0.1"/>
+
+      <!-- Topo terrain rings on map -->
+      <g fill="none" stroke="#0C7A5E" stroke-opacity="0.12" stroke-width="1.5">
+        <ellipse cx="230" cy="140" rx="160" ry="90"/>
+        <ellipse cx="230" cy="140" rx="110" ry="60"/>
+        <ellipse cx="230" cy="140" rx="60" ry="32"/>
+      </g>
+
+      <!-- Connecting Transit Spline Path -->
+      <path d="M 64 210 C 90 140, 160 80, 220 120 C 280 160, 310 100, 380 70"
+            fill="none" stroke="#0C7A5E" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M 64 210 C 90 140, 160 80, 220 120 C 280 160, 310 100, 380 70"
+            fill="none" stroke="#3ED0A2" stroke-width="1.5" stroke-dasharray="6 6"/>
+
+      <!-- Waypoint 1: Coastal Base (Start) -->
+      <g transform="translate(64, 210)">
+        <circle cx="0" cy="0" r="16" fill="#0C7A5E" fill-opacity="0.15"/>
+        <circle cx="0" cy="0" r="8" fill="#0C7A5E"/>
+        <circle cx="0" cy="0" r="3" fill="#FFFFFF"/>
+        <rect x="-36" y="14" width="72" height="20" rx="4" fill="#FFFFFF" stroke="#0C7A5E" stroke-width="1"/>
+        <text x="0" y="27" font-family="ui-monospace, monospace" font-size="9" fill="#0C7A5E" text-anchor="middle" font-weight="700">DAY 01 · 24m</text>
+      </g>
+
+      <!-- Waypoint 2: Valley Ridge (Transit) -->
+      <g transform="translate(220, 120)">
+        <circle cx="0" cy="0" r="16" fill="#0C7A5E" fill-opacity="0.15"/>
+        <circle cx="0" cy="0" r="8" fill="#0C7A5E"/>
+        <circle cx="0" cy="0" r="3" fill="#FFFFFF"/>
+        <rect x="-42" y="-30" width="84" height="20" rx="4" fill="#FFFFFF" stroke="#0C7A5E" stroke-width="1"/>
+        <text x="0" y="-17" font-family="ui-monospace, monospace" font-size="9" fill="#0C7A5E" text-anchor="middle" font-weight="700">DAY 02 · 640m</text>
+      </g>
+
+      <!-- Waypoint 3: Alpine Summit (Destination) -->
+      <g transform="translate(380, 70)">
+        <circle cx="0" cy="0" r="20" fill="#0C7A5E" fill-opacity="0.2"/>
+        <circle cx="0" cy="0" r="9" fill="#0C7A5E"/>
+        <circle cx="0" cy="0" r="4" fill="#FFFFFF"/>
+        <rect x="-48" y="-32" width="96" height="20" rx="4" fill="#0C7A5E"/>
+        <text x="0" y="-19" font-family="ui-monospace, monospace" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="700">DAY 03 · 1,820m</text>
+      </g>
+    </g>
+
+    <!-- Elevation Profile & Route Telemetry -->
+    <g transform="translate(28, 388)">
+      <rect width="444" height="76" rx="8" fill="#13262E" stroke="#1E3E4B"/>
+      <text x="18" y="24" font-family="ui-monospace, monospace" font-size="10" letter-spacing="1.8" fill="#3ED0A2">ELEVATION PROFILE &amp; TRANSIT VELOCITY</text>
+      
+      <!-- Profile Curve -->
+      <path d="M 20 54 Q 120 50, 180 40 T 320 28 T 424 18" fill="none" stroke="#3ED0A2" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="20" y1="58" x2="424" y2="58" stroke="#EEF3F0" stroke-opacity="0.2"/>
+      
+      <text x="20" y="68" font-family="ui-monospace, monospace" font-size="9" fill="#EEF3F0" fill-opacity="0.6">Base: 24m</text>
+      <text x="210" y="68" font-family="ui-monospace, monospace" font-size="9" fill="#EEF3F0" fill-opacity="0.6">Ridge: 640m</text>
+      <text x="424" y="68" font-family="ui-monospace, monospace" font-size="9" fill="#3ED0A2" text-anchor="end">Peak: 1,820m</text>
+    </g>
+  </g>
+
+  <!-- Right: Reservation & Departure Schedule Coordination -->
+  <g transform="translate(588, 76)">
+    <rect width="344" height="490" rx="14" fill="#13262E" fill-opacity="0.96" stroke="#1E3E4B" stroke-width="1.5"/>
+
+    <!-- Header -->
+    <text x="24" y="38" font-family="ui-monospace, monospace" font-size="11" letter-spacing="2.2" fill="#3ED0A2" font-weight="700">BOOKING COORDINATION</text>
+    <text x="24" y="56" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#EEF3F0" fill-opacity="0.5">Verified Itinerary Vouchers</text>
+
+    <!-- Reservation Card 1 -->
+    <g transform="translate(20, 76)">
+      <rect width="304" height="110" rx="10" fill="#19323C" stroke="#254A58" stroke-width="1"/>
+      <text x="16" y="24" font-family="ui-monospace, monospace" font-size="10" fill="#3ED0A2" font-weight="700">TRANSIT · FLIGHT &amp; RAIL</text>
+      <rect x="216" y="10" width="74" height="22" rx="4" fill="#123B2D"/>
+      <text x="253" y="24" font-family="ui-monospace, monospace" font-size="9" fill="#3ED0A2" text-anchor="middle" font-weight="700">CONFIRMED</text>
+
+      <text x="16" y="50" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" fill="#EEF3F0">Nordic Scenic Express</text>
+      <text x="16" y="68" font-family="ui-monospace, monospace" font-size="11" fill="#EEF3F0" fill-opacity="0.6">Coach 04 · Seat 18A · Departure 08:30</text>
+      <text x="16" y="90" font-family="ui-monospace, monospace" font-size="10" fill="#3ED0A2">E-TICKET #TF-9941-XQ</text>
+    </g>
+
+    <!-- Reservation Card 2 -->
+    <g transform="translate(20, 200)">
+      <rect width="304" height="110" rx="10" fill="#19323C" stroke="#254A58" stroke-width="1"/>
+      <text x="16" y="24" font-family="ui-monospace, monospace" font-size="10" fill="#3ED0A2" font-weight="700">LODGING · ALPIN RESORT</text>
+      <rect x="216" y="10" width="74" height="22" rx="4" fill="#123B2D"/>
+      <text x="253" y="24" font-family="ui-monospace, monospace" font-size="9" fill="#3ED0A2" text-anchor="middle" font-weight="700">BOOKED</text>
+
+      <text x="16" y="50" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" fill="#EEF3F0">Fjord Panorama Lodge</text>
+      <text x="16" y="68" font-family="ui-monospace, monospace" font-size="11" fill="#EEF3F0" fill-opacity="0.6">2 Nights · Valley View Suite · Keyless</text>
+      <text x="16" y="90" font-family="ui-monospace, monospace" font-size="10" fill="#3ED0A2">VOUCHER #HT-2084-LK</text>
+    </g>
+
+    <!-- Reservation Card 3: Guide Excursion -->
+    <g transform="translate(20, 324)">
+      <rect width="304" height="136" rx="10" fill="#19323C" stroke="#254A58" stroke-width="1"/>
+      <text x="16" y="24" font-family="ui-monospace, monospace" font-size="10" fill="#3ED0A2" font-weight="700">EXCURSION · CERTIFIED GUIDE</text>
+      <rect x="216" y="10" width="74" height="22" rx="4" fill="#123B2D"/>
+      <text x="253" y="24" font-family="ui-monospace, monospace" font-size="9" fill="#3ED0A2" text-anchor="middle" font-weight="700">ASSIGNED</text>
+
+      <text x="16" y="50" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" fill="#EEF3F0">Glacier Ridge Guided Trek</text>
+      <text x="16" y="68" font-family="ui-monospace, monospace" font-size="11" fill="#EEF3F0" fill-opacity="0.6">Lead Guide: Erik Lindqvist · 6 Pax</text>
+      <text x="16" y="88" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#3ED0A2">Safety Gear &amp; Telemetry GPS Included</text>
+
+      <!-- Weather status pill -->
+      <g transform="translate(16, 102)">
+        <rect width="180" height="22" rx="4" fill="#112229"/>
+        <text x="90" y="15" font-family="ui-monospace, monospace" font-size="9" fill="#3ED0A2" text-anchor="middle">REGIONAL TRAIL WEATHER: CLEAR</text>
+      </g>
+    </g>
+  </g>
+</svg>

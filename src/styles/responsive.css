@@ -147,7 +147,7 @@ html, body {
     max-width: 52ch !important;
   }
 
-  .hero { padding-top: calc(var(--header-h) + 36px); }
+  .hero { padding-top: calc(var(--header-h) + 22px); }
   .hero__frame { aspect-ratio: 4 / 3; }
   .hero__panel { position: static; max-width: none; box-shadow: none; }
   .hero__visual { display: grid; gap: var(--s-3); }
@@ -171,7 +171,7 @@ html, body {
 
   /* Compact editorial journey steps on mobile */
   .journey {
-    padding-block: var(--s-2) !important;
+    padding-block: var(--s-3) !important;
   }
   .journey__rail {
     display: flex !important;
@@ -179,40 +179,58 @@ html, body {
     gap: 0 !important;
   }
   .journey__step {
-    padding: 10px 0 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 3px !important;
+    padding: 16px 0 !important;
+    display: grid !important;
+    grid-template-columns: 44px minmax(0, 1fr) !important;
+    column-gap: 14px !important;
+    row-gap: 4px !important;
     border-left: 0 !important;
     border-top: 1px solid var(--ink-hair) !important;
+    align-items: start !important;
   }
   .journey__step:first-child {
     border-top: 0 !important;
+    padding-top: 4px !important;
   }
-  .journey__step + .journey__step {
-    padding-left: 0 !important;
-  }
-  .journey__node {
-    display: none !important;
-  }
-  .journey__head {
+  .journey__header {
+    grid-column: 1 / -1 !important;
     display: flex !important;
-    align-items: baseline !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
     gap: 8px !important;
+    margin-bottom: 2px !important;
   }
   .journey__num {
     font-size: 0.72rem !important;
     color: var(--accent-bright) !important;
     font-weight: 700 !important;
-    letter-spacing: 0.08em !important;
-    flex-shrink: 0 !important;
+    letter-spacing: 0.1em !important;
   }
-  .journey__title {
-    font-size: 1.02rem !important;
+  .journey__node {
+    display: inline-block !important;
+    width: 5px !important;
+    height: 5px !important;
+  }
+  .journey__icon-box {
+    grid-column: 1 !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 10px !important;
+  }
+  .journey-icon-svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+  .journey__content {
+    grid-column: 2 !important;
+    display: grid !important;
+    gap: 3px !important;
+  }
+  .journey__label {
+    font-size: 0.96rem !important;
     font-weight: 600 !important;
-    line-height: 1.25 !important;
-    color: var(--text-on-ink) !important;
-    margin: 0 !important;
+    color: #f0fdf4 !important;
+    line-height: 1.3 !important;
   }
   .journey__body {
     font-size: 0.84rem !important;
@@ -220,7 +238,6 @@ html, body {
     color: var(--text-on-ink-2) !important;
     max-width: none !important;
     margin: 0 !important;
-    padding-left: 24px !important;
   }
 
   /* Brand manifesto compact on mobile */
@@ -237,18 +254,30 @@ html, body {
   .manifesto__lead {
     font-size: 0.92rem !important;
     line-height: 1.55 !important;
+    text-align: justify !important;
+    text-align-last: left !important;
   }
   .manifesto__pillars {
-    gap: var(--s-4) !important;
+    gap: var(--s-5) !important;
     padding-top: var(--s-4) !important;
     margin-top: var(--s-4) !important;
   }
+  .manifesto__icon-box {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 9px !important;
+  }
+  .manifesto-icon-svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
   .manifesto__pillar-title {
-    font-size: 1.05rem !important;
+    font-size: 0.98rem !important;
   }
   .manifesto__pillar-desc {
     font-size: 0.85rem !important;
     line-height: 1.5 !important;
+    max-width: none !important;
   }
 
   .trust-strip__list { grid-template-columns: minmax(0, 1fr); gap: var(--s-4); }
@@ -385,6 +414,6 @@ html, body {
    Short viewports: never let the hero force a scroll trap
    -------------------------------------------------------------------------- */
 @media (max-height: 700px) and (min-width: 1120px) {
-  .hero { padding-top: calc(var(--header-h) + 40px); }
+  .hero { padding-top: calc(var(--header-h) + 30px); }
   .hero__inner { padding-bottom: var(--s-8); }
 }

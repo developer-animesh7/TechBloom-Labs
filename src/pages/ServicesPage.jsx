@@ -25,7 +25,9 @@ export default function ServicesPage() {
             Capabilities & Domain Solutions
           </Reveal>
           <Reveal as="h1" className="t-h1 page-head__title">
-            Where Research Meets <em>Real-World</em> Innovation.
+            TECHNOLOGY.<br />
+            EXPERTISE.<br />
+            BUILT FOR <em>IMPACT</em>.
           </Reveal>
           <Reveal as="p" className="t-lead" delay={80}>
             {servicesIntro}
@@ -46,10 +48,10 @@ export default function ServicesPage() {
         <PageContainer>
           <SectionHeading
             number="01"
-            eyebrow="Specialized Capabilities"
+            eyebrow="Our Services"
             id="services-list-title"
-            title="Strategic Engineering & Advisory Practices"
-            lead="Explore our core service practices. Each capability combines deep domain expertise with structured execution to solve complex organizational challenges."
+            title="Capabilities Designed to Move Ideas Forward"
+            lead="Explore focused capabilities designed to help organizations move from complex requirements to practical solutions, stronger systems, and measurable progress."
           />
 
           <Divider className="services__rule" />

@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" role="img" aria-label="Robotic arm kinematic joints with trajectory coordinates and actuator telemetry panel">
+  <defs>
+    <linearGradient id="rb-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E1A17"/>
+      <stop offset="1" stop-color="#08110E"/>
+    </linearGradient>
+    <linearGradient id="rb-accent-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3ED0A2" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#0C7A5E" stop-opacity="0.4"/>
+    </linearGradient>
+    <radialGradient id="rb-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3ED0A2" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#3ED0A2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="640" fill="url(#rb-bg)"/>
+
+  <!-- Polar & Kinematic Coordinate Grid -->
+  <g stroke="#EEF3F0" stroke-opacity="0.06">
+    <path d="M0 80h1000M0 160h1000M0 240h1000M0 320h1000M0 400h1000M0 480h1000M0 560h1000"/>
+    <path d="M80 0v640M160 0v640M240 0v640M320 0v640M400 0v640M480 0v640M560 0v640M640 0v640M720 0v640M800 0v640M880 0v640"/>
+  </g>
+
+  <!-- Circular Kinematic Reference Rings -->
+  <g fill="none" stroke="#3ED0A2" stroke-opacity="0.12" stroke-dasharray="4 6">
+    <circle cx="280" cy="460" r="140"/>
+    <circle cx="280" cy="460" r="240"/>
+    <circle cx="280" cy="460" r="320"/>
+  </g>
+
+  <!-- Kinematic Robot Arm Assembly -->
+  <!-- Base Pedestal -->
+  <g transform="translate(200, 460)">
+    <rect x="0" y="50" width="160" height="24" rx="4" fill="#182A24" stroke="#3ED0A2" stroke-opacity="0.3" stroke-width="1.5"/>
+    <rect x="30" y="20" width="100" height="30" rx="4" fill="#203830" stroke="#3ED0A2" stroke-opacity="0.4" stroke-width="1.5"/>
+    <circle cx="80" cy="20" r="28" fill="#13241F" stroke="#3ED0A2" stroke-width="2.5"/>
+    <circle cx="80" cy="20" r="12" fill="#3ED0A2" fill-opacity="0.8"/>
+    <text x="80" y="-14" font-family="ui-monospace, monospace" font-size="11" letter-spacing="1.5" fill="#3ED0A2" text-anchor="middle">J1 · BASE</text>
+  </g>
+
+  <!-- Joint 1 to Joint 2 Link (Lower Arm) -->
+  <path d="M280 480 L 250 280" stroke="#1D362E" stroke-width="26" stroke-linecap="round"/>
+  <path d="M280 480 L 250 280" stroke="#3ED0A2" stroke-width="3" stroke-linecap="round" stroke-opacity="0.8"/>
+
+  <!-- Joint 2 (Elbow Joint) -->
+  <g transform="translate(250, 280)">
+    <circle cx="0" cy="0" r="42" fill="url(#rb-glow)"/>
+    <circle cx="0" cy="0" r="24" fill="#152722" stroke="#3ED0A2" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="10" fill="#3ED0A2"/>
+    <!-- Angle Measurement Arc -->
+    <path d="M 0 -34 A 34 34 0 0 1 30 -16" fill="none" stroke="#3ED0A2" stroke-width="2" stroke-dasharray="3 3"/>
+    <text x="-36" y="-12" font-family="ui-monospace, monospace" font-size="11" letter-spacing="1.2" fill="#EEF3F0" fill-opacity="0.7">θ₂: 68.4°</text>
+    <text x="32" y="10" font-family="ui-monospace, monospace" font-size="11" letter-spacing="1.5" fill="#3ED0A2">J2 · ELBOW</text>
+  </g>
+
+  <!-- Joint 2 to Joint 3 Link (Forearm) -->
+  <path d="M250 280 L 410 170" stroke="#1D362E" stroke-width="20" stroke-linecap="round"/>
+  <path d="M250 280 L 410 170" stroke="#3ED0A2" stroke-width="3" stroke-linecap="round" stroke-opacity="0.7"/>
+
+  <!-- Joint 3 (Wrist Joint) -->
+  <g transform="translate(410, 170)">
+    <circle cx="0" cy="0" r="18" fill="#152722" stroke="#3ED0A2" stroke-width="2"/>
+    <circle cx="0" cy="0" r="8" fill="#3ED0A2"/>
+    <text x="24" y="-8" font-family="ui-monospace, monospace" font-size="11" letter-spacing="1.5" fill="#3ED0A2">J3 · WRIST</text>
+  </g>
+
+  <!-- End Effector Gripper / Tool Head -->
+  <g transform="translate(410, 170) rotate(-35)">
+    <path d="M0 0 L 44 0" stroke="#3ED0A2" stroke-width="4"/>
+    <path d="M44 -18 L 44 18" stroke="#3ED0A2" stroke-width="4"/>
+    <path d="M44 -18 L 68 -12" stroke="#3ED0A2" stroke-width="3"/>
+    <path d="M44 18 L 68 12" stroke="#3ED0A2" stroke-width="3"/>
+    <!-- Laser / Tool focal point -->
+    <circle cx="78" cy="0" r="4" fill="#3ED0A2"/>
+    <line x1="78" y1="-12" x2="78" y2="12" stroke="#3ED0A2" stroke-width="1.2" stroke-opacity="0.7"/>
+    <line x1="66" y1="0" x2="90" y2="0" stroke="#3ED0A2" stroke-width="1.2" stroke-opacity="0.7"/>
+  </g>
+
+  <!-- Tool Center Point (TCP) Target Coordinates -->
+  <g transform="translate(480, 110)">
+    <rect width="138" height="42" rx="6" fill="#0A1613" stroke="#3ED0A2" stroke-opacity="0.5" stroke-width="1.5"/>
+    <text x="12" y="18" font-family="ui-monospace, monospace" font-size="10" letter-spacing="1.8" fill="#3ED0A2">TCP VECTOR</text>
+    <text x="12" y="32" font-family="ui-monospace, monospace" font-size="11" fill="#EEF3F0">X:482 Y:136 Z:84</text>
+  </g>
+
+  <!-- Trajectory Spline Path -->
+  <path d="M 470 145 C 440 90, 320 70, 220 110 C 130 145, 90 240, 110 330 C 130 420, 190 440, 260 410"
+        fill="none" stroke="#3ED0A2" stroke-width="2" stroke-dasharray="6 6" stroke-opacity="0.5"/>
+
+  <!-- Right Panel: Actuator & Real-time Kinematic Telemetry -->
+  <g transform="translate(640, 80)">
+    <!-- Container Card -->
+    <rect width="300" height="480" rx="14" fill="#0B1613" fill-opacity="0.94" stroke="#1B332A" stroke-width="1.5"/>
+
+    <!-- Header -->
+    <text x="24" y="36" font-family="ui-monospace, monospace" font-size="12" letter-spacing="2.2" fill="#3ED0A2" font-weight="700">ROBOCORE · TELEMETRY</text>
+    <text x="24" y="54" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#EEF3F0" fill-opacity="0.5">ROS 2 · Node Controller Active</text>
+
+    <line x1="24" y1="70" x2="276" y2="70" stroke="#1B332A" stroke-width="1.5"/>
+
+    <!-- Actuator Channels (Joint Torques) -->
+    <text x="24" y="96" font-family="ui-monospace, monospace" font-size="11" letter-spacing="1.8" fill="#EEF3F0" fill-opacity="0.6">ACTUATOR TORQUE / LOAD</text>
+
+    <!-- Axis 1 -->
+    <g transform="translate(24, 112)">
+      <text x="0" y="12" font-family="ui-monospace, monospace" font-size="11" fill="#EEF3F0">AXIS 1 (Base)</text>
+      <text x="252" y="12" font-family="ui-monospace, monospace" font-size="11" fill="#3ED0A2" text-anchor="end">42 Nm</text>
+      <rect y="20" width="252" height="6" rx="3" fill="#162722"/>
+      <rect y="20" width="170" height="6" rx="3" fill="#3ED0A2"/>
+    </g>
+
+    <!-- Axis 2 -->
+    <g transform="translate(24, 154)">
+      <text x="0" y="12" font-family="ui-monospace, monospace" font-size="11" fill="#EEF3F0">AXIS 2 (Shoulder)</text>
+      <text x="252" y="12" font-family="ui-monospace, monospace" font-size="11" fill="#3ED0A2" text-anchor="end">78 Nm</text>
+      <rect y="20" width="252" height="6" rx="3" fill="#162722"/>
+      <rect y="20" width="210" height="6" rx="3" fill="#3ED0A2"/>
+    </g>
+
+    <!-- Axis 3 -->
+    <g transform="translate(24, 196)">
+      <text x="0" y="12" font-family="ui-monospace, monospace" font-size="11" fill="#EEF3F0">AXIS 3 (Elbow)</text>
+      <text x="252" y="12" font-family="ui-monospace, monospace" font-size="11" fill="#3ED0A2" text-anchor="end">55 Nm</text>
+      <rect y="20" width="252" height="6" rx="3" fill="#162722"/>
+      <rect y="20" width="145" height="6" rx="3" fill="#3ED0A2"/>
+    </g>
+
+    <!-- Axis 4-6 (Wrist Roll/Pitch/Yaw) -->
+    <g transform="translate(24, 238)">
+      <text x="0" y="12" font-family="ui-monospace, monospace" font-size="11" fill="#EEF3F0">AXIS 4-6 (Wrist)</text>
+      <text x="252" y="12" font-family="ui-monospace, monospace" font-size="11" fill="#3ED0A2" text-anchor="end">18 Nm</text>
+      <rect y="20" width="252" height="6" rx="3" fill="#162722"/>
+      <rect y="20" width="84" height="6" rx="3" fill="#3ED0A2"/>
+    </g>
+
+    <line x1="24" y1="284" x2="276" y2="284" stroke="#1B332A" stroke-width="1.5"/>
+
+    <!-- Kinematics Loop Waveform -->
+    <text x="24" y="310" font-family="ui-monospace, monospace" font-size="11" letter-spacing="1.8" fill="#EEF3F0" fill-opacity="0.6">CLOSED-LOOP FREQUENCY</text>
+
+    <g transform="translate(24, 324)">
+      <rect width="252" height="76" rx="8" fill="#0E1E19" stroke="#183127"/>
+      <!-- Grid lines -->
+      <line x1="0" y1="25" x2="252" y2="25" stroke="#183127" stroke-dasharray="2 4"/>
+      <line x1="0" y1="50" x2="252" y2="50" stroke="#183127" stroke-dasharray="2 4"/>
+      <!-- Sine / Oscillation Wave -->
+      <path d="M 0 38 Q 20 10, 40 38 T 80 38 T 120 38 T 160 38 T 200 38 T 240 38 L 252 38"
+            fill="none" stroke="#3ED0A2" stroke-width="2" stroke-linecap="round"/>
+      <text x="12" y="68" font-family="ui-monospace, monospace" font-size="10" fill="#3ED0A2">1.0 kHz · Zero Latency</text>
+    </g>
+
+    <!-- Status Tags -->
+    <g transform="translate(24, 426)">
+      <rect width="118" height="28" rx="6" fill="#142B23" stroke="#3ED0A2" stroke-opacity="0.5"/>
+      <circle cx="16" cy="14" r="4" fill="#3ED0A2"/>
+      <text x="28" y="18" font-family="ui-monospace, monospace" font-size="10" fill="#3ED0A2" font-weight="700">HARDWARE OK</text>
+
+      <rect x="130" width="122" height="28" rx="6" fill="#142B23" stroke="#3ED0A2" stroke-opacity="0.5"/>
+      <text x="191" y="18" font-family="ui-monospace, monospace" font-size="10" fill="#3ED0A2" text-anchor="middle">KINEMATICS: 6-DOF</text>
+    </g>
+  </g>
+</svg>

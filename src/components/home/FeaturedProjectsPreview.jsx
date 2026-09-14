@@ -53,7 +53,7 @@ export default function FeaturedProjectsPreview() {
 
                 <div className="compact-project-card__footer">
                   <Link to={`/projects/${project.id}`} className="link link--subtle">
-                    <span>Explore Product</span>
+                    <span>View Product</span>
                     <ArrowIcon size={14} />
                   </Link>
                 </div>

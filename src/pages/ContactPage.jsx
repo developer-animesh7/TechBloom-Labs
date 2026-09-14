@@ -23,9 +23,9 @@ export default function ContactPage() {
 
     const typeParam = (params.get('type') || '').toLowerCase();
     let careerInterest = '';
-    if (typeParam === 'internship') careerInterest = 'Internship Application';
-    else if (typeParam === 'job') careerInterest = 'Job Application';
-    else if (typeParam === 'general' || typeParam === 'career') careerInterest = 'General Career Inquiry';
+    if (typeParam === 'internship') careerInterest = 'Internship';
+    else if (typeParam === 'job') careerInterest = 'Job';
+    else if (typeParam === 'general' || typeParam === 'career') careerInterest = 'General Inquiry';
 
     // Flexible matching: check slug, exact value, or partial match (e.g. 'agriculture' -> 'Agriculture Project')
     const match =

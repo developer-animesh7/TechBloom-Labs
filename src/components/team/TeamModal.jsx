@@ -17,6 +17,15 @@ export default function TeamModal({ person, onClose }) {
 
   if (!person) return null;
 
+  const isMentor = person.category === 'Mentor';
+  const displayName = isMentor
+    ? (person.name || '').replace(/^(prof\.|dr\.|prof\s+dr\.|professor)\s+/i, '').trim()
+    : person.name;
+
+  const subText = isMentor && person.affiliation && person.affiliation !== person.role
+    ? `${person.affiliation} · ${person.role}`
+    : `${person.role}${person.affiliation && person.affiliation !== person.role ? ` · ${person.affiliation}` : ''}`;
+
   const profileLink = person.profileUrl || person.linkedin;
   const linkText = person.profileUrl ? 'View Research Profile' : 'View LinkedIn Profile';
 
@@ -41,12 +50,9 @@ export default function TeamModal({ person, onClose }) {
         </button>
 
         <span className="team-modal-tag">{person.category || 'Team Profile'}</span>
-        <h3 className="team-modal-name" id="team-modal-name">{person.name}</h3>
+        <h3 className="team-modal-name" id="team-modal-name">{displayName}</h3>
         
-        <p className="team-modal-sub">
-          {person.role}
-          {person.affiliation && person.affiliation !== person.role ? ` · ${person.affiliation}` : ''}
-        </p>
+        <p className="team-modal-sub">{subText}</p>
 
         {person.summary && (
           <p className="team-modal-bio">{person.summary}</p>

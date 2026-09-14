@@ -4,11 +4,12 @@ import Reveal from '../components/common/Reveal.jsx';
 import Button from '../components/common/Button.jsx';
 import ArrowIcon from '../components/common/ArrowIcon.jsx';
 import MentorCard from '../components/team/MentorCard.jsx';
-import EngineerCard from '../components/team/EngineerCard.jsx';
+import EngineeringDomains from '../components/team/EngineeringDomains.jsx';
 import TeamModal from '../components/team/TeamModal.jsx';
 import {
   mentors,
-  engineeringTeam,
+  engineeringDomains,
+  peopleCultureLead,
   companyName,
   CONTACT_EMAIL
 } from '../data/company.js';
@@ -16,8 +17,8 @@ import {
 /**
  * Our Team Page (/experts)
  * Exact two-section layout:
- * 1. Our Mentors (6 mentors in 2 rows x 3 cards)
- * 2. Our Leadership & Engineering Team (6 members in 2 rows x 3 cards)
+ * 1. Our Mentors (8 mentors in 2 rows x 4 cards)
+ * 2. Development & Engineering (5 Interactive Technical Domains + People & Culture)
  */
 export default function ExpertsPage() {
   const [selectedPerson, setSelectedPerson] = useState(null);
@@ -30,11 +31,6 @@ export default function ExpertsPage() {
   const formattedMentors = mentors.map((m) => ({
     ...m,
     category: 'Mentor'
-  }));
-
-  const formattedTeam = engineeringTeam.map((e) => ({
-    ...e,
-    category: 'Leadership & Engineering Team'
   }));
 
   return (
@@ -76,17 +72,18 @@ export default function ExpertsPage() {
             <Button
               variant="ghost"
               onClick={() => {
-                document.getElementById('leadership-engineering')?.scrollIntoView({ behavior: 'smooth' });
+                const target = document.getElementById('development-engineering') || document.getElementById('leadership-engineering');
+                target?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              Leadership & Engineering
+              Development & Engineering
             </Button>
           </Reveal>
         </div>
       </header>
 
       {/* ====================================================================
-          2. SECTION 01: OUR MENTORS (6 Mentors, 3 Columns x 2 Rows)
+          2. SECTION 01: OUR MENTORS (8 Mentors, 4 Columns x 2 Rows)
           ==================================================================== */}
       <section className="team-section team-section--paper" id="mentors" aria-labelledby="team-mentors-title">
         <PageContainer>
@@ -115,31 +112,28 @@ export default function ExpertsPage() {
       </section>
 
       {/* ====================================================================
-          3. SECTION 02: OUR LEADERSHIP & ENGINEERING TEAM (6 Members, 3 Columns x 2 Rows)
+          3. SECTION 02: DEVELOPMENT & ENGINEERING (5 Technical Domains + People & Culture)
           ==================================================================== */}
-      <section className="team-section team-section--sunk" id="leadership-engineering" aria-labelledby="team-leadership-eng-title">
+      <section className="team-section team-section--sunk" id="development-engineering" aria-labelledby="team-dev-eng-title">
         <PageContainer>
-          <div className="team-section__header">
+          <div className="team-section__header team-section__header--dev">
             <div>
-              <span className="team-section__kicker">02 / Execution</span>
-              <h2 className="team-section__title" id="team-leadership-eng-title">Our Leadership & Engineering Team</h2>
+              <span className="team-section__kicker">02 / Technical Disciplines</span>
+              <h2 className="team-section__title" id="team-dev-eng-title">Development & Engineering</h2>
+              <p className="team-section__sub-lead">
+                Specialized teams working across the technical disciplines that shape our products and digital systems.
+              </p>
             </div>
             <div className="team-section__aside">
-              <span className="team-section__count">{String(formattedTeam.length).padStart(2, '0')} Members</span>
-              <span className="team-section__hint">Turning research into scalable systems</span>
+              <span className="team-section__count">05 Domains</span>
+              <span className="team-section__hint">Click any discipline to reveal team</span>
             </div>
           </div>
 
-          <div className="team-engineers-grid">
-            {formattedTeam.map((member, idx) => (
-              <Reveal key={member.id} delay={idx * 60}>
-                <EngineerCard
-                  engineer={member}
-                  onSelect={(p) => setSelectedPerson(p)}
-                />
-              </Reveal>
-            ))}
-          </div>
+          <EngineeringDomains
+            domains={engineeringDomains}
+            peopleLead={peopleCultureLead}
+          />
         </PageContainer>
       </section>
 

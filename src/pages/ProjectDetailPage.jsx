@@ -74,6 +74,17 @@ export default function ProjectDetailPage() {
       {/* 2. Structured Project Depth: Overview, Challenge, Solution, Tech, Impact */}
       <Section tone="paper" size="lg" ruled>
         <PageContainer>
+          {project.image && (
+            <Reveal className="project-detail__media" delay={100}>
+              <img
+                src={project.image}
+                alt={project.alt || `${project.title} system visual`}
+                loading="eager"
+                decoding="async"
+              />
+            </Reveal>
+          )}
+
           <div className="project-detail__grid">
             <div className="project-detail__main">
               {/* SECTION: OVERVIEW */}

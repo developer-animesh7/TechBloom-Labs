@@ -130,7 +130,11 @@ export default function Leadership() {
                   mentor.name
                 )}
               </h4>
-              <p className="mentor-card__role">{mentor.role}</p>
+              <p className="mentor-card__role">
+                {mentor.affiliation && mentor.affiliation !== mentor.role
+                  ? `${mentor.affiliation} · ${mentor.role}`
+                  : mentor.role}
+              </p>
 
               {mentor.profileUrl && (
                 <a

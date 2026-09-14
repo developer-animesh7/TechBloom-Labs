@@ -411,6 +411,7 @@ export default function HeroVisual() {
           <span className="hero-panel__chip">SOFTWARE</span>
           <span className="hero-panel__chip">SECURITY</span>
           <span className="hero-panel__chip">DIGITAL</span>
+          <span className="hero-panel__chip">IoT & Robotics</span>
         </div>
         <p className="hero-panel__footer-text">
           Enterprise Architecture · Deployment Ready

@@ -5,7 +5,7 @@
    ========================================================================== */
 
 export const servicesIntro =
-  'TechBloom Labs provides expert consulting, research and development, product development, market research, digital transformation, and professional training solutions to solve complex organizational challenges and drive sustainable growth.';
+  'From strategic consulting and research to product development, digital transformation, IoT, AI, robotics, and professional development, our services are designed to help organizations solve complex challenges and build practical, technology-driven solutions.';
 
 export const services = [
   {
@@ -96,6 +96,38 @@ export const services = [
       'We empower individuals and teams to perform better and adapt to changing industry demands.'
     ],
     intent: 'training-professional-development',
+    accent: 'var(--accent-bright)'
+  },
+  {
+    number: '07',
+    id: 'iot-smart-technology-systems',
+    title: 'IoT & Smart Technology Systems',
+    // Minimal temporary scope ready for official client-provided copy
+    blurb:
+      'We design and integrate smart connected infrastructure, intelligent sensor networks, real-time monitoring systems, and operational automation architectures.',
+    lines: [
+      'Connected devices, smart infrastructure, and IoT network deployments.',
+      'Sensor-based monitoring and real-time connected environments.',
+      'Intelligent device integration and edge automation systems.',
+      'Distributed hardware architectures and telemetry analytics.'
+    ],
+    intent: 'iot-smart-technology-systems',
+    accent: 'var(--accent)'
+  },
+  {
+    number: '08',
+    id: 'ai-robotics-advanced-engineering',
+    title: 'AI & Robotics Advanced Engineering',
+    // Minimal temporary scope ready for official client-provided copy
+    blurb:
+      'We engineer advanced machine intelligence systems, robotics architectures, autonomous decision frameworks, and AI-powered industrial solutions.',
+    lines: [
+      'Artificial intelligence, machine learning, and autonomous systems.',
+      'Robotics engineering, mechanical intelligence, and automation.',
+      'Intelligent decision frameworks and advanced algorithmic workflows.',
+      'AI-powered engineering solutions tailored for real-world operations.'
+    ],
+    intent: 'ai-robotics-advanced-engineering',
     accent: 'var(--accent-bright)'
   }
 ];

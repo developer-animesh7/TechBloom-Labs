@@ -133,7 +133,7 @@ export default function Home() {
             eyebrow="Core Services"
             id="services-preview-title"
             title="Strategic Advisory & Engineering Solutions"
-            lead="From strategic consulting and R&D to product development, market intelligence, digital transformation, and professional training, we empower organizations with structured execution."
+            lead="From strategic consulting and R&D to product development, digital transformation, IoT systems, AI robotics, and professional development, we empower organizations with structured execution."
             aside={
               <Button to="/services" arrow>
                 View All Services

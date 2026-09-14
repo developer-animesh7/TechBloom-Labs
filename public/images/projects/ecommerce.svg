@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" role="img" aria-label="Digital commerce architecture with product catalog inventory tracking, checkout pipeline and fulfillment dispatch queue">
+  <defs>
+    <linearGradient id="ec-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ECF2F3"/>
+      <stop offset="1" stop-color="#DCE6E8"/>
+    </linearGradient>
+    <linearGradient id="ec-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#F5F8F8" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1000" height="640" fill="url(#ec-bg)"/>
+
+  <!-- Technical Grid -->
+  <g stroke="#15363F" stroke-opacity="0.06">
+    <path d="M0 64h1000M0 128h1000M0 192h1000M0 256h1000M0 320h1000M0 384h1000M0 448h1000M0 512h1000M0 576h1000"/>
+    <path d="M80 0v640M160 0v640M240 0v640M320 0v640M400 0v640M480 0v640M560 0v640M640 0v640M720 0v640M800 0v640M880 0v640"/>
+  </g>
+
+  <!-- Left: Multi-Channel Product Catalog & Inventory Matrix -->
+  <g transform="translate(68, 76)">
+    <!-- Container Card -->
+    <rect width="490" height="490" rx="14" fill="url(#ec-card)" stroke="#15363F" stroke-opacity="0.14" stroke-width="1.5"/>
+
+    <!-- Header -->
+    <text x="28" y="38" font-family="ui-monospace, monospace" font-size="11" letter-spacing="2.2" fill="#0C7A5E" font-weight="700">COMMERCEHUB · SKU CATALOG</text>
+    <text x="28" y="56" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#15363F" fill-opacity="0.55">Multi-Channel Product Variants &amp; Inventory Sync</text>
+
+    <!-- Channel Pills -->
+    <g transform="translate(300, 24)">
+      <rect width="48" height="22" rx="6" fill="#E4EFEA"/>
+      <text x="24" y="15" font-family="ui-monospace, monospace" font-size="9" fill="#0C7A5E" text-anchor="middle" font-weight="700">WEB</text>
+
+      <rect x="54" width="48" height="22" rx="6" fill="#E4EFEA"/>
+      <text x="78" y="15" font-family="ui-monospace, monospace" font-size="9" fill="#0C7A5E" text-anchor="middle" font-weight="700">APP</text>
+
+      <rect x="108" width="48" height="22" rx="6" fill="#E4EFEA"/>
+      <text x="132" y="15" font-family="ui-monospace, monospace" font-size="9" fill="#0C7A5E" text-anchor="middle" font-weight="700">POS</text>
+    </g>
+
+    <line x1="28" y1="74" x2="462" y2="74" stroke="#15363F" stroke-opacity="0.12" stroke-width="1.5"/>
+
+    <!-- Product Item 1 -->
+    <g transform="translate(28, 92)">
+      <rect width="434" height="78" rx="10" fill="#FFFFFF" stroke="#15363F" stroke-opacity="0.1" stroke-width="1"/>
+      <!-- Thumbnail Icon Placeholder -->
+      <rect x="12" y="12" width="54" height="54" rx="8" fill="#EBF4F2" stroke="#0C7A5E" stroke-opacity="0.2"/>
+      <rect x="22" y="24" width="34" height="26" rx="4" fill="#0C7A5E" fill-opacity="0.6"/>
+      <circle cx="39" cy="37" r="5" fill="#FFFFFF"/>
+
+      <text x="78" y="30" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" fill="#15363F">Precision Smart Edge Gateway</text>
+      <text x="78" y="48" font-family="ui-monospace, monospace" font-size="10" fill="#15363F" fill-opacity="0.5">SKU: CH-EDG-409 · Hardware · 3 Variants</text>
+      <text x="78" y="64" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#0C7A5E">$349.00 USD</text>
+
+      <!-- Stock Quantity Badge -->
+      <rect x="330" y="26" width="90" height="26" rx="13" fill="#E8F6F1"/>
+      <circle cx="344" cy="39" r="4" fill="#0C7A5E"/>
+      <text x="354" y="43" font-family="ui-monospace, monospace" font-size="10" fill="#0C7A5E" font-weight="700">842 IN STOCK</text>
+    </g>
+
+    <!-- Product Item 2 -->
+    <g transform="translate(28, 184)">
+      <rect width="434" height="78" rx="10" fill="#FFFFFF" stroke="#15363F" stroke-opacity="0.1" stroke-width="1"/>
+      <rect x="12" y="12" width="54" height="54" rx="8" fill="#EBF4F2" stroke="#0C7A5E" stroke-opacity="0.2"/>
+      <path d="M 28 48 L 39 24 L 50 48 Z" fill="#0C7A5E" fill-opacity="0.6"/>
+
+      <text x="78" y="30" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" fill="#15363F">Industrial Telemetry Sensor Node</text>
+      <text x="78" y="48" font-family="ui-monospace, monospace" font-size="10" fill="#15363F" fill-opacity="0.5">SKU: CH-SN-820 · Peripherals · 2 Variants</text>
+      <text x="78" y="64" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#0C7A5E">$129.50 USD</text>
+
+      <rect x="330" y="26" width="90" height="26" rx="13" fill="#E8F6F1"/>
+      <circle cx="344" cy="39" r="4" fill="#0C7A5E"/>
+      <text x="354" y="43" font-family="ui-monospace, monospace" font-size="10" fill="#0C7A5E" font-weight="700">1,240 IN STOCK</text>
+    </g>
+
+    <!-- Product Item 3: Low Stock Warning -->
+    <g transform="translate(28, 276)">
+      <rect width="434" height="78" rx="10" fill="#FFFFFF" stroke="#D9822B" stroke-opacity="0.35" stroke-width="1"/>
+      <rect x="12" y="12" width="54" height="54" rx="8" fill="#FBF3EB" stroke="#D9822B" stroke-opacity="0.3"/>
+      <circle cx="39" cy="39" r="14" fill="#D9822B" fill-opacity="0.6"/>
+
+      <text x="78" y="30" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" fill="#15363F">Autonomous Kinematics Controller</text>
+      <text x="78" y="48" font-family="ui-monospace, monospace" font-size="10" fill="#15363F" fill-opacity="0.5">SKU: CH-ROB-112 · Robotics Component</text>
+      <text x="78" y="64" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#0C7A5E">$580.00 USD</text>
+
+      <!-- Low Stock Badge -->
+      <rect x="330" y="26" width="90" height="26" rx="13" fill="#FDF3E9"/>
+      <circle cx="344" cy="39" r="4" fill="#D9822B"/>
+      <text x="354" y="43" font-family="ui-monospace, monospace" font-size="10" fill="#D9822B" font-weight="700">14 LOW STOCK</text>
+    </g>
+
+    <!-- Real-Time Sync Status Footer -->
+    <g transform="translate(28, 372)">
+      <rect width="434" height="92" rx="10" fill="#10252A" stroke="#1D434B"/>
+      <text x="18" y="28" font-family="ui-monospace, monospace" font-size="10" letter-spacing="1.8" fill="#3ED0A2">WAREHOUSE INVENTORY THRESHOLD</text>
+      <g transform="translate(18, 44)">
+        <text x="0" y="12" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#EEF3F0">Central Hub Distribution</text>
+        <text x="398" y="12" font-family="ui-monospace, monospace" font-size="11" fill="#3ED0A2" text-anchor="end">98.2% Filled</text>
+        <rect y="20" width="398" height="6" rx="3" fill="#19383E"/>
+        <rect y="20" width="390" height="6" rx="3" fill="#3ED0A2"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right: Checkout Flow & Order Dispatch Pipeline -->
+  <g transform="translate(578, 76)">
+    <!-- Top Card: Multi-Step Checkout Pipeline -->
+    <g>
+      <rect width="354" height="226" rx="14" fill="url(#ec-card)" stroke="#15363F" stroke-opacity="0.14" stroke-width="1.5"/>
+      <text x="24" y="34" font-family="ui-monospace, monospace" font-size="11" letter-spacing="2" fill="#0C7A5E" font-weight="700">CHECKOUT &amp; PAYMENT PIPELINE</text>
+      <text x="24" y="52" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#15363F" fill-opacity="0.55">Cart Ingestion to Payment Settlement</text>
+
+      <!-- Pipeline Steps -->
+      <g transform="translate(24, 76)">
+        <!-- Step 1: Cart -->
+        <g>
+          <circle cx="16" cy="16" r="16" fill="#0C7A5E"/>
+          <text x="16" y="20" font-family="ui-monospace, monospace" font-size="11" fill="#FFFFFF" text-anchor="middle" font-weight="700">1</text>
+          <text x="44" y="14" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" fill="#15363F">Cart Ingest</text>
+          <text x="44" y="28" font-family="ui-monospace, monospace" font-size="10" fill="#0C7A5E">Verified Items</text>
+        </g>
+
+        <!-- Connecting line -->
+        <line x1="16" y1="36" x2="16" y2="52" stroke="#0C7A5E" stroke-width="2"/>
+
+        <!-- Step 2: Payment Auth -->
+        <g transform="translate(0, 56)">
+          <circle cx="16" cy="16" r="16" fill="#0C7A5E"/>
+          <text x="16" y="20" font-family="ui-monospace, monospace" font-size="11" fill="#FFFFFF" text-anchor="middle" font-weight="700">2</text>
+          <text x="44" y="14" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" fill="#15363F">Payment Auth</text>
+          <text x="44" y="28" font-family="ui-monospace, monospace" font-size="10" fill="#0C7A5E">Gateway Settled</text>
+        </g>
+
+        <!-- Connecting line -->
+        <line x1="16" y1="92" x2="16" y2="108" stroke="#15363F" stroke-opacity="0.25" stroke-dasharray="2 3"/>
+
+        <!-- Step 3: Order Generated -->
+        <g transform="translate(0, 112)">
+          <circle cx="16" cy="16" r="16" fill="#E8F6F1" stroke="#0C7A5E" stroke-width="1.5"/>
+          <text x="16" y="20" font-family="ui-monospace, monospace" font-size="11" fill="#0C7A5E" text-anchor="middle" font-weight="700">3</text>
+          <text x="44" y="14" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" fill="#15363F">Order Queued</text>
+          <text x="44" y="28" font-family="ui-monospace, monospace" font-size="10" fill="#15363F" fill-opacity="0.5">Automated Invoice</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Bottom Card: Fulfillment Stream -->
+    <g transform="translate(0, 244)">
+      <rect width="354" height="222" rx="14" fill="#10252A" stroke="#1D434B" stroke-width="1.5"/>
+      <text x="24" y="34" font-family="ui-monospace, monospace" font-size="11" letter-spacing="2" fill="#3ED0A2" font-weight="700">DISPATCH &amp; FULFILLMENT QUEUE</text>
+      
+      <!-- Order Row 1 -->
+      <g transform="translate(24, 56)">
+        <rect width="306" height="42" rx="8" fill="#17343C"/>
+        <text x="14" y="20" font-family="ui-monospace, monospace" font-size="10" fill="#3ED0A2" font-weight="700">#ORD-94812</text>
+        <text x="14" y="33" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#EEF3F0" fill-opacity="0.6">FedEx Express · 2 Items</text>
+        <rect x="220" y="10" width="74" height="22" rx="6" fill="#123B2D"/>
+        <text x="257" y="24" font-family="ui-monospace, monospace" font-size="9" fill="#3ED0A2" text-anchor="middle" font-weight="700">DISPATCHED</text>
+      </g>
+
+      <!-- Order Row 2 -->
+      <g transform="translate(24, 108)">
+        <rect width="306" height="42" rx="8" fill="#17343C"/>
+        <text x="14" y="20" font-family="ui-monospace, monospace" font-size="10" fill="#3ED0A2" font-weight="700">#ORD-94813</text>
+        <text x="14" y="33" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#EEF3F0" fill-opacity="0.6">DHL Freight · 4 Items</text>
+        <rect x="220" y="10" width="74" height="22" rx="6" fill="#2E3B1C"/>
+        <text x="257" y="24" font-family="ui-monospace, monospace" font-size="9" fill="#C2D962" text-anchor="middle" font-weight="700">PACKING</text>
+      </g>
+
+      <!-- Order Row 3 -->
+      <g transform="translate(24, 160)">
+        <rect width="306" height="42" rx="8" fill="#17343C"/>
+        <text x="14" y="20" font-family="ui-monospace, monospace" font-size="10" fill="#3ED0A2" font-weight="700">#ORD-94814</text>
+        <text x="14" y="33" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#EEF3F0" fill-opacity="0.6">Standard Ground · 1 Item</text>
+        <rect x="220" y="10" width="74" height="22" rx="6" fill="#223945"/>
+        <text x="257" y="24" font-family="ui-monospace, monospace" font-size="9" fill="#80B8FF" text-anchor="middle" font-weight="700">PICKING</text>
+      </g>
+    </g>
+  </g>
+</svg>

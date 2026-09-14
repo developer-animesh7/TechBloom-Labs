@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" role="img" aria-label="Financial technology ledger dashboard with transaction reconciliation table and settlement liquidity telemetry">
+  <defs>
+    <linearGradient id="fin-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E1724"/>
+      <stop offset="1" stop-color="#070D16"/>
+    </linearGradient>
+    <linearGradient id="fin-curve-fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3ED0A2" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#3ED0A2" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1000" height="640" fill="url(#fin-bg)"/>
+
+  <!-- Technical Ledger Grid -->
+  <g stroke="#EEF3F0" stroke-opacity="0.05">
+    <path d="M0 64h1000M0 128h1000M0 192h1000M0 256h1000M0 320h1000M0 384h1000M0 448h1000M0 512h1000M0 576h1000"/>
+    <path d="M80 0v640M160 0v640M240 0v640M320 0v640M400 0v640M480 0v640M560 0v640M640 0v640M720 0v640M800 0v640M880 0v640"/>
+  </g>
+
+  <!-- Left: Double-Entry Immutable Ledger Journal -->
+  <g transform="translate(68, 76)">
+    <!-- Ledger Container -->
+    <rect width="480" height="490" rx="14" fill="#121D2C" fill-opacity="0.95" stroke="#1E2F46" stroke-width="1.5"/>
+
+    <!-- Ledger Header -->
+    <text x="28" y="38" font-family="ui-monospace, monospace" font-size="12" letter-spacing="2.2" fill="#3ED0A2" font-weight="700">FINCORE · DOUBLE-ENTRY LEDGER</text>
+    <text x="28" y="56" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#EEF3F0" fill-opacity="0.5">Automated Transaction Audit Trail &amp; Verification</text>
+
+    <!-- Balanced Badge -->
+    <g transform="translate(332, 24)">
+      <rect width="120" height="26" rx="6" fill="#143328" stroke="#3ED0A2" stroke-opacity="0.6"/>
+      <circle cx="14" cy="13" r="4" fill="#3ED0A2"/>
+      <text x="26" y="17" font-family="ui-monospace, monospace" font-size="10" fill="#3ED0A2" font-weight="700">BALANCED · Δ 0.00</text>
+    </g>
+
+    <line x1="28" y1="74" x2="452" y2="74" stroke="#1E2F46" stroke-width="1.5"/>
+
+    <!-- Table Column Headers -->
+    <g font-family="ui-monospace, monospace" font-size="10" letter-spacing="1.4" fill="#EEF3F0" fill-opacity="0.45">
+      <text x="28" y="98">TX HASH</text>
+      <text x="140" y="98">ACCOUNT</text>
+      <text x="260" y="98">DEBIT</text>
+      <text x="330" y="98">CREDIT</text>
+      <text x="400" y="98">STATUS</text>
+    </g>
+
+    <!-- Row 1 -->
+    <g transform="translate(28, 114)">
+      <rect width="424" height="48" rx="8" fill="#162436" stroke="#223650" stroke-width="1"/>
+      <text x="14" y="24" font-family="ui-monospace, monospace" font-size="11" fill="#3ED0A2">0x8F4A..C2</text>
+      <text x="14" y="38" font-family="ui-monospace, monospace" font-size="9" fill="#EEF3F0" fill-opacity="0.4">14:02:18 UTC</text>
+      <text x="112" y="28" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#EEF3F0">Operating Cash</text>
+      <text x="232" y="28" font-family="ui-monospace, monospace" font-size="11" fill="#3ED0A2" font-weight="700">+48,250.00</text>
+      <text x="302" y="28" font-family="ui-monospace, monospace" font-size="11" fill="#EEF3F0" fill-opacity="0.4">—</text>
+      <rect x="372" y="14" width="44" height="20" rx="4" fill="#123B2D"/>
+      <text x="394" y="28" font-family="ui-monospace, monospace" font-size="9" fill="#3ED0A2" text-anchor="middle" font-weight="700">SETTLED</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(28, 172)">
+      <rect width="424" height="48" rx="8" fill="#162436" stroke="#223650" stroke-width="1"/>
+      <text x="14" y="24" font-family="ui-monospace, monospace" font-size="11" fill="#3ED0A2">0x8F4A..C3</text>
+      <text x="14" y="38" font-family="ui-monospace, monospace" font-size="9" fill="#EEF3F0" fill-opacity="0.4">14:02:18 UTC</text>
+      <text x="112" y="28" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#EEF3F0">Clearing Escrow</text>
+      <text x="232" y="28" font-family="ui-monospace, monospace" font-size="11" fill="#EEF3F0" fill-opacity="0.4">—</text>
+      <text x="302" y="28" font-family="ui-monospace, monospace" font-size="11" fill="#EEF3F0" font-weight="700">-48,250.00</text>
+      <rect x="372" y="14" width="44" height="20" rx="4" fill="#123B2D"/>
+      <text x="394" y="28" font-family="ui-monospace, monospace" font-size="9" fill="#3ED0A2" text-anchor="middle" font-weight="700">SETTLED</text>
+    </g>
+
+    <!-- Row 3 -->
+    <g transform="translate(28, 230)">
+      <rect width="424" height="48" rx="8" fill="#162436" stroke="#223650" stroke-width="1"/>
+      <text x="14" y="24" font-family="ui-monospace, monospace" font-size="11" fill="#3ED0A2">0x3B91..7E</text>
+      <text x="14" y="38" font-family="ui-monospace, monospace" font-size="9" fill="#EEF3F0" fill-opacity="0.4">14:02:44 UTC</text>
+      <text x="112" y="28" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#EEF3F0">Merchant Payout</text>
+      <text x="232" y="28" font-family="ui-monospace, monospace" font-size="11" fill="#EEF3F0" fill-opacity="0.4">—</text>
+      <text x="302" y="28" font-family="ui-monospace, monospace" font-size="11" fill="#EEF3F0" font-weight="700">-12,800.00</text>
+      <rect x="372" y="14" width="44" height="20" rx="4" fill="#1B334B"/>
+      <text x="394" y="28" font-family="ui-monospace, monospace" font-size="9" fill="#75B4FF" text-anchor="middle" font-weight="700">CLEARED</text>
+    </g>
+
+    <!-- Row 4 -->
+    <g transform="translate(28, 288)">
+      <rect width="424" height="48" rx="8" fill="#162436" stroke="#223650" stroke-width="1"/>
+      <text x="14" y="24" font-family="ui-monospace, monospace" font-size="11" fill="#3ED0A2">0x3B91..7F</text>
+      <text x="14" y="38" font-family="ui-monospace, monospace" font-size="9" fill="#EEF3F0" fill-opacity="0.4">14:02:44 UTC</text>
+      <text x="112" y="28" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#EEF3F0">Settlement Reserve</text>
+      <text x="232" y="28" font-family="ui-monospace, monospace" font-size="11" fill="#3ED0A2" font-weight="700">+12,800.00</text>
+      <text x="302" y="28" font-family="ui-monospace, monospace" font-size="11" fill="#EEF3F0" fill-opacity="0.4">—</text>
+      <rect x="372" y="14" width="44" height="20" rx="4" fill="#1B334B"/>
+      <text x="394" y="28" font-family="ui-monospace, monospace" font-size="9" fill="#75B4FF" text-anchor="middle" font-weight="700">CLEARED</text>
+    </g>
+
+    <!-- Cryptographic Block Hash Verification Footer -->
+    <g transform="translate(28, 350)">
+      <rect width="424" height="114" rx="8" fill="#0D1622" stroke="#1C2C40"/>
+      <text x="16" y="26" font-family="ui-monospace, monospace" font-size="10" letter-spacing="1.6" fill="#3ED0A2">MERKLE STATE ROOT · SHA-256 VERIFIED</text>
+      
+      <!-- Merkle Nodes Visual -->
+      <g stroke="#3ED0A2" stroke-opacity="0.5" stroke-width="1.2" fill="none">
+        <path d="M 40 54 L 110 54 M 180 54 L 250 54 M 320 54 L 390 54"/>
+        <path d="M 75 54 L 75 74 L 215 74 L 215 54"/>
+        <path d="M 145 74 L 145 92"/>
+      </g>
+      <g fill="#3ED0A2">
+        <circle cx="40" cy="54" r="4"/><circle cx="110" cy="54" r="4"/><circle cx="180" cy="54" r="4"/><circle cx="250" cy="54" r="4"/><circle cx="320" cy="54" r="4"/><circle cx="390" cy="54" r="4"/>
+        <circle cx="145" cy="74" r="5" fill="#1D4D3D" stroke="#3ED0A2" stroke-width="2"/>
+        <circle cx="145" cy="94" r="5" fill="#3ED0A2"/>
+      </g>
+      <text x="166" y="98" font-family="ui-monospace, monospace" font-size="10" fill="#EEF3F0">BLOCK #1,842,910 · ZERO-KNOWLEDGE AUDIT PASS</text>
+    </g>
+  </g>
+
+  <!-- Right: Settlement Volume & Liquidity Telemetry -->
+  <g transform="translate(578, 76)">
+    <!-- Top Card: Liquidity Velocity -->
+    <g>
+      <rect width="354" height="250" rx="14" fill="#121D2C" fill-opacity="0.95" stroke="#1E2F46" stroke-width="1.5"/>
+      <text x="24" y="34" font-family="ui-monospace, monospace" font-size="11" letter-spacing="2" fill="#3ED0A2" font-weight="700">SETTLEMENT VELOCITY</text>
+      <text x="24" y="52" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#EEF3F0" fill-opacity="0.5">Automated Clearing Flow (T+0)</text>
+
+      <!-- Waveform chart -->
+      <g transform="translate(24, 74)">
+        <path d="M 0 110 Q 40 40, 80 85 T 160 50 T 240 30 T 306 15 L 306 130 L 0 130 Z" fill="url(#fin-curve-fill)"/>
+        <path d="M 0 110 Q 40 40, 80 85 T 160 50 T 240 30 T 306 15" fill="none" stroke="#3ED0A2" stroke-width="2.6" stroke-linecap="round"/>
+        <!-- Chart Axis & Guides -->
+        <line x1="0" y1="130" x2="306" y2="130" stroke="#EEF3F0" stroke-opacity="0.2"/>
+        <line x1="0" y1="70" x2="306" y2="70" stroke="#EEF3F0" stroke-dasharray="2 4" stroke-opacity="0.15"/>
+        <!-- Target Points -->
+        <circle cx="160" cy="50" r="4.5" fill="#3ED0A2"/>
+        <circle cx="306" cy="15" r="5" fill="#3ED0A2"/>
+      </g>
+
+      <g font-family="ui-monospace, monospace" font-size="10" fill="#EEF3F0" fill-opacity="0.5">
+        <text x="24" y="230">00:00</text>
+        <text x="120" y="230">08:00</text>
+        <text x="210" y="230">16:00</text>
+        <text x="306" y="230">24:00 UTC</text>
+      </g>
+    </g>
+
+    <!-- Bottom Card: Automated Reconciliation Statistics -->
+    <g transform="translate(0, 268)">
+      <rect width="354" height="210" rx="14" fill="#121D2C" fill-opacity="0.95" stroke="#1E2F46" stroke-width="1.5"/>
+      <text x="24" y="34" font-family="ui-monospace, monospace" font-size="11" letter-spacing="2" fill="#3ED0A2" font-weight="700">RECONCILIATION ENGINE</text>
+      
+      <!-- Metric Bar 1 -->
+      <g transform="translate(24, 56)">
+        <text x="0" y="14" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#EEF3F0">Auto-Matching Ratio</text>
+        <text x="306" y="14" font-family="ui-monospace, monospace" font-size="12" fill="#3ED0A2" text-anchor="end" font-weight="700">99.98%</text>
+        <rect y="22" width="306" height="7" rx="3.5" fill="#1A2A3E"/>
+        <rect y="22" width="300" height="7" rx="3.5" fill="#3ED0A2"/>
+      </g>
+
+      <!-- Metric Bar 2 -->
+      <g transform="translate(24, 102)">
+        <text x="0" y="14" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#EEF3F0">Multi-Bank Gateway Sync</text>
+        <text x="306" y="14" font-family="ui-monospace, monospace" font-size="12" fill="#3ED0A2" text-anchor="end" font-weight="700">100.0%</text>
+        <rect y="22" width="306" height="7" rx="3.5" fill="#1A2A3E"/>
+        <rect y="22" width="306" height="7" rx="3.5" fill="#3ED0A2"/>
+      </g>
+
+      <!-- Security / Regulatory Tag -->
+      <g transform="translate(24, 156)">
+        <rect width="306" height="34" rx="6" fill="#0D1622" stroke="#1E3148"/>
+        <text x="14" y="21" font-family="ui-monospace, monospace" font-size="10" fill="#3ED0A2">PCI-DSS COMPLIANT ARCHITECTURE</text>
+      </g>
+    </g>
+  </g>
+</svg>

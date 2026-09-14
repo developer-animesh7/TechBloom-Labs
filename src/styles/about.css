@@ -113,12 +113,24 @@
   line-height: 1.6;
   color: var(--ink);
   font-weight: 500;
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+  text-wrap: pretty;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .about-hero__body {
   font-size: var(--fs-body);
   line-height: 1.7;
   color: var(--text-2);
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+  text-wrap: pretty;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .about-hero__sub-bar {

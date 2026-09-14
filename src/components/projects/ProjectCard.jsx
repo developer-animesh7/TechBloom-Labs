@@ -4,57 +4,62 @@ import Reveal from '../common/Reveal.jsx';
 import { getCategory } from '../../data/projects.js';
 
 /**
- * Compact horizontal editorial project card.
- * Designed for quick scanning: small visual, clear title, short summary,
- * technology metadata, and subtle CTA leading to /projects/:slug.
+ * Editorial Product Card for TechBloom Labs Product Catalogue.
+ * Structured cleanly:
+ * [PRODUCT IMAGE]
+ * CATEGORY
+ * PRODUCT NAME
+ * Short product description
+ * TECH STACK
+ * View Product →
  */
 export default function ProjectCard({ project, to, delay = 0 }) {
   const category = getCategory(project.category);
   const destination = to || `/projects/${project.id}`;
 
-  // Technology / category metadata
   const techString = project.stack && project.stack.length > 0
     ? project.stack.slice(0, 3).join(' · ')
-    : category?.name || 'Technology';
+    : (project.techStack && project.techStack.length > 0 ? project.techStack.slice(0, 3).join(' · ') : category?.name || 'Technology');
+
+  const categoryName = category?.name || category?.short || 'Product';
+  const productName = project.name || project.title;
+  const productDesc = project.description || project.summary;
 
   return (
-    <Reveal as="li" className="project-item" delay={delay}>
+    <Reveal as="li" className="product-card-item" delay={delay}>
       <Link
         to={destination}
-        className="project-item__link"
-        aria-label={`View product details for ${project.title}`}
+        className="product-card"
+        aria-label={`View product details for ${productName}`}
       >
-        <div className="project-item__media">
+        <div className="product-card__media">
           {project.image ? (
             <img
               src={project.image}
-              alt={project.alt || `${project.title} visualization`}
-              className="project-item__img"
+              alt={project.alt || `${productName} visualization`}
+              className="product-card__img"
               loading="lazy"
               decoding="async"
             />
           ) : (
-            <div
-              className="project-item__plate"
-              style={{ '--plate-accent': category?.accent || 'var(--accent)' }}
-              aria-hidden="true"
-            >
-              <span className="project-item__plate-tag">{category?.short || 'Platform'}</span>
+            <div className="product-card__placeholder" aria-hidden="true">
+              <span>{categoryName}</span>
             </div>
           )}
         </div>
 
-        <div className="project-item__content">
-          <div className="project-item__top">
-            <h3 className="project-item__title">{project.title}</h3>
-            <span className="project-item__badge">{category?.short || category?.name}</span>
+        <div className="product-card__body">
+          <div className="product-card__meta">
+            <span className="product-card__category">{categoryName}</span>
           </div>
 
-          <p className="project-item__summary">{project.summary}</p>
+          <h3 className="product-card__name">{productName}</h3>
 
-          <div className="project-item__footer">
-            <span className="project-item__tech">{techString}</span>
-            <span className="project-item__cta">
+          <p className="product-card__desc">{productDesc}</p>
+
+          <div className="product-card__footer">
+            <span className="product-card__tech" title={techString}>{techString}</span>
+            <span className="product-card__cta">
               <span>View Product</span>
               <ArrowIcon size={13} />
             </span>

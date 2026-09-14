@@ -950,12 +950,13 @@
   gap: var(--s-4);
   padding: 14px 0;
   border-bottom: 1px solid var(--ink-hair);
+  border-left: 3px solid transparent;
   font-family: var(--font-display);
   font-size: clamp(1.3rem, 5.4vw, 1.75rem);
   font-weight: 500;
   letter-spacing: -0.02em;
   color: var(--text-on-ink);
-  transition: color var(--dur) var(--ease), padding-left var(--dur) var(--ease);
+  transition: color var(--dur) var(--ease), padding-left var(--dur) var(--ease), background var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
 .nav-drawer__list a:hover,
 .nav-drawer__list a:focus-visible { color: var(--accent-bright); padding-left: 6px; }
@@ -965,7 +966,41 @@
   font-size: 0.64rem;
   letter-spacing: 0.12em;
   color: var(--text-on-ink-3);
+  transition: color var(--dur) var(--ease);
 }
+
+/* Mobile Nav Link active state indicator */
+.nav-drawer__list a.is-current {
+  color: var(--accent-bright);
+  font-weight: 600;
+  padding-left: 12px;
+  border-left-color: var(--accent-bright);
+  border-bottom-color: rgba(62, 208, 162, 0.28);
+  background: linear-gradient(90deg, rgba(62, 208, 162, 0.08) 0%, rgba(62, 208, 162, 0.01) 85%, transparent 100%);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+}
+.nav-drawer__list a.is-current:hover,
+.nav-drawer__list a.is-current:focus-visible {
+  color: var(--accent-bright);
+  padding-left: 12px;
+}
+.nav-drawer__list a.is-current i {
+  color: var(--accent-bright);
+  font-weight: 600;
+  opacity: 1;
+}
+.nav-drawer__list a.is-current::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-bright);
+  box-shadow: 0 0 8px var(--accent-bright);
+  margin-left: auto;
+  align-self: center;
+}
+
 .nav-drawer__group-label {
   display: block;
   font-family: var(--font-mono);
@@ -982,9 +1017,15 @@
   border-radius: var(--r-pill);
   font-size: var(--fs-xs);
   color: var(--text-on-ink-2);
-  transition: border-color var(--dur) var(--ease), color var(--dur) var(--ease);
+  transition: border-color var(--dur) var(--ease), color var(--dur) var(--ease), background var(--dur) var(--ease);
 }
 .nav-drawer__sub a:hover { border-color: var(--accent-bright); color: var(--accent-bright); }
+.nav-drawer__sub a.is-current {
+  border-color: var(--accent-bright);
+  color: var(--accent-bright);
+  font-weight: 600;
+  background: rgba(62, 208, 162, 0.08);
+}
 
 .nav-drawer__foot {
   padding: var(--s-5) var(--gutter) var(--s-7);
@@ -1487,16 +1528,22 @@
   position: relative;
   width: 100%;
   max-width: 460px;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
   background: #0B1512;
   background: linear-gradient(180deg, #11221D 0%, #0B1512 100%);
   border: 1px solid rgba(62, 208, 162, 0.28);
   border-radius: 20px;
-  padding: clamp(28px, 4vw, 40px) clamp(20px, 3.5vw, 32px);
+  padding: clamp(24px, 4vw, 40px) clamp(18px, 3.5vw, 32px);
   box-shadow: 0 24px 56px rgba(0, 0, 0, 0.65), 0 0 36px rgba(12, 122, 94, 0.2);
   animation: tb-sub-pop 0.26s cubic-bezier(0.16, 1, 0.3, 1);
   color: #F4F6F5;
   text-align: center;
   box-sizing: border-box;
+}
+
+.submission-modal-box--career {
+  max-width: 520px;
 }
 
 .submission-modal-box--error {
@@ -1606,14 +1653,109 @@
   margin-right: auto;
 }
 
+.submission-modal-career-wrap {
+  margin-bottom: 24px;
+}
+
+.submission-modal-career-wrap .submission-modal-desc {
+  margin-bottom: 14px;
+}
+
+.submission-modal-career-note {
+  padding: 16px 18px;
+  background: rgba(62, 208, 162, 0.07);
+  border: 1px solid rgba(62, 208, 162, 0.22);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.submission-modal-career-lead {
+  margin: 0 0 8px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: rgba(244, 246, 245, 0.9);
+}
+
+.submission-modal-career-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 2px 0 10px;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent-bright);
+  text-decoration: none;
+  background: rgba(62, 208, 162, 0.12);
+  padding: 5px 14px;
+  border-radius: var(--r-pill);
+  border: 1px solid rgba(62, 208, 162, 0.3);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.submission-modal-career-email:hover {
+  background: rgba(62, 208, 162, 0.22);
+  border-color: var(--accent-bright);
+}
+
+.submission-modal-career-sub {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: rgba(244, 246, 245, 0.74);
+}
+
 .submission-modal-actions {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 12px;
   flex-wrap: wrap;
 }
 
 .submission-modal-btn {
-  min-width: 120px;
+  min-width: 130px;
+}
+
+.submission-modal-box .btn--secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.submission-modal-box .btn--secondary:hover,
+.submission-modal-box .btn--secondary:focus-visible {
+  background: rgba(255, 255, 255, 0.16);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.submission-modal-btn--email {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: var(--accent-bright);
+  color: var(--ink);
+  font-weight: 600;
+  border: 1px solid var(--accent-bright);
+}
+
+.submission-modal-btn--email:hover {
+  background: #50e4b4;
+  color: var(--ink);
+  border-color: #50e4b4;
+}
+
+@media (max-width: 480px) {
+  .submission-modal-actions {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .submission-modal-btn {
+    width: 100%;
+    min-width: 0;
+  }
 }
 

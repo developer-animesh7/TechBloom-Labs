@@ -99,6 +99,7 @@ export default function MobileMenu({ open, onClose }) {
                     tabIndex={open ? 0 : -1}
                     onClick={onClose}
                     className={active ? 'is-current' : ''}
+                    aria-current={active ? 'page' : undefined}
                   >
                     <i>{String(index + 1).padStart(2, '0')}</i>
                     {item.label}
@@ -112,11 +113,21 @@ export default function MobileMenu({ open, onClose }) {
         <div>
           <span className="nav-drawer__group-label">Legal & Terms</span>
           <div className="nav-drawer__sub">
-            {legalNav.map((item) => (
-              <Link key={item.label} to={item.to} tabIndex={open ? 0 : -1} onClick={onClose}>
-                {item.label}
-              </Link>
-            ))}
+            {legalNav.map((item) => {
+              const active = isLinkActive(item.to);
+              return (
+                <Link
+                  key={item.label}
+                  to={item.to}
+                  tabIndex={open ? 0 : -1}
+                  onClick={onClose}
+                  className={active ? 'is-current' : ''}
+                  aria-current={active ? 'page' : undefined}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>

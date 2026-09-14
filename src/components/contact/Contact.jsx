@@ -5,13 +5,11 @@ import SectionHeading from '../common/SectionHeading.jsx';
 import PageContainer from '../layout/PageContainer.jsx';
 import Section from '../layout/Section.jsx';
 import ContactForm, { INTEREST_OPTIONS } from './ContactForm.jsx';
-import { Mail, Phone, Pin } from '../../assets/icons/index.jsx';
+import { Mail, Pin } from '../../assets/icons/index.jsx';
 import {
   CONTACT_EMAIL,
-  CONTACT_PHONE,
   address,
-  companyName,
-  leadership
+  companyName
 } from '../../data/company.js';
 
 const QUICK_INTENTS = ['consulting-services', 'research-development', 'product-building-development', 'partnership', 'general-inquiry'];
@@ -62,41 +60,14 @@ export default function Contact({ compact = false, initialInterest = '', context
             </Reveal>
 
             <Reveal className="contact__block" delay={80}>
-              <p className="t-label">Leadership</p>
-              <dl className="contact__leaders">
-                {leadership.map((person) => (
-                  <div key={person.name}>
-                    <dt className="t-sm">{person.role}</dt>
-                    <dd className="t-h4">{person.name}</dd>
-                  </div>
-                ))}
-              </dl>
-            </Reveal>
-
-            <Reveal className="contact__block" delay={140}>
               <p className="t-label">Reach us</p>
               <ul className="contact__channels">
                 <li>
                   <Mail size={17} />
-                  {CONTACT_EMAIL ? (
-                    <a className="link" href={`mailto:${CONTACT_EMAIL}`}>
-                      {CONTACT_EMAIL}
-                    </a>
-                  ) : (
-                    <span className="t-sm">
-                      Email address to be published. Use the form and it routes to the team once the
-                      address is configured.
-                    </span>
-                  )}
+                  <a className="link" href={`mailto:${CONTACT_EMAIL}`}>
+                    {CONTACT_EMAIL}
+                  </a>
                 </li>
-                {CONTACT_PHONE ? (
-                  <li>
-                    <Phone size={17} />
-                    <a className="link" href={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`}>
-                      {CONTACT_PHONE}
-                    </a>
-                  </li>
-                ) : null}
               </ul>
             </Reveal>
 

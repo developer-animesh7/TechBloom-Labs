@@ -5,7 +5,6 @@ import FormField from './FormField.jsx';
 import SubmissionStatusModal from './SubmissionStatusModal.jsx';
 import {
   runValidators,
-  validateAttachment,
   validateConsent,
   validateEmail,
   validateMessage,
@@ -22,19 +21,18 @@ export const INTEREST_OPTIONS = [
   { value: 'Market Research & Analysis', label: 'Market Research & Analysis', slug: 'market-research-analysis' },
   { value: 'Digital Transformation Services', label: 'Digital Transformation Services', slug: 'digital-transformation-services' },
   { value: 'Training & Professional Development', label: 'Training & Professional Development', slug: 'training-professional-development' },
-  { value: 'Internship Application', label: 'Internship Application', slug: 'internship' },
-  { value: 'Job Application', label: 'Job Application', slug: 'job' },
-  { value: 'General Career Inquiry', label: 'General Career Inquiry', slug: 'career' },
+  { value: 'IoT & Smart Technology Systems', label: 'IoT & Smart Technology Systems', slug: 'iot-smart-technology-systems' },
+  { value: 'AI & Robotics Advanced Engineering', label: 'AI & Robotics Advanced Engineering', slug: 'ai-robotics-advanced-engineering' },
+  { value: 'Internship', label: 'Internship', slug: 'internship' },
+  { value: 'Job', label: 'Job', slug: 'job' },
   { value: 'Research Project', label: 'Research Project', slug: 'research-project' },
   { value: 'Faculty / Mentorship', label: 'Faculty / Mentorship', slug: 'faculty-mentorship' },
   { value: 'Partnership', label: 'Partnership', slug: 'partnership' },
   { value: 'Technology Project', label: 'Technology Project', slug: 'technology-project' },
-  { value: 'Career Guidance', label: 'Career Guidance', slug: 'career-guidance' },
   { value: 'General Inquiry', label: 'General Inquiry', slug: 'general-inquiry' },
   { value: 'Other', label: 'Other', slug: 'other' }
 ];
 
-const ACCEPTED = ['.pdf', '.doc', '.docx', '.png', '.jpg', '.jpeg'];
 const FORMSPREE_ID = 'mdeobzno';
 
 const VALIDATORS = {
@@ -45,6 +43,13 @@ const VALIDATORS = {
   message: (value) => validateMessage(value, 15),
   consent: (value) => validateConsent(value)
 };
+
+export function computeSubject(interest) {
+  if (interest === 'Internship') return 'Internship Application';
+  if (interest === 'Job') return 'Job Application';
+  if (interest) return `Website Contact Form — ${interest}`;
+  return 'Website Contact Form';
+}
 
 /**
  * Contact form with official Formspree React integration (useForm).
@@ -61,7 +66,6 @@ export default function ContactForm({ initialInterest = '', contextNote = '' }) 
     message: contextNote ? `Regarding: ${contextNote}\n\n` : '',
     consent: false
   });
-  const [file, setFile] = useState(null);
   const [errors, setErrors] = useState({});
 
   // Official Formspree React Hook
@@ -71,6 +75,10 @@ export default function ContactForm({ initialInterest = '', contextNote = '' }) 
   const [modalOpen, setModalOpen] = useState(false);
   const [modalStatus, setModalStatus] = useState('success');
   const [modalMessage, setModalMessage] = useState('');
+  const [isCareerModal, setIsCareerModal] = useState(false);
+
+  // Track the submitted interest option to differentiate career vs general success modal
+  const submittedInterestRef = useRef('');
 
   useEffect(() => {
     if (initialInterest) setValues((prev) => ({ ...prev, interest: initialInterest }));
@@ -79,9 +87,18 @@ export default function ContactForm({ initialInterest = '', contextNote = '' }) 
   // Handle Formspree submission lifecycle
   useEffect(() => {
     if (state.succeeded) {
+      const currentInterest = submittedInterestRef.current;
+      const isCareer = currentInterest === 'Internship' || currentInterest === 'Job';
+
+      setIsCareerModal(isCareer);
       setModalStatus('success');
-      setModalMessage('Thank you for contacting TechBloom Labs. Your message has been received.');
+      setModalMessage(
+        isCareer
+          ? ''
+          : 'Thank you for contacting TechBloom Labs. Your message has been received.'
+      );
       setModalOpen(true);
+
       // Reset form values cleanly on confirmed Formspree success
       setValues({
         name: '',
@@ -92,53 +109,24 @@ export default function ContactForm({ initialInterest = '', contextNote = '' }) 
         message: '',
         consent: false
       });
-      setFile(null);
       setErrors({});
-      const fileInput = document.getElementById('contact-attachment');
-      if (fileInput) fileInput.value = '';
     } else if (state.errors) {
       const formErrors = typeof state.errors.getFormErrors === 'function' ? state.errors.getFormErrors() : [];
       const allFieldErrors = typeof state.errors.getAllFieldErrors === 'function' ? state.errors.getAllFieldErrors() : [];
-      const attachmentErrors = typeof state.errors.getFieldErrors === 'function' ? state.errors.getFieldErrors('attachment') : [];
 
-      // Extract all error messages and codes
       const allMessages = [
         ...formErrors.map((e) => (typeof e === 'string' ? e : e?.message || '')),
-        ...attachmentErrors.map((e) => (typeof e === 'string' ? e : e?.message || '')),
         ...allFieldErrors.flatMap(([_, errs]) => errs.map((e) => (typeof e === 'string' ? e : e?.message || '')))
       ].filter(Boolean);
 
-      const allCodes = [
-        ...formErrors.map((e) => e?.code || ''),
-        ...attachmentErrors.map((e) => e?.code || ''),
-        ...allFieldErrors.flatMap(([_, errs]) => errs.map((e) => e?.code || ''))
-      ].filter(Boolean);
-
-      const isFileRelated =
-        attachmentErrors.length > 0 ||
-        allCodes.some((code) => ['NO_FILE_UPLOADS', 'FILES_TOO_BIG', 'TOO_MANY_FILES'].includes(code)) ||
-        allMessages.some((msg) => {
-          const lower = msg.toLowerCase();
-          return (
-            lower.includes('file') ||
-            lower.includes('upload') ||
-            lower.includes('attachment') ||
-            lower.includes('size') ||
-            lower.includes('multipart') ||
-            lower.includes('not permitted') ||
-            lower.includes('too big')
-          );
-        });
-
       let displayMessage = '';
-      if (isFileRelated) {
-        displayMessage = 'Unable to attach this file. Please choose another file and try again.';
-      } else if (allMessages.length > 0) {
+      if (allMessages.length > 0) {
         displayMessage = allMessages.join(' ');
       } else {
         displayMessage = 'Something went wrong while sending your message. Please try again.';
       }
 
+      setIsCareerModal(false);
       setModalStatus('error');
       setModalMessage(displayMessage);
       setModalOpen(true);
@@ -157,58 +145,40 @@ export default function ContactForm({ initialInterest = '', contextNote = '' }) 
     setErrors((prev) => ({ ...prev, [field]: validator(values[field], values) }));
   };
 
-  const onFileChange = (event) => {
-    const selected = event.target.files?.[0] || null;
-    const message = validateAttachment(selected, { maxMB: 10, accept: ACCEPTED });
-    setErrors((prev) => ({ ...prev, attachment: message }));
-    setFile(message ? null : selected);
-  };
-
-  const onFileRemove = (e) => {
-    if (e) {
-      e.preventDefault();
-      e.stopPropagation();
-    }
-    setFile(null);
-    setErrors((prev) => ({ ...prev, attachment: '' }));
-    const fileInput = document.getElementById('contact-attachment');
-    if (fileInput) fileInput.value = '';
-  };
-
   const onSubmit = async (event) => {
     event.preventDefault();
 
-    const { errors: found, isValid, firstField } = runValidators(values, VALIDATORS);
+    if (state.submitting) return;
 
-    /* Re-check attachment */
-    const attachmentError = validateAttachment(file, { maxMB: 10, accept: ACCEPTED });
-    if (attachmentError) found.attachment = attachmentError;
+    const { errors: found, isValid, firstField } = runValidators(values, VALIDATORS);
     setErrors(found);
 
-    if (!isValid || attachmentError) {
-      document.getElementById(`contact-${firstField || 'attachment'}`)?.focus();
+    if (!isValid) {
+      document.getElementById(`contact-${firstField}`)?.focus();
       return;
     }
+
+    submittedInterestRef.current = values.interest;
+    const computedSub = computeSubject(values.interest);
 
     const submission = new FormData(event.currentTarget);
     submission.set('name', values.name.trim());
     submission.set('email', values.email.trim());
+    submission.set('_replyto', values.email.trim());
     if (values.phone?.trim()) submission.set('phone', values.phone.trim());
     else submission.delete('phone');
     if (values.organization?.trim()) submission.set('organization', values.organization.trim());
     else submission.delete('organization');
     submission.set('interest', values.interest);
+    submission.set('inquiryType', values.interest || 'General Inquiry');
     submission.set('message', values.message.trim());
-    submission.set('_subject', `TechBloom Labs enquiry — ${values.interest || 'General'}`);
-    if (file instanceof File) {
-      submission.set('attachment', file, file.name);
-    } else {
-      submission.delete('attachment');
-    }
+    submission.set('subject', computedSub);
+    submission.set('_subject', computedSub);
 
     try {
       await handleSubmit(submission);
     } catch (err) {
+      setIsCareerModal(false);
       setModalStatus('error');
       setModalMessage(
         'Network error or server unavailable. Please check your connection and try again.'
@@ -236,14 +206,23 @@ export default function ContactForm({ initialInterest = '', contextNote = '' }) 
       <form
         className="form contact-form"
         onSubmit={onSubmit}
-        encType="multipart/form-data"
         noValidate
       >
-        {/* Hidden subject for Formspree email notification */}
+        {/* Hidden subject & mapping fields for Formspree notification & routing */}
+        <input
+          type="hidden"
+          name="subject"
+          value={computeSubject(values.interest)}
+        />
         <input
           type="hidden"
           name="_subject"
-          value={`TechBloom Labs enquiry — ${values.interest || 'General'}`}
+          value={computeSubject(values.interest)}
+        />
+        <input
+          type="hidden"
+          name="inquiryType"
+          value={values.interest || 'General Inquiry'}
         />
 
         <div className="form__grid">
@@ -378,21 +357,6 @@ export default function ContactForm({ initialInterest = '', contextNote = '' }) 
               style={{ display: 'flex' }}
             />
           </div>
-
-          <FormField
-            id="contact-attachment"
-            name="attachment"
-            label="Attachment"
-            type="file"
-            accept={ACCEPTED.join(',')}
-            onChange={onFileChange}
-            onClear={onFileRemove}
-            error={errors.attachment}
-            fileName={file?.name}
-            help={`Optional. ${ACCEPTED.join(', ')} up to 10 MB.`}
-            optional
-            full
-          />
         </div>
 
         <div className={`check${errors.consent ? ' has-error' : ''}`}>
@@ -433,6 +397,7 @@ export default function ContactForm({ initialInterest = '', contextNote = '' }) 
       <SubmissionStatusModal
         isOpen={modalOpen}
         status={modalStatus}
+        isCareerApplication={isCareerModal}
         message={modalMessage}
         onClose={handleCloseModal}
         onRetry={handleRetry}

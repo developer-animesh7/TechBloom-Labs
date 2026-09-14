@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" role="img" aria-label="Restaurant operations floor plan map with real-time table status and kitchen display ticket queue">
+  <defs>
+    <linearGradient id="rf-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F3F0EA"/>
+      <stop offset="1" stop-color="#E2DDD2"/>
+    </linearGradient>
+    <linearGradient id="rf-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#F7F5F0" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1000" height="640" fill="url(#rf-bg)"/>
+
+  <!-- Architectural Floor Grid -->
+  <g stroke="#383023" stroke-opacity="0.06">
+    <path d="M0 64h1000M0 128h1000M0 192h1000M0 256h1000M0 320h1000M0 384h1000M0 448h1000M0 512h1000M0 576h1000"/>
+    <path d="M80 0v640M160 0v640M240 0v640M320 0v640M400 0v640M480 0v640M560 0v640M640 0v640M720 0v640M800 0v640M880 0v640"/>
+  </g>
+
+  <!-- Left: Interactive Dining Room Floor Map -->
+  <g transform="translate(68, 76)">
+    <!-- Container Card -->
+    <rect width="500" height="490" rx="14" fill="url(#rf-card)" stroke="#383023" stroke-opacity="0.14" stroke-width="1.5"/>
+
+    <!-- Header -->
+    <text x="28" y="38" font-family="ui-monospace, monospace" font-size="11" letter-spacing="2.2" fill="#0C7A5E" font-weight="700">TABLEFLOW · DINING ROOM FLOOR MAP</text>
+    <text x="28" y="56" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#383023" fill-opacity="0.55">Spatial Seating Layout &amp; Real-Time Turnover Status</text>
+
+    <!-- Legend -->
+    <g transform="translate(28, 74)">
+      <circle cx="6" cy="6" r="5" fill="#0C7A5E"/>
+      <text x="16" y="10" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#383023">Occupied</text>
+
+      <circle cx="96" cy="6" r="5" fill="#C9752A"/>
+      <text x="106" y="10" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#383023">Reserved</text>
+
+      <circle cx="186" cy="6" r="5" fill="#E8E5DD" stroke="#383023" stroke-opacity="0.3"/>
+      <text x="196" y="10" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#383023">Available</text>
+    </g>
+
+    <line x1="28" y1="96" x2="472" y2="96" stroke="#383023" stroke-opacity="0.1" stroke-width="1.5"/>
+
+    <!-- Floor Seating Plan Layout -->
+    <!-- Booth Section Top Left -->
+    <!-- Table T01 (Rectangular Booth) -->
+    <g transform="translate(48, 126)">
+      <!-- Booth Seating -->
+      <rect x="-8" y="-12" width="76" height="8" rx="3" fill="#D3CBC0"/>
+      <rect x="-8" y="54" width="76" height="8" rx="3" fill="#D3CBC0"/>
+      <!-- Table Surface -->
+      <rect width="60" height="50" rx="8" fill="#0C7A5E" fill-opacity="0.15" stroke="#0C7A5E" stroke-width="2"/>
+      <text x="30" y="24" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#0C7A5E" text-anchor="middle">T-01</text>
+      <text x="30" y="38" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#0C7A5E" text-anchor="middle">4 Seats</text>
+    </g>
+
+    <!-- Table T02 (Rectangular Booth) -->
+    <g transform="translate(156, 126)">
+      <rect x="-8" y="-12" width="76" height="8" rx="3" fill="#D3CBC0"/>
+      <rect x="-8" y="54" width="76" height="8" rx="3" fill="#D3CBC0"/>
+      <rect width="60" height="50" rx="8" fill="#C9752A" fill-opacity="0.15" stroke="#C9752A" stroke-width="2"/>
+      <text x="30" y="24" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#C9752A" text-anchor="middle">T-02</text>
+      <text x="30" y="38" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#C9752A" text-anchor="middle">19:30 RES</text>
+    </g>
+
+    <!-- Table T03 (Center Large Round Table) -->
+    <g transform="translate(320, 160)">
+      <!-- Chairs around circle -->
+      <circle cx="-38" cy="0" r="7" fill="#D3CBC0"/>
+      <circle cx="38" cy="0" r="7" fill="#D3CBC0"/>
+      <circle cx="0" cy="-38" r="7" fill="#D3CBC0"/>
+      <circle cx="0" cy="38" r="7" fill="#D3CBC0"/>
+      <circle cx="-26" cy="-26" r="7" fill="#D3CBC0"/>
+      <circle cx="26" cy="26" r="7" fill="#D3CBC0"/>
+      <!-- Main Table Circle -->
+      <circle cx="0" cy="0" r="30" fill="#0C7A5E" fill-opacity="0.15" stroke="#0C7A5E" stroke-width="2.5"/>
+      <text x="0" y="-3" font-family="ui-monospace, monospace" font-size="12" font-weight="700" fill="#0C7A5E" text-anchor="middle">T-03</text>
+      <text x="0" y="12" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#0C7A5E" text-anchor="middle">6 Guests</text>
+    </g>
+
+    <!-- Table T04 (Round 4-Top) -->
+    <g transform="translate(100, 260)">
+      <circle cx="-32" cy="0" r="6" fill="#D3CBC0"/>
+      <circle cx="32" cy="0" r="6" fill="#D3CBC0"/>
+      <circle cx="0" cy="-32" r="6" fill="#D3CBC0"/>
+      <circle cx="0" cy="32" r="6" fill="#D3CBC0"/>
+      <circle cx="0" cy="0" r="24" fill="#0C7A5E" fill-opacity="0.15" stroke="#0C7A5E" stroke-width="2"/>
+      <text x="0" y="-2" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#0C7A5E" text-anchor="middle">T-04</text>
+      <text x="0" y="11" font-family="Inter, system-ui, sans-serif" font-size="8" fill="#0C7A5E" text-anchor="middle">Mains</text>
+    </g>
+
+    <!-- Table T05 (Round 4-Top) -->
+    <g transform="translate(220, 260)">
+      <circle cx="-32" cy="0" r="6" fill="#D3CBC0"/>
+      <circle cx="32" cy="0" r="6" fill="#D3CBC0"/>
+      <circle cx="0" cy="-32" r="6" fill="#D3CBC0"/>
+      <circle cx="0" cy="32" r="6" fill="#D3CBC0"/>
+      <circle cx="0" cy="0" r="24" fill="#FFFFFF" stroke="#383023" stroke-opacity="0.3" stroke-width="1.5"/>
+      <text x="0" y="-2" font-family="ui-monospace, monospace" font-size="11" font-weight="600" fill="#383023" text-anchor="middle">T-05</text>
+      <text x="0" y="11" font-family="Inter, system-ui, sans-serif" font-size="8" fill="#383023" fill-opacity="0.5" text-anchor="middle">Open</text>
+    </g>
+
+    <!-- Table T06 & T07 (Bistro 2-Tops) -->
+    <g transform="translate(360, 270)">
+      <circle cx="0" cy="-28" r="6" fill="#D3CBC0"/>
+      <circle cx="0" cy="28" r="6" fill="#D3CBC0"/>
+      <rect x="-18" y="-18" width="36" height="36" rx="6" fill="#0C7A5E" fill-opacity="0.15" stroke="#0C7A5E" stroke-width="2"/>
+      <text x="0" y="4" font-family="ui-monospace, monospace" font-size="10" font-weight="700" fill="#0C7A5E" text-anchor="middle">T-06</text>
+    </g>
+
+    <g transform="translate(430, 270)">
+      <circle cx="0" cy="-28" r="6" fill="#D3CBC0"/>
+      <circle cx="0" cy="28" r="6" fill="#D3CBC0"/>
+      <rect x="-18" y="-18" width="36" height="36" rx="6" fill="#C9752A" fill-opacity="0.15" stroke="#C9752A" stroke-width="2"/>
+      <text x="0" y="4" font-family="ui-monospace, monospace" font-size="10" font-weight="700" fill="#C9752A" text-anchor="middle">T-07</text>
+    </g>
+
+    <!-- Shift Turnover Bar Footer -->
+    <g transform="translate(28, 360)">
+      <rect width="444" height="100" rx="10" fill="#201C15" stroke="#383023"/>
+      <text x="20" y="28" font-family="ui-monospace, monospace" font-size="10" letter-spacing="1.8" fill="#3ED0A2">SERVICE SHIFT OCCUPANCY</text>
+      <text x="424" y="28" font-family="ui-monospace, monospace" font-size="11" fill="#3ED0A2" text-anchor="end">84% Capacity</text>
+      
+      <g transform="translate(20, 44)">
+        <rect width="404" height="8" rx="4" fill="#383023"/>
+        <rect width="340" height="8" rx="4" fill="#0C7A5E"/>
+        <text x="0" y="26" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#EEF3F0" fill-opacity="0.7">Dinner Service · Avg Turn Time: 58 mins</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right: Kitchen Display System (KDS) Active Tickets -->
+  <g transform="translate(588, 76)">
+    <rect width="344" height="490" rx="14" fill="#1C1813" fill-opacity="0.96" stroke="#332B22" stroke-width="1.5"/>
+
+    <text x="24" y="38" font-family="ui-monospace, monospace" font-size="11" letter-spacing="2.2" fill="#3ED0A2" font-weight="700">KDS · KITCHEN TICKETS</text>
+    <text x="24" y="56" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#EEF3F0" fill-opacity="0.5">Live Station Order Dispatch</text>
+
+    <!-- Ticket 1: Active Expedite -->
+    <g transform="translate(20, 76)">
+      <rect width="304" height="182" rx="10" fill="#26211A" stroke="#0C7A5E" stroke-width="1.5"/>
+      <!-- Ticket Header -->
+      <g transform="translate(14, 20)">
+        <text x="0" y="4" font-family="ui-monospace, monospace" font-size="13" font-weight="700" fill="#3ED0A2">TABLE 01</text>
+        <text x="90" y="4" font-family="ui-monospace, monospace" font-size="10" fill="#EEF3F0" fill-opacity="0.5">#8420 · 4 Covers</text>
+        
+        <rect x="200" y="-8" width="76" height="20" rx="4" fill="#123B2D"/>
+        <text x="238" y="6" font-family="ui-monospace, monospace" font-size="9" fill="#3ED0A2" text-anchor="middle" font-weight="700">06:40 MIN</text>
+      </g>
+
+      <line x1="14" y1="36" x2="290" y2="36" stroke="#383023" stroke-width="1"/>
+
+      <!-- Order Items List -->
+      <g transform="translate(14, 54)" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#EEF3F0">
+        <text x="0" y="14" font-weight="600">2× Wild Truffle Risotto</text>
+        <text x="0" y="38" font-weight="600">1× Dry-Aged Wagyu Striploin</text>
+        <text x="20" y="54" font-size="10" fill="#3ED0A2">↳ Med-Rare · Chef Garnish</text>
+        <text x="0" y="78" font-weight="600">1× Pan-Seared Atlantic Halibut</text>
+      </g>
+
+      <!-- Stage Button -->
+      <rect x="14" y="146" width="276" height="24" rx="5" fill="#0C7A5E"/>
+      <text x="152" y="162" font-family="ui-monospace, monospace" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="700">EXPEDITE TO PASS →</text>
+    </g>
+
+    <!-- Ticket 2: Prep Stage -->
+    <g transform="translate(20, 272)">
+      <rect width="304" height="182" rx="10" fill="#26211A" stroke="#383023" stroke-width="1"/>
+      <g transform="translate(14, 20)">
+        <text x="0" y="4" font-family="ui-monospace, monospace" font-size="13" font-weight="700" fill="#EEF3F0">TABLE 04</text>
+        <text x="90" y="4" font-family="ui-monospace, monospace" font-size="10" fill="#EEF3F0" fill-opacity="0.5">#8422 · 2 Covers</text>
+        
+        <rect x="200" y="-8" width="76" height="20" rx="4" fill="#382C18"/>
+        <text x="238" y="6" font-family="ui-monospace, monospace" font-size="9" fill="#D98A32" text-anchor="middle" font-weight="700">02:15 MIN</text>
+      </g>
+
+      <line x1="14" y1="36" x2="290" y2="36" stroke="#383023" stroke-width="1"/>
+
+      <g transform="translate(14, 54)" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#EEF3F0">
+        <text x="0" y="14" font-weight="600">1× Heirloom Burrata Salad</text>
+        <text x="0" y="38" font-weight="600">2× House Handcrafted Tagliatelle</text>
+        <text x="0" y="62" font-weight="600">1× Dark Chocolate Soufflé</text>
+      </g>
+
+      <rect x="14" y="146" width="276" height="24" rx="5" fill="#383023"/>
+      <text x="152" y="162" font-family="ui-monospace, monospace" font-size="10" fill="#EEF3F0" fill-opacity="0.8" text-anchor="middle" font-weight="700">FIRE ENTRÉES</text>
+    </g>
+  </g>
+</svg>

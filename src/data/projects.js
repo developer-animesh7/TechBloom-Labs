@@ -1,394 +1,533 @@
 /* ==========================================================================
-   Projects — domains and project concepts.
-   These are project concepts offered through TechBloom Labs, not shipped products.
+   Projects & Technology Products — Official Product Portfolio
+   Canonical data source for TechBloom Labs product catalogue.
+   Strictly covers the 11 approved product domains and engineered products.
    ========================================================================== */
 
 export const projectCategories = [
   {
-    id: 'ai-ml',
-    name: 'AI & Machine Learning',
-    short: 'AI / ML',
-    accent: 'var(--dom-ai)',
-    icon: 'network',
-    blurb: 'Applied intelligence for documents, prediction, vision and decision support.',
-    examples: [
-      'Intelligent document analysis',
-      'Predictive analytics',
-      'Computer vision',
-      'AI-assisted decision systems'
-    ]
-  },
-  {
     id: 'healthcare',
-    name: 'Healthcare & Medical Technology',
+    number: '01',
+    name: 'Healthcare',
     short: 'Healthcare',
-    accent: 'var(--dom-health)',
-    icon: 'pulse',
-    blurb: 'Service coordination, patient workflow and clinical data organisation.',
+    accent: 'var(--accent)',
+    blurb: 'Digital health platforms, clinical workflow coordination, and patient information management.',
     examples: [
-      'Healthcare service management',
-      'Patient workflow systems',
-      'Clinical data analytics',
-      'Appointment coordination',
+      'Patient health records',
+      'Clinical workflow coordination',
+      'Appointment scheduling',
       'Medical resource management'
     ]
   },
   {
-    id: 'pharma',
-    name: 'Pharmaceutical Technology',
-    short: 'Pharma',
-    accent: 'var(--dom-pharma)',
-    icon: 'vial',
-    blurb: 'Research workflow, batch records, laboratory operations and quality control.',
-    examples: [
-      'Pharmaceutical research workflow',
-      'Drug inventory and batch management',
-      'Laboratory research management',
-      'Pharma supply-chain analytics',
-      'Drug discovery data management',
-      'Quality-control workflow software'
-    ]
-  },
-  {
     id: 'agriculture',
-    name: 'Agriculture Technology',
+    number: '02',
+    name: 'Agriculture',
     short: 'Agriculture',
-    accent: 'var(--dom-agri)',
-    icon: 'leaf',
-    blurb: 'Crop planning, field operations, irrigation records and farm analytics.',
+    accent: 'var(--accent-bright)',
+    blurb: 'Smart agricultural platforms, field telemetry, crop planning, and harvest analytics.',
     examples: [
-      'Crop planning',
-      'Farm activity management',
-      'Irrigation records',
-      'Soil information',
-      'Crop monitoring',
-      'Harvest tracking',
-      'Agricultural analytics'
+      'Crop planning and calendars',
+      'Field activity management',
+      'Irrigation and soil telemetry',
+      'Harvest yield tracking'
     ]
   },
   {
-    id: 'livestock',
-    name: 'Animal Genetics & Livestock Management',
-    short: 'Animal Genetics',
-    accent: 'var(--dom-livestock)',
-    icon: 'lineage',
-    blurb: 'Animal profiles, lineage records, breeding history and research data.',
+    id: 'ai-robotics',
+    number: '03',
+    name: 'AI & Robotics',
+    short: 'AI & Robotics',
+    accent: 'var(--accent)',
+    blurb: 'Intelligent robotics, autonomous telemetry, hardware integration, and motion automation.',
     examples: [
-      'Animal profile management',
-      'Breed information',
-      'Genetics records',
-      'Lineage tracking',
-      'Breeding records',
-      'Health and event records',
-      'Research data organisation'
+      'Robotic motion planning',
+      'Autonomous telemetry',
+      'Hardware interface drivers',
+      'Kinematics simulation'
     ]
   },
   {
-    id: 'infrastructure',
-    name: 'Infrastructure & Construction Technology',
-    short: 'Infrastructure',
-    accent: 'var(--dom-infra)',
-    icon: 'structure',
-    blurb: 'Project planning, site coordination, materials and progress reporting.',
+    id: 'finance-fintech',
+    number: '04',
+    name: 'Finance & FinTech',
+    short: 'Finance & FinTech',
+    accent: 'var(--accent-bright)',
+    blurb: 'Financial technology platforms, ledger management, transaction auditing, and payment workflows.',
     examples: [
-      'Project planning',
-      'Site management',
-      'Contractor coordination',
-      'Material tracking',
-      'Milestone management',
-      'Progress reporting',
-      'Project analytics'
+      'Double-entry ledgers',
+      'Payment reconciliation',
+      'Transaction auditing',
+      'Financial risk analytics'
+    ]
+  },
+  {
+    id: 'education-edtech',
+    number: '05',
+    name: 'Education & EdTech',
+    short: 'Education & EdTech',
+    accent: 'var(--accent)',
+    blurb: 'Interactive learning systems, modular curriculum delivery, and student progress tracking.',
+    examples: [
+      'Modular course authoring',
+      'Student progress tracking',
+      'Interactive assessments',
+      'Cohort learning analytics'
+    ]
+  },
+  {
+    id: 'e-commerce',
+    number: '06',
+    name: 'E-Commerce',
+    short: 'E-Commerce',
+    accent: 'var(--accent-bright)',
+    blurb: 'Digital commerce architectures, catalog management, inventory tracking, and checkout workflows.',
+    examples: [
+      'Multi-channel product catalogs',
+      'Real-time inventory levels',
+      'Order fulfillment queues',
+      'Checkout and payments'
+    ]
+  },
+  {
+    id: 'restaurant-food',
+    number: '07',
+    name: 'Restaurant & Food',
+    short: 'Restaurant & Food',
+    accent: 'var(--accent)',
+    blurb: 'Restaurant management platforms, table reservation coordination, and kitchen order dispatch.',
+    examples: [
+      'Table reservation maps',
+      'Kitchen order ticketing',
+      'Menu availability tracking',
+      'Dining shift analytics'
+    ]
+  },
+  {
+    id: 'real-estate',
+    number: '08',
+    name: 'Real Estate',
+    short: 'Real Estate',
+    accent: 'var(--accent-bright)',
+    blurb: 'Property technology platforms, construction site coordination, and asset milestone tracking.',
+    examples: [
+      'Property asset records',
+      'Site contractor scheduling',
+      'Material deliveries',
+      'Milestone governance'
     ]
   },
   {
     id: 'cybersecurity',
+    number: '09',
     name: 'Cybersecurity',
     short: 'Cybersecurity',
-    accent: 'var(--dom-cyber)',
-    icon: 'shield',
-    blurb: 'Monitoring, awareness, vulnerability workflow and security analytics.',
+    accent: 'var(--accent)',
+    blurb: 'Security operations platforms, vulnerability monitoring, and team awareness workflows.',
     examples: [
-      'Security monitoring',
-      'Awareness platforms',
-      'Vulnerability workflow management',
-      'Security analytics'
+      'Vulnerability monitoring',
+      'Endpoint event telemetry',
+      'Incident response tasks',
+      'Security awareness records'
     ]
   },
   {
-    id: 'biotech',
-    name: 'Biotechnology',
-    short: 'Biotechnology',
-    accent: 'var(--dom-biotech)',
-    icon: 'helix',
-    blurb: 'Laboratory workflow, experiment tracking and research data structure.',
-    examples: ['Laboratory workflow management', 'Research data organisation', 'Experiment tracking']
-  },
-  {
-    id: 'data-science',
-    name: 'Data Science',
-    short: 'Data Science',
-    accent: 'var(--dom-data)',
-    icon: 'chart',
-    blurb: 'Business analytics, forecasting, dashboards and research analytics.',
-    examples: ['Business analytics', 'Forecasting', 'Dashboards', 'Research analytics']
-  },
-  {
-    id: 'software',
-    name: 'Software Development',
-    short: 'Software',
-    accent: 'var(--dom-software)',
-    icon: 'braces',
-    blurb: 'Workflow automation, collaboration, documents and operational tooling.',
+    id: 'ai-innovation',
+    number: '10',
+    name: 'AI & Innovation',
+    short: 'AI & Innovation',
+    accent: 'var(--accent-bright)',
+    blurb: 'Applied neural architectures, vector search, predictive modeling, and knowledge extraction.',
     examples: [
-      'Workflow automation',
-      'Team collaboration',
-      'Document management',
-      'Task management',
-      'Reporting and notifications'
+      'Neural document analysis',
+      'Vector semantic search',
+      'Knowledge extraction',
+      'Model evaluation harnesses'
+    ]
+  },
+  {
+    id: 'travel-tourism',
+    number: '11',
+    name: 'Travel & Tourism',
+    short: 'Travel & Tourism',
+    accent: 'var(--accent)',
+    blurb: 'Travel planning platforms, destination discovery guides, and itinerary booking coordination.',
+    examples: [
+      'Interactive destination guides',
+      'Dynamic itinerary builder',
+      'Traveler reservation records',
+      'Trip notification dispatch'
     ]
   }
 ];
 
-/* status: open | review | active — the state of the project concept itself */
 export const projects = [
   {
-    id: 'smart-agriculture',
+    id: 'healthsync',
+    slug: 'healthsync',
     number: '01',
-    title: 'Smart Agriculture Management Platform',
+    name: 'HealthSync',
+    title: 'HealthSync',
+    category: 'healthcare',
+    feature: 'primary',
+    status: 'active',
+    duration: '6 months',
+    mode: 'Online / Hybrid',
+    image: '/images/projects/healthcare.svg',
+    alt: 'Healthcare coordination board with appointment queue and operational telemetry',
+    summary:
+      'A digital healthcare platform designed to organize patient records, clinical appointment scheduling, and care team resource coordination.',
+    description:
+      'A digital healthcare platform designed to organize patient records, clinical appointment scheduling, and care team resource coordination.',
+    scope: [
+      'Patient records and clinical history organization',
+      'Clinical appointment and consultation scheduling',
+      'Medical resource allocation and department coordination',
+      'Operational healthcare reporting and telemetry'
+    ],
+    capabilities: [
+      'Patient records and clinical history organization',
+      'Clinical appointment and consultation scheduling',
+      'Medical resource allocation and department coordination',
+      'Operational healthcare reporting and telemetry'
+    ],
+    stack: ['React', 'Express', 'MongoDB', 'REST API'],
+    techStack: ['React', 'Express', 'MongoDB', 'REST API'],
+    mentorship: 'Healthcare Engineering Lead',
+    note: 'Service coordination software. It does not diagnose, advise, or make autonomous medical decisions.'
+  },
+  {
+    id: 'agriflow',
+    slug: 'agriflow',
+    number: '02',
+    name: 'AgriFlow',
+    title: 'AgriFlow',
     category: 'agriculture',
     feature: 'primary',
-    status: 'open',
+    status: 'active',
     duration: '6 months',
     mode: 'Hybrid',
     image: '/images/projects/agriculture.svg',
     alt: 'Field rows with an irrigation line and monitoring sensor nodes',
     summary:
-      'A management platform for crop planning, field activity, irrigation records and harvest tracking — so a farm can see its own season clearly.',
+      'A smart agriculture platform for managing crop activities, field operations, irrigation records, and harvest information.',
+    description:
+      'A smart agriculture platform for managing crop activities, field operations, irrigation records, and harvest information.',
     scope: [
-      'Crop planning and seasonal calendars',
-      'Farm activity management',
-      'Irrigation records and soil information',
-      'Crop monitoring and harvest tracking',
-      'Resource management',
-      'Agricultural analytics'
+      'Crop planning and seasonal production calendars',
+      'Field activity logs and farm operation tracking',
+      'Irrigation records and soil telemetry monitoring',
+      'Harvest metrics and agricultural yield analytics'
+    ],
+    capabilities: [
+      'Crop planning and seasonal production calendars',
+      'Field activity logs and farm operation tracking',
+      'Irrigation records and soil telemetry monitoring',
+      'Harvest metrics and agricultural yield analytics'
     ],
     stack: ['React', 'Node.js', 'PostgreSQL', 'Charting'],
-    mentorship: 'Faculty-led with domain review'
+    techStack: ['React', 'Node.js', 'PostgreSQL', 'Charting'],
+    mentorship: 'Agriculture Technology Lead'
   },
   {
-    id: 'animal-genetics',
-    number: '02',
-    title: 'Animal Genetics & Livestock Management',
-    category: 'livestock',
-    feature: 'primary',
-    status: 'open',
-    duration: '6 months',
-    mode: 'Offline / Hybrid',
-    image: '/images/projects/animal-genetics.svg',
-    alt: 'Lineage chart with animal record cards and a trait marker strip',
-    summary:
-      'Structured records for animal profiles, breed information, lineage and breeding history, built so research data stays traceable across generations.',
-    scope: [
-      'Animal profile management',
-      'Breed information and genetics records',
-      'Lineage tracking',
-      'Breeding records',
-      'Health and event history tracking',
-      'Livestock management and research data organisation'
-    ],
-    stack: ['Django', 'PostgreSQL', 'Graph visualisation'],
-    mentorship: 'Faculty-led',
-    note: 'Records and reporting only. The project makes no veterinary or genetic health claims.'
-  },
-  {
-    id: 'pharma-workflow',
+    id: 'robocore',
+    slug: 'robocore',
     number: '03',
-    title: 'Pharmaceutical Research Workflow',
-    category: 'pharma',
-    feature: 'wide',
-    status: 'review',
+    name: 'RoboCore',
+    title: 'RoboCore',
+    category: 'ai-robotics',
+    feature: 'primary',
+    status: 'active',
     duration: '6 months',
-    mode: 'Research',
-    image: '/images/projects/pharmaceutical.svg',
-    alt: 'Vial batches, a molecular diagram and a quality-control matrix',
+    mode: 'Research / Hybrid',
+    image: '/images/projects/robotics.svg',
+    alt: 'Robotic arm kinematic joints with trajectory coordinates and actuator telemetry panel',
     summary:
-      'Workflow software for laboratory research operations: batch and inventory records, research stages and quality-control documentation.',
+      'An intelligent robotic control and simulation platform for autonomous motion telemetry, robotic kinematics, and real-time hardware interfacing.',
+    description:
+      'An intelligent robotic control and simulation platform for autonomous motion telemetry, robotic kinematics, and real-time hardware interfacing.',
     scope: [
-      'Laboratory workflow',
-      'Research records',
-      'Batch management',
-      'Inventory workflow',
-      'Quality-control documentation',
-      'Pharmaceutical research data management'
+      'Robotic motion trajectory planning and execution',
+      'Autonomous sensor feedback and telemetry streams',
+      'Hardware interface drivers and edge messaging',
+      'Kinematics simulation and operational diagnostics'
     ],
-    stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Role-based access'],
-    mentorship: 'Faculty and industry mentor',
-    note: 'Documentation and workflow only. No claims are made about medical efficacy.'
+    capabilities: [
+      'Robotic motion trajectory planning and execution',
+      'Autonomous sensor feedback and telemetry streams',
+      'Hardware interface drivers and edge messaging',
+      'Kinematics simulation and operational diagnostics'
+    ],
+    stack: ['Python', 'ROS', 'PyTorch', 'OpenCV', 'C++'],
+    techStack: ['Python', 'ROS', 'PyTorch', 'OpenCV', 'C++'],
+    mentorship: 'Robotics & AI Engineering Lead'
   },
   {
-    id: 'healthcare-services',
+    id: 'fincore',
+    slug: 'fincore',
     number: '04',
-    title: 'Healthcare Services Management',
-    category: 'healthcare',
+    name: 'FinCore',
+    title: 'FinCore',
+    category: 'finance-fintech',
     feature: 'standard',
-    status: 'open',
-    duration: '2 or 6 months',
+    status: 'active',
+    duration: '6 months',
     mode: 'Online',
-    image: '/images/projects/healthcare.svg',
-    alt: 'Coordination board with workflow stages and an operational signal chart',
+    image: '/images/projects/finance.svg',
+    alt: 'Financial technology ledger dashboard with transaction reconciliation table and settlement liquidity telemetry',
     summary:
-      'Coordination software for appointments, service management and medical resource scheduling, with operational reporting for service teams.',
+      'A financial technology platform providing secure ledger management, automated payment reconciliation, and financial analytics workflows.',
+    description:
+      'A financial technology platform providing secure ledger management, automated payment reconciliation, and financial analytics workflows.',
     scope: [
-      'Appointment workflow',
-      'Service management',
-      'Operational records',
-      'Resource coordination',
-      'Reporting'
+      'Double-entry ledger accounting and audit trails',
+      'Automated transaction and settlement reconciliation',
+      'Transaction verification and risk detection rules',
+      'Financial reporting dashboards and cash flow telemetry'
     ],
-    stack: ['React', 'Express', 'MongoDB'],
-    mentorship: 'Faculty-led',
-    note: 'Service coordination software. It does not diagnose, advise or make medical decisions.'
+    capabilities: [
+      'Double-entry ledger accounting and audit trails',
+      'Automated transaction and settlement reconciliation',
+      'Transaction verification and risk detection rules',
+      'Financial reporting dashboards and cash flow telemetry'
+    ],
+    stack: ['TypeScript', 'Node.js', 'PostgreSQL', 'Docker', 'REST API'],
+    techStack: ['TypeScript', 'Node.js', 'PostgreSQL', 'Docker', 'REST API'],
+    mentorship: 'FinTech Engineering Lead'
   },
   {
-    id: 'infrastructure-pm',
+    id: 'learngrid',
+    slug: 'learngrid',
     number: '05',
-    title: 'Infrastructure Project Management',
-    category: 'infrastructure',
+    name: 'LearnGrid',
+    title: 'LearnGrid',
+    category: 'education-edtech',
+    feature: 'standard',
+    status: 'active',
+    duration: '4 months',
+    mode: 'Online',
+    image: '/images/projects/edtech.svg',
+    alt: 'Interactive learning management curriculum architecture with course module units and student cohort mastery tracking',
+    summary:
+      'An interactive learning management system designed for modular curriculum delivery, student progress tracking, and outcome assessment.',
+    description:
+      'An interactive learning management system designed for modular curriculum delivery, student progress tracking, and outcome assessment.',
+    scope: [
+      'Modular syllabus authoring and lesson structuring',
+      'Student enrollment, attendance, and milestone tracking',
+      'Interactive quiz evaluation and assignment submissions',
+      'Cohort performance analytics and learning outcomes'
+    ],
+    capabilities: [
+      'Modular syllabus authoring and lesson structuring',
+      'Student enrollment, attendance, and milestone tracking',
+      'Interactive quiz evaluation and assignment submissions',
+      'Cohort performance analytics and learning outcomes'
+    ],
+    stack: ['React', 'Next.js', 'Node.js', 'PostgreSQL'],
+    techStack: ['React', 'Next.js', 'Node.js', 'PostgreSQL'],
+    mentorship: 'EdTech Advisory Lead'
+  },
+  {
+    id: 'commercehub',
+    slug: 'commercehub',
+    number: '06',
+    name: 'CommerceHub',
+    title: 'CommerceHub',
+    category: 'e-commerce',
+    feature: 'standard',
+    status: 'active',
+    duration: '6 months',
+    mode: 'Online / Hybrid',
+    image: '/images/projects/ecommerce.svg',
+    alt: 'Digital commerce architecture with product catalog inventory tracking, checkout pipeline and fulfillment dispatch queue',
+    summary:
+      'A modular digital commerce platform featuring inventory tracking, multi-channel product catalog management, and checkout workflows.',
+    description:
+      'A modular digital commerce platform featuring inventory tracking, multi-channel product catalog management, and checkout workflows.',
+    scope: [
+      'Multi-category product catalog and variant handling',
+      'Real-time inventory thresholds and warehouse status',
+      'Cart, payment processing, and checkout pipelines',
+      'Order fulfillment queues and customer notifications'
+    ],
+    capabilities: [
+      'Multi-category product catalog and variant handling',
+      'Real-time inventory thresholds and warehouse status',
+      'Cart, payment processing, and checkout pipelines',
+      'Order fulfillment queues and customer notifications'
+    ],
+    stack: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'GraphQL'],
+    techStack: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'GraphQL'],
+    mentorship: 'Commerce Architecture Lead'
+  },
+  {
+    id: 'tableflow',
+    slug: 'tableflow',
+    number: '07',
+    name: 'TableFlow',
+    title: 'TableFlow',
+    category: 'restaurant-food',
+    feature: 'standard',
+    status: 'active',
+    duration: '4 months',
+    mode: 'Hybrid',
+    image: '/images/projects/restaurant.svg',
+    alt: 'Restaurant operations floor plan map with real-time table status and kitchen display ticket queue',
+    summary:
+      'A digital restaurant operations platform managing table reservations, kitchen order ticketing, and dining floor workflow.',
+    description:
+      'A digital restaurant operations platform managing table reservations, kitchen order ticketing, and dining floor workflow.',
+    scope: [
+      'Table reservations and interactive floor layout status',
+      'Digital kitchen display system and ticket dispatch',
+      'Live menu availability and item lifecycle tracking',
+      'Daily shift analytics and dining revenue summaries'
+    ],
+    capabilities: [
+      'Table reservations and interactive floor layout status',
+      'Digital kitchen display system and ticket dispatch',
+      'Live menu availability and item lifecycle tracking',
+      'Daily shift analytics and dining revenue summaries'
+    ],
+    stack: ['React', 'FastAPI', 'PostgreSQL', 'WebSocket'],
+    techStack: ['React', 'FastAPI', 'PostgreSQL', 'WebSocket'],
+    mentorship: 'FoodTech Systems Lead'
+  },
+  {
+    id: 'estateflow',
+    slug: 'estateflow',
+    number: '08',
+    name: 'EstateFlow',
+    title: 'EstateFlow',
+    category: 'real-estate',
     feature: 'standard',
     status: 'active',
     duration: '6 months',
     mode: 'Hybrid',
     image: '/images/projects/infrastructure.svg',
-    alt: 'Structural frame, tower crane and milestone schedule bars',
+    alt: 'Construction structural frame, site cranes, and progress milestone schedule',
     summary:
-      'Planning and tracking for construction work: sites, contractors, materials, milestones and documented progress in one place.',
+      'A property technology and construction management platform for site coordination, milestone tracking, and contractor operations.',
+    description:
+      'A property technology and construction management platform for site coordination, milestone tracking, and contractor operations.',
     scope: [
-      'Project planning',
-      'Site management',
-      'Contractor coordination',
-      'Task management and material tracking',
-      'Milestones and documentation',
-      'Progress reports'
+      'Property asset records and developmental site logs',
+      'Contractor task scheduling and milestone governance',
+      'Material delivery tracking and inspection signoffs',
+      'Project progress dashboards and documented handovers'
     ],
-    stack: ['Vue', 'Laravel', 'MySQL', 'Gantt visualisation'],
-    mentorship: 'Industry mentor'
+    capabilities: [
+      'Property asset records and developmental site logs',
+      'Contractor task scheduling and milestone governance',
+      'Material delivery tracking and inspection signoffs',
+      'Project progress dashboards and documented handovers'
+    ],
+    stack: ['Vue', 'Laravel', 'MySQL', 'Gantt Visualisation'],
+    techStack: ['Vue', 'Laravel', 'MySQL', 'Gantt Visualisation'],
+    mentorship: 'PropTech Engineering Lead'
   },
   {
-    id: 'ai-research-assistant',
-    number: '06',
-    title: 'AI Research Assistant',
-    category: 'ai-ml',
-    feature: 'standard',
-    status: 'open',
-    duration: '2 or 6 months',
-    mode: 'Online',
-    image: '/images/projects/ai-ml.svg',
-    alt: 'Neural network layers with an attention grid and extracted document fields',
-    summary:
-      'Research discovery and analysis support: document organisation, structured extraction and summaries that trace back to their source.',
-    scope: [
-      'Research discovery',
-      'Document organisation',
-      'Knowledge workflows',
-      'Analysis assistance',
-      'Evaluation harness'
-    ],
-    stack: ['Python', 'PyTorch', 'Vector search', 'FastAPI'],
-    mentorship: 'Faculty-led research'
-  },
-  {
-    id: 'enterprise-workflow',
-    number: '07',
-    title: 'Enterprise Workflow Platform',
-    category: 'software',
-    feature: 'standard',
-    status: 'open',
-    duration: '2 months',
-    mode: 'Online',
-    image: '/images/projects/software.svg',
-    alt: 'Task columns, approval branches and automation rules',
-    summary:
-      'A configurable workflow engine: task stages, approvals, automation rules, documents and notifications for operating teams.',
-    scope: [
-      'Task management',
-      'Workflow automation',
-      'Team collaboration',
-      'Document management',
-      'Reporting and notifications'
-    ],
-    stack: ['React', 'Node.js', 'PostgreSQL', 'Queue worker'],
-    mentorship: 'Industry mentor'
-  },
-  {
-    id: 'data-intelligence',
-    number: '08',
-    title: 'Data Intelligence Platform',
-    category: 'data-science',
-    feature: 'standard',
-    status: 'review',
-    duration: '6 months',
-    mode: 'Hybrid',
-    image: '/images/projects/data-science.svg',
-    alt: 'Forecast curve, distribution bars and a cohort matrix',
-    summary:
-      'Analytics and forecasting over operational data, with dashboards and cohort views for teams that need to see a trend early.',
-    scope: [
-      'Analytics',
-      'Dashboards',
-      'Reporting',
-      'Forecasting',
-      'Data-driven insights'
-    ],
-    stack: ['Python', 'Pandas', 'DuckDB', 'Plotting'],
-    mentorship: 'Faculty and industry mentor'
-  },
-  {
-    id: 'security-operations',
+    id: 'cyberguard',
+    slug: 'cyberguard',
     number: '09',
-    title: 'Security Monitoring & Awareness Workspace',
+    name: 'CyberGuard',
+    title: 'CyberGuard',
     category: 'cybersecurity',
     feature: 'standard',
-    status: 'open',
-    duration: '2 or 6 months',
+    status: 'active',
+    duration: '6 months',
     mode: 'Online',
     image: '/images/projects/cybersecurity.svg',
     alt: 'Alert queue, network segments and vulnerability workflow lanes',
     summary:
-      'Vulnerability workflow, monitoring views and an awareness module that turns findings into training for the teams involved.',
+      'A security operations workspace providing real-time vulnerability tracking, network segment monitoring, and security awareness modules.',
+    description:
+      'A security operations workspace providing real-time vulnerability tracking, network segment monitoring, and security awareness modules.',
     scope: [
-      'Security monitoring',
-      'Vulnerability workflow management',
-      'Awareness and training modules',
-      'Security analytics'
+      'Vulnerability ingestion, scoring, and workflow queues',
+      'Network endpoint telemetry and segment monitoring',
+      'Incident response coordination and resolution logs',
+      'Team security training modules and awareness records'
     ],
-    stack: ['Python', 'Elastic', 'React'],
-    mentorship: 'Industry mentor'
+    capabilities: [
+      'Vulnerability ingestion, scoring, and workflow queues',
+      'Network endpoint telemetry and segment monitoring',
+      'Incident response coordination and resolution logs',
+      'Team security training modules and awareness records'
+    ],
+    stack: ['Python', 'Elasticsearch', 'React', 'Docker'],
+    techStack: ['Python', 'Elasticsearch', 'React', 'Docker'],
+    mentorship: 'Cybersecurity Operations Lead'
   },
   {
-    id: 'lab-workflow',
+    id: 'nova-ai',
+    slug: 'nova-ai',
     number: '10',
-    title: 'Laboratory Experiment Tracking',
-    category: 'biotech',
-    feature: 'standard',
-    status: 'open',
-    duration: '2 months',
-    mode: 'Offline / Hybrid',
-    image: '/images/projects/biotech.svg',
-    alt: 'Biotechnology laboratory experiment tracking with DNA sequence helix, well plates and protocol run stages',
+    name: 'NovaAI',
+    title: 'NovaAI',
+    category: 'ai-innovation',
+    feature: 'wide',
+    status: 'active',
+    duration: '6 months',
+    mode: 'Research',
+    image: '/images/projects/ai-ml.svg',
+    alt: 'Neural network layers with attention matrix and extracted knowledge fields',
     summary:
-      'Experiment tracking for a working lab: protocols, runs, samples and results, organised so a result can be found again months later.',
+      'A neural document analysis and knowledge discovery engine with vector search, structured data extraction, and semantic summarization.',
+    description:
+      'A neural document analysis and knowledge discovery engine with vector search, structured data extraction, and semantic summarization.',
     scope: [
-      'Laboratory workflow management',
-      'Experiment and run tracking',
-      'Sample and protocol records',
-      'Research data organisation'
+      'Document ingestion and semantic vector indexing',
+      'Contextual multi-hop search and field extraction',
+      'Source-attributed knowledge summarization',
+      'Model accuracy evaluation and benchmark reporting'
     ],
-    stack: ['Django', 'PostgreSQL', 'File storage'],
-    mentorship: 'Faculty-led'
+    capabilities: [
+      'Document ingestion and semantic vector indexing',
+      'Contextual multi-hop search and field extraction',
+      'Source-attributed knowledge summarization',
+      'Model accuracy evaluation and benchmark reporting'
+    ],
+    stack: ['Python', 'PyTorch', 'Vector Search', 'FastAPI'],
+    techStack: ['Python', 'PyTorch', 'Vector Search', 'FastAPI'],
+    mentorship: 'Applied AI Research Lead'
+  },
+  {
+    id: 'travelflow',
+    slug: 'travelflow',
+    number: '11',
+    name: 'TravelFlow',
+    title: 'TravelFlow',
+    category: 'travel-tourism',
+    feature: 'standard',
+    status: 'active',
+    duration: '4 months',
+    mode: 'Online',
+    image: '/images/projects/travel.svg',
+    alt: 'Travel itinerary planner map with destination waypoints, booking reservation coordination and departure schedule',
+    summary:
+      'A travel discovery and itinerary management system for booking coordination, destination guides, and tour schedule tracking.',
+    description:
+      'A travel discovery and itinerary management system for booking coordination, destination guides, and tour schedule tracking.',
+    scope: [
+      'Destination guide directory and interactive point-of-interest mapping',
+      'Dynamic itinerary builder with automated route scheduling',
+      'Traveler booking status and reservation coordination',
+      'Travel document aggregation and departure alert notifications'
+    ],
+    capabilities: [
+      'Destination guide directory and interactive point-of-interest mapping',
+      'Dynamic itinerary builder with automated route scheduling',
+      'Traveler booking status and reservation coordination',
+      'Travel document aggregation and departure alert notifications'
+    ],
+    stack: ['React', 'Node.js', 'PostgreSQL', 'Mapbox'],
+    techStack: ['React', 'Node.js', 'PostgreSQL', 'Mapbox'],
+    mentorship: 'Travel Technology Lead'
   }
 ];
 
-/* Steps shown in the Custom Engineering Solutions section. */
 export const proposalSteps = [
   { step: '01', title: 'Problem & Specification Formulation', body: 'Define domain, challenge statement, functional specifications, and technical objectives.' },
   { step: '02', title: 'Technical Feasibility Review', body: 'Architectural scope, engineering complexity, and domain requirements are evaluated.' },
@@ -409,12 +548,28 @@ export function getCategory(categoryId) {
   return projectCategories.find((category) => category.id === categoryId);
 }
 
+const LEGACY_ID_MAP = {
+  'smart-agriculture': 'agriflow',
+  'healthcare-services': 'healthsync',
+  'infrastructure-pm': 'estateflow',
+  'ai-research-assistant': 'nova-ai',
+  'security-operations': 'cyberguard',
+  'enterprise-workflow': 'commercehub',
+  'animal-genetics': 'agriflow',
+  'pharma-workflow': 'healthsync',
+  'data-intelligence': 'fincore',
+  'lab-workflow': 'healthsync'
+};
+
 export function getProject(slugOrId) {
   if (!slugOrId) return null;
   const clean = slugOrId.toLowerCase().trim();
+  const mapped = LEGACY_ID_MAP[clean] || clean;
   return (
+    projects.find((p) => p.id === mapped) ||
+    projects.find((p) => p.slug === mapped) ||
+    projects.find((p) => (p.name || p.title || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') === mapped) ||
     projects.find((p) => p.id === clean) ||
-    projects.find((p) => p.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') === clean) ||
     null
   );
 }

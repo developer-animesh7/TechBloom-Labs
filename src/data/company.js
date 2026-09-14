@@ -74,122 +74,164 @@ export const leadership = [
 ];
 
 /* --------------------------------------------------------------------------
-   Top World-Class Mentors (Exactly 6 Mentors)
+   Top World-Class Mentors (Exactly 8 Mentors)
    -------------------------------------------------------------------------- */
 export const mentors = [
   {
     id: 'M-01',
     num: '01',
-    name: 'Dr. Phillip G. Bradford',
-    role: 'Associate Professor-in-Residence, Computer Science',
-    affiliation: 'University of Connecticut (UConn)',
+    name: 'Phillip G. Bradford',
+    role: 'Associate Professor',
+    affiliation: 'Associate Professor',
     location: 'USA',
     portrait: '/images/leadership/Phillip%20G.%20Bradford.png',
-    portraitAlt: 'Dr. Phillip G. Bradford, Associate Professor-in-Residence, Computer Science, University of Connecticut (UConn)'
+    portraitAlt: 'Phillip G. Bradford, Associate Professor'
   },
   {
     id: 'M-02',
     num: '02',
     name: 'Avnish Kumar',
-    role: 'Amazon Engineer (AWS)',
-    affiliation: 'Amazon Engineer (AWS)',
+    role: 'Amazon (AWS)',
+    affiliation: 'Amazon (AWS)',
     location: 'USA',
     portrait: '/images/leadership/Avnish%20Kumar.png',
-    portraitAlt: 'Avnish Kumar, Amazon Engineer (AWS)'
+    portraitAlt: 'Avnish Kumar, Amazon (AWS)'
   },
   {
     id: 'M-03',
     num: '03',
-    name: 'Dr. Andrew J. Park',
+    name: 'Andrew J. Park',
     role: 'Trinity Western University',
     affiliation: 'Trinity Western University',
     location: 'Canada',
     portrait: '/images/leadership/Andrew%20J.%20Park.png',
-    portraitAlt: 'Dr. Andrew J. Park, Trinity Western University'
+    portraitAlt: 'Andrew J. Park, Trinity Western University'
   },
   {
     id: 'M-04',
     num: '04',
     name: 'Saptarshi Banerjee',
-    role: 'Amazon Engineer (AWS)',
-    affiliation: 'Amazon Engineer (AWS)',
+    role: 'Amazon (AWS)',
+    affiliation: 'Amazon (AWS)',
     location: 'USA',
     portrait: '/images/leadership/Saptarshi%20Banerjee%20.png',
-    portraitAlt: 'Saptarshi Banerjee, Amazon Engineer (AWS)'
+    portraitAlt: 'Saptarshi Banerjee, Amazon (AWS)'
   },
   {
     id: 'M-05',
     num: '05',
     name: 'Soummyo Priyo Chattopadhyay',
-    role: 'Deloitte Canada',
-    affiliation: 'Deloitte Canada',
+    role: 'Deloitte',
+    affiliation: 'Deloitte',
     location: 'Canada',
     portrait: '/images/leadership/Soummyo%20Priyo%20Chattopadhyay.jpeg',
-    portraitAlt: 'Soummyo Priyo Chattopadhyay, Deloitte Canada'
+    portraitAlt: 'Soummyo Priyo Chattopadhyay, Deloitte'
   },
   {
     id: 'M-06',
     num: '06',
-    name: 'Prof. Dr. Himadri Nath Saha',
+    name: 'Himadri Nath Saha',
     role: 'SNEC',
     affiliation: 'SNEC',
     location: 'India',
     portrait: '/images/leadership/himadri-nath-saha.jpg',
-    portraitAlt: 'Prof. Dr. Himadri Nath Saha, SNEC'
+    portraitAlt: 'Himadri Nath Saha, SNEC'
+  },
+  {
+    id: 'M-07',
+    num: '07',
+    name: 'Nabeeh Kandalaft',
+    role: 'Associate Professor',
+    affiliation: 'Associate Professor',
+    location: 'USA',
+    portrait: '/images/leadership/Nabeeh%20Kandalaft.png',
+    portraitAlt: 'Nabeeh Kandalaft, Associate Professor'
+  },
+  {
+    id: 'M-08',
+    num: '08',
+    name: 'Abhipraya Dey',
+    role: 'CEO',
+    affiliation: 'PurplleCow',
+    location: '',
+    portrait: '/images/leadership/Abhipraya%20Dey.png',
+    portraitAlt: 'Abhipraya Dey, PurplleCow CEO'
   }
 ];
 
 /* --------------------------------------------------------------------------
-   Our Leadership & Engineering Team (Exactly 6 Members)
+   Development & Engineering (5 Technical Domains)
+   -------------------------------------------------------------------------- */
+export const engineeringDomains = [
+  {
+    id: 'domain-web-app',
+    num: '01',
+    title: 'Web & Application Development',
+    members: ['Tanisha Saha', 'Arunima Kundu', 'Arjesh Ghosh']
+  },
+  {
+    id: 'domain-software-dev',
+    num: '02',
+    title: 'Software Development',
+    members: ['Animesh Patra', 'Amitava Giri', 'Soumosish Jana']
+  },
+  {
+    id: 'domain-cybersecurity',
+    num: '03',
+    title: 'Cybersecurity',
+    members: ['Samarjit Jana']
+  },
+  {
+    id: 'domain-ai-innovation',
+    num: '04',
+    title: 'AI & Innovation',
+    members: ['Sreyan Saha', 'Arya Sarkar']
+  },
+  {
+    id: 'domain-robotics-iot',
+    num: '05',
+    title: 'Robotics & IoT',
+    members: ['Ayush Ghosh', 'Shreya Ghosh', 'Sana Saha']
+  }
+];
+
+/* --------------------------------------------------------------------------
+   People & Culture Leadership
+   -------------------------------------------------------------------------- */
+export const peopleCultureLead = {
+  name: 'Bhabani Prasad Roy',
+  role: 'Head of Human Resources',
+  portrait: '/images/leadership/Bhabani%20Prasad%20Roy.png',
+  portraitAlt: 'Bhabani Prasad Roy, Head of Human Resources'
+};
+
+/* --------------------------------------------------------------------------
+   Legacy Engineering Team Data (Kept for safe backward-compatibility)
    -------------------------------------------------------------------------- */
 export const engineeringTeam = [
   {
     id: 'LEAD-01',
     num: '01',
     name: 'Prof. Bhabani Prasad Roy',
-    role: 'Chief Marketing Adviser',
+    role: 'Head of Human Resources',
     portrait: '/images/leadership/Bhabani%20Prasad%20Roy.png',
-    portraitAlt: 'Prof. Bhabani Prasad Roy, Chief Marketing Adviser'
+    portraitAlt: 'Bhabani Prasad Roy, Head of Human Resources'
   },
   {
     id: 'LEAD-02',
     num: '02',
     name: 'Sreyan Saha',
-    role: 'Director of AI and Innovation',
+    role: 'AI & Innovation',
     portrait: '/images/leadership/Sreyan%20Saha.jpeg',
-    portraitAlt: 'Sreyan Saha, Director of AI and Innovation'
+    portraitAlt: 'Sreyan Saha, AI & Innovation'
   },
   {
     id: 'LEAD-03',
     num: '03',
     name: 'Tanisha Saha',
-    role: 'Director of Web Development',
+    role: 'Web & Application Development',
     portrait: '/images/leadership/Tanisha%20Saha.jpeg',
-    portraitAlt: 'Tanisha Saha, Director of Web Development'
-  },
-  {
-    id: 'ENG-01',
-    num: '04',
-    name: 'Animesh Patra',
-    role: 'Software Development Engineer: AI',
-    domain: 'Artificial Intelligence & Systems',
-    linkedin: 'https://www.linkedin.com/in/animesh-patra2004/'
-  },
-  {
-    id: 'ENG-02',
-    num: '05',
-    name: 'Amitava Giri',
-    role: 'AI & Cloud Engineer',
-    domain: 'Cloud Architecture & Intelligence',
-    linkedin: 'https://www.linkedin.com/in/amitava-giri/'
-  },
-  {
-    id: 'ENG-03',
-    num: '06',
-    name: 'Soumosish Jana',
-    role: 'Full Stack Engineer: AI',
-    domain: 'Full Stack Applications & AI',
-    linkedin: 'https://www.linkedin.com/in/soumosish-jana-a28050342/'
+    portraitAlt: 'Tanisha Saha, Web & Application Development'
   }
 ];
 
