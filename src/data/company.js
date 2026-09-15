@@ -81,11 +81,11 @@ export const mentors = [
     id: 'M-01',
     num: '01',
     name: 'Phillip G. Bradford',
-    role: 'Associate Professor',
-    affiliation: 'Associate Professor',
+    role: 'University of Connecticut',
+    affiliation: 'University of Connecticut',
     location: 'USA',
     portrait: '/images/leadership/Phillip%20G.%20Bradford.png',
-    portraitAlt: 'Phillip G. Bradford, Associate Professor'
+    portraitAlt: 'Phillip G. Bradford, University of Connecticut'
   },
   {
     id: 'M-02',
@@ -141,21 +141,21 @@ export const mentors = [
     id: 'M-07',
     num: '07',
     name: 'Nabeeh Kandalaft',
-    role: 'Associate Professor',
-    affiliation: 'Associate Professor',
+    role: 'Grand Valley University',
+    affiliation: 'Grand Valley University',
     location: 'USA',
     portrait: '/images/leadership/Nabeeh%20Kandalaft.png',
-    portraitAlt: 'Nabeeh Kandalaft, Associate Professor'
+    portraitAlt: 'Nabeeh Kandalaft, Grand Valley University'
   },
   {
     id: 'M-08',
     num: '08',
     name: 'Abhipraya Dey',
-    role: 'CEO',
-    affiliation: 'PurplleCow',
-    location: '',
+    role: 'University of British Columbia',
+    affiliation: 'University of British Columbia',
+    location: 'Canada',
     portrait: '/images/leadership/Abhipraya%20Dey.png',
-    portraitAlt: 'Abhipraya Dey, PurplleCow CEO'
+    portraitAlt: 'Abhipraya Dey, University of British Columbia'
   }
 ];
 
