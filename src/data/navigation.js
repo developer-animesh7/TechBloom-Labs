@@ -34,10 +34,7 @@ export const footerNav = [
     title: 'Company',
     links: [
       { label: 'About', to: '/about' },
-      { label: 'Our Products', to: '/projects' },
-      { label: 'Our Team', to: '/experts' },
-      { label: 'Careers', to: '/careers' },
-      { label: 'Contact', to: '/contact' }
+      { label: 'Careers', to: '/careers' }
     ]
   },
   {
